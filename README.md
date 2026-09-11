@@ -4,7 +4,7 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Resources: 24](https://img.shields.io/badge/resources-24-2563eb?style=flat-square)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-16a34a?style=flat-square)](#contributing) [![License: MIT](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)](LICENSE)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 24](https://img.shields.io/badge/Resources-24-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers)
 
 [Start here](#start-here) · [Blogs](#blogs-and-perspectives) · [Demos](#videos-and-demonstrations) · [Papers](#research-papers) · [Projects](#robot-interfaces-and-tool-frameworks) · [Evaluation](#agent-benchmarks-and-evaluation-frameworks) · [Models](#supporting-models-and-learning-infrastructure)
 
@@ -95,19 +95,19 @@ These are author-provided demonstrations; consult the linked papers for evaluati
 
 ## Research papers
 
-Grouped by the agent mechanism and ordered by first arXiv release month, newest first within each group. Full titles are retained for search and citation. Method summaries reflect the authors' descriptions; this list does not claim independent reproduction.
+Grouped by agent mechanism, with the newest first arXiv release in each group listed first. Paper and code links are separated for quick access; project pages sit below the full titles. Star badges show repository totals, including the full monorepo for Code as Policies and SayCan. `Unverified` means implementation availability has not been confirmed. Method summaries reflect the authors' descriptions; this list does not claim independent reproduction.
 
 ### Planning and code as policies
 
 <details open>
 <summary>Browse 4 papers</summary>
 
-| Work | First release | Agent mechanism | Official links and release notes |
-| --- | --- | --- | --- |
-| **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** | 2026-03 | Studies embodied coding agents through CaP-Gym, CaP-Bench, CaP-Agent0, and CaP-RL, including execution feedback and skill synthesis. | [Paper](https://arxiv.org/abs/2603.22435) · [Code](https://github.com/capgym/cap-x) |
-| **VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models** | 2023-07 | Uses generated code and visual grounding to construct 3D value maps for motion planning; the generated program can be reevaluated with visual feedback. | [Paper](https://arxiv.org/abs/2307.05973) · [Project](https://voxposer.github.io/) · [Code](https://github.com/huangwl18/VoxPoser) |
-| **Code as Policies: Language Model Programs for Embodied Control** | 2022-09 | Generates programs that compose perception outputs, control APIs, and feedback loops. | [Paper](https://arxiv.org/abs/2209.07753) · [Project](https://code-as-policies.github.io/) · [Code](https://github.com/google-research/google-research/tree/master/code_as_policies) |
-| **SayCan — Do As I Can, Not As I Say: Grounding Language in Robotic Affordances** | 2022-04 | Combines language-model skill scoring with affordance/value estimates to select feasible robot behaviors. | [Paper](https://arxiv.org/abs/2204.01691) · [Project](https://say-can.github.io/) · [Code: tabletop simulation](https://github.com/google-research/google-research/tree/master/saycan) |
+| Date | Work | Paper | Code | Mechanism / release notes |
+| --- | --- | --- | --- | --- |
+| 2026-03 | **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** | [Paper](https://arxiv.org/abs/2603.22435) | [Code](https://github.com/capgym/cap-x) <br> [![GitHub stars](https://img.shields.io/github/stars/capgym/cap-x?style=flat-square&label=stars)](https://github.com/capgym/cap-x) | Studies embodied coding agents through CaP-Gym, CaP-Bench, CaP-Agent0, and CaP-RL, including execution feedback and skill synthesis. |
+| 2023-07 | **VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models** <br> [Project](https://voxposer.github.io/) | [Paper](https://arxiv.org/abs/2307.05973) | [Code](https://github.com/huangwl18/VoxPoser) <br> [![GitHub stars](https://img.shields.io/github/stars/huangwl18/VoxPoser?style=flat-square&label=stars)](https://github.com/huangwl18/VoxPoser) | Uses generated code and visual grounding to construct 3D value maps for motion planning; the generated program can be reevaluated with visual feedback. |
+| 2022-09 | **Code as Policies: Language Model Programs for Embodied Control** <br> [Project](https://code-as-policies.github.io/) | [Paper](https://arxiv.org/abs/2209.07753) | [Code](https://github.com/google-research/google-research/tree/master/code_as_policies) <br> [![GitHub stars](https://img.shields.io/github/stars/google-research/google-research?style=flat-square&label=stars)](https://github.com/google-research/google-research) | Generates programs that compose perception outputs, control APIs, and feedback loops. |
+| 2022-04 | **SayCan — Do As I Can, Not As I Say: Grounding Language in Robotic Affordances** <br> [Project](https://say-can.github.io/) | [Paper](https://arxiv.org/abs/2204.01691) | [Code: tabletop simulation](https://github.com/google-research/google-research/tree/master/saycan) <br> [![GitHub stars](https://img.shields.io/github/stars/google-research/google-research?style=flat-square&label=stars)](https://github.com/google-research/google-research) | Combines language-model skill scoring with affordance/value estimates to select feasible robot behaviors. |
 
 </details>
 
@@ -116,10 +116,10 @@ Grouped by the agent mechanism and ordered by first arXiv release month, newest 
 <details open>
 <summary>Browse 2 papers</summary>
 
-| Work | First release | Agent mechanism | Official links and release notes |
-| --- | --- | --- | --- |
-| **REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction** | 2023-06 | Summarizes multisensory execution history, explains failures, and conditions a planner on those explanations to produce corrective actions. | [Paper](https://arxiv.org/abs/2306.15724) · [Project](https://robot-reflect.github.io/) · [Code](https://github.com/real-stanford/reflect) |
-| **Inner Monologue: Embodied Reasoning through Planning with Language Models** | 2022-07 | Feeds success detection, scene descriptions, and human feedback into language-based planning; demonstrates replanning and responses to changed goals. | [Paper](https://arxiv.org/abs/2207.05608) · [Project and demos](https://innermonologue.github.io/) |
+| Date | Work | Paper | Code | Mechanism / release notes |
+| --- | --- | --- | --- | --- |
+| 2023-06 | **REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction** <br> [Project](https://robot-reflect.github.io/) | [Paper](https://arxiv.org/abs/2306.15724) | [Code](https://github.com/real-stanford/reflect) <br> [![GitHub stars](https://img.shields.io/github/stars/real-stanford/reflect?style=flat-square&label=stars)](https://github.com/real-stanford/reflect) | Summarizes multisensory execution history, explains failures, and conditions a planner on those explanations to produce corrective actions. |
+| 2022-07 | **Inner Monologue: Embodied Reasoning through Planning with Language Models** <br> [Project and demos](https://innermonologue.github.io/) | [Paper](https://arxiv.org/abs/2207.05608) | Unverified | Feeds success detection, scene descriptions, and human feedback into language-based planning; demonstrates replanning and responses to changed goals. |
 
 </details>
 
@@ -128,12 +128,12 @@ Grouped by the agent mechanism and ordered by first arXiv release month, newest 
 <details open>
 <summary>Browse 4 papers</summary>
 
-| Work | First release | Agent mechanism | Official links and release notes |
-| --- | --- | --- | --- |
-| **Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence** | 2026-08 | Keeps the base policy frozen while developing runtime critics and recovery skills through execution, diagnosis, and gated updates. | [Paper](https://arxiv.org/abs/2608.16590) · [Project](https://air-embodied-brain.github.io/zetta/) · [Code](https://github.com/air-embodied-brain/Zetta-Embodiment). The separate `air-embodied-brain/zetta` repository hosts the project website. |
-| **Thea — Towards the Harness of Embodied Agents** | 2026-08 | Wraps robot capabilities as callable tools, maintains symbolic scene context, and evaluates action termination, success, and failure causes. | [Paper](https://arxiv.org/abs/2608.11246) · [Project](https://eit-hai.github.io/thea/) · [Code](https://github.com/EIT-HAI/Thea). Public runtime and interfaces; robot/simulator deployment requires concrete adapters and capabilities. |
-| **RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for Long-Horizon Planning** | 2026-07 | Uses execution memory to route among heterogeneous policies and a Memory Bridge to improve handoffs between policies. | [Paper](https://arxiv.org/abs/2607.18060). **Unverified release:** implementation. |
-| **Guava: An Effective and Universal Harness for Embodied Manipulation** | 2026-06 | Studies iterative perception–reasoning–action, semantic action abstractions, and multimodal observations; also describes distillation into a smaller agent model. | [Paper](https://arxiv.org/abs/2606.18363). **Unverified release:** implementation and checkpoints. |
+| Date | Work | Paper | Code | Mechanism / release notes |
+| --- | --- | --- | --- | --- |
+| 2026-08 | **Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence** <br> [Project](https://air-embodied-brain.github.io/zetta/) | [Paper](https://arxiv.org/abs/2608.16590) | [Code](https://github.com/air-embodied-brain/Zetta-Embodiment) <br> [![GitHub stars](https://img.shields.io/github/stars/air-embodied-brain/Zetta-Embodiment?style=flat-square&label=stars)](https://github.com/air-embodied-brain/Zetta-Embodiment) | Keeps the base policy frozen while developing runtime critics and recovery skills through execution, diagnosis, and gated updates. The separate `air-embodied-brain/zetta` repository hosts the project website. |
+| 2026-08 | **Thea — Towards the Harness of Embodied Agents** <br> [Project](https://eit-hai.github.io/thea/) | [Paper](https://arxiv.org/abs/2608.11246) | [Code](https://github.com/EIT-HAI/Thea) <br> [![GitHub stars](https://img.shields.io/github/stars/EIT-HAI/Thea?style=flat-square&label=stars)](https://github.com/EIT-HAI/Thea) | Wraps robot capabilities as callable tools, maintains symbolic scene context, and evaluates action termination, success, and failure causes. Public runtime and interfaces; robot/simulator deployment requires concrete adapters and capabilities. |
+| 2026-07 | **RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for Long-Horizon Planning** | [Paper](https://arxiv.org/abs/2607.18060) | Unverified | Uses execution memory to route among heterogeneous policies and a Memory Bridge to improve handoffs between policies. |
+| 2026-06 | **Guava: An Effective and Universal Harness for Embodied Manipulation** | [Paper](https://arxiv.org/abs/2606.18363) | Unverified | Studies iterative perception–reasoning–action, semantic action abstractions, and multimodal observations; also describes distillation into a smaller agent model. Checkpoint availability also unverified. |
 
 </details>
 
@@ -232,12 +232,12 @@ Suggestions and corrections are welcome through an issue or pull request.
 Suggested paper row:
 
 ```markdown
-| **Full paper title** | YYYY-MM | One-sentence agent mechanism | [Paper](URL) · [Project](URL) · [Code](URL); state release limits |
+| YYYY-MM | **Full paper title** <br> [Project](URL) | [Paper](URL) | [Code](URL) or Unverified | One-sentence mechanism; state release limits |
 ```
 
 For a project or model family, include its interface, intended role, official repository/docs, and current availability. Count each resource once in the overview; cross-links do not add to the total.
 
-Keep paper rows newest-first within a category. Use a focused commit message such as `docs(papers): add <work>` or `docs(readme): update <section>`, following `type(scope): description`.
+Keep paper rows newest-first within a category. Use a focused commit message such as `docs: add <work>` or `docs: update <section>`, following `type: description`.
 
 ## License
 

@@ -4,9 +4,9 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 32](https://img.shields.io/badge/Resources-32-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 39](https://img.shields.io/badge/Resources-39-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers)
 
-[Getting started](#getting-started) · [Agents & frameworks](#agents-and-frameworks) · [Evaluation](#benchmarks-and-environments) · [Models](#models-and-learning-tools) · [Blogs & demos](#blogs-and-demos)
+[Getting started](#getting-started) · [Agents & frameworks](#agents-and-frameworks) · [Evaluation](#benchmarks-and-environments) · [Supporting components](#supporting-components) · [Blogs & demos](#blogs-and-demos)
 
 </div>
 
@@ -24,7 +24,7 @@ A practical guide and evidence index for **agents that use robots as tools**: ho
    - **Connect and run:** [Robot interfaces](#robot-interfaces-and-tools) · [Agent runtimes](#agent-runtimes-and-orchestration)
    - **Plan and adapt:** [Harnesses](#embodied-harnesses-and-policy-orchestration) · [Planning and code](#planning-and-code-as-policies) · [Feedback and recovery](#execution-feedback-and-recovery)
 3. [Benchmarks and environments](#benchmarks-and-environments) — [Agent evaluation](#agent-benchmarks-and-evaluation-frameworks) · [Simulation tasks](#simulation-environments-and-task-suites)
-4. [Models and learning tools](#models-and-learning-tools) — [Multimodal models](#closed-source-multimodal-model-families) · [Policies and learning](#supporting-policies-and-learning-infrastructure)
+4. [Supporting components](#supporting-components) — [Perception & spatial understanding](#perception-and-spatial-understanding) · [Motion planning & control](#motion-planning-and-control) · [Execution infrastructure](#execution-infrastructure) · [Multimodal models](#closed-source-multimodal-model-families) · [Policies and learning](#supporting-policies-and-learning-infrastructure)
 5. [Blogs and demos](#blogs-and-demos) — [Perspectives](#blogs-and-perspectives) · [X / Twitter evidence](#social-demos-and-evaluations)
 
 </details>
@@ -44,7 +44,7 @@ For this list, a **robot-use agent** is a system that turns a goal into robot ac
 
 An LLM may use a robot as a tool; a robot may also use a physical tool such as a hammer. This list focuses on the former system boundary. A VLA can supply an agent's action capability, but a VLA checkpoint alone does not specify the surrounding agent workflow. Similarly, an MCP bridge exposes capabilities without necessarily providing planning or recovery.
 
-Follow the workflow from robot interfaces and agent runtimes to planning, feedback, and evaluation. Models and learning tools supply supporting components. A work that spans several roles receives one main entry; other sections use cross-references. Placement does not imply that every work implements the entire loop or has been independently reproduced.
+Follow the workflow from robot interfaces and agent runtimes to planning, feedback, and evaluation. General-purpose perception, planning, execution, and model libraries are grouped separately under supporting components. A work that spans several roles receives one main entry; other sections use cross-references. Placement does not imply that every work implements the entire loop or has been independently reproduced.
 
 ### Start here
 
@@ -91,9 +91,9 @@ Closed-loop feedback alone does not establish continuous streaming interaction. 
 | [Agents and frameworks](#agents-and-frameworks) | 20 | Planning, feedback, policy orchestration, agent runtimes, and robot interfaces |
 | [Agent evaluation](#agent-benchmarks-and-evaluation-frameworks) | 3 | Benchmarks and frameworks for assessing agent decisions and execution |
 | [Environments and task suites](#simulation-environments-and-task-suites) | 3 | Manipulation and household tasks, with associated data |
-| [Supporting models and infrastructure](#models-and-learning-tools) | 6 | Three API model families plus three policy/learning resources |
+| [Supporting components](#supporting-components) | 13 | Seven perception, planning, and execution components; three API model families; three policy/learning resources |
 
-[X / Twitter resources](#social-demos-and-evaluations): **14 original posts** covering robot demonstrations, evaluations, and research discussions. These supplement the 32 resources counted above.
+[X / Twitter resources](#social-demos-and-evaluations): **14 original posts** covering robot demonstrations, evaluations, and research discussions. These supplement the 39 resources counted above.
 
 **Reading the links:** `Paper` describes a method; `Project` may contain only descriptions and demos; `Code` points to implementation resources; `Docs` describes a platform interface. Code, weights, data, and full reproduction are separate release claims. “Unverified release” means this list has not confirmed the relevant artifact, not that it does not exist.
 
@@ -106,6 +106,8 @@ Each work has one main entry, grouped by its role in a robot-use system. Paper, 
 ### Robot interfaces and tools
 
 <a id="projects-and-tools"></a>
+
+Agent-facing interfaces to robot observations, actions, and execution feedback belong here. General-purpose models and libraries belong under [Supporting components](#supporting-components); a separate project that wraps one as a robot-use tool is classified by the interface it actually provides.
 
 | Resource | Role | Scope / boundary | Official source |
 | --- | --- | --- | --- |
@@ -195,9 +197,31 @@ These provide tasks and execution environments for agent research. An environmen
 [Back to top](#awesome-robot-use-agent-rua)
 
 
-## Models and learning tools
+## Supporting components
 
-These are building blocks for an agent: perception/reasoning models, robot policies, and learning tools. Their inclusion does not establish an end-to-end robot-use capability.
+Selected building blocks for constructing robot-use tools and agents. These general-purpose components do not, by themselves, provide an agent-facing robot-use interface or a complete observation–action–feedback loop. Their possible roles below are integration suggestions, not claims of a validated robot-use system. We keep this selection focused rather than cataloguing all robotics and vision libraries.
+
+### Perception and spatial understanding
+
+| Resource | Capability | Integration boundary | Official source |
+| --- | --- | --- | --- |
+| **Grounded SAM 2** | Text-guided object detection, segmentation, and video tracking | A perception pipeline, not a robot-use interface. Converting masks into robot-frame targets requires depth, calibration, and a control adapter; local-model and cloud-API paths have different dependencies. | [Code and documentation](https://github.com/IDEA-Research/Grounded-SAM-2) |
+| **FoundationPose** | 6D object pose estimation and tracking from CAD models or reference images | Requires the corresponding object inputs and inference setup. Its source license limits use to non-commercial research or evaluation. | [Code](https://github.com/NVlabs/FoundationPose) · [License](https://github.com/NVlabs/FoundationPose/blob/main/LICENSE) |
+| **ConceptGraphs** | Open-vocabulary 3D scene graphs from posed RGB-D observations | Can support object and spatial-relation queries; requires upstream perception and camera poses. Inclusion does not establish dynamic-world consistency or a complete agent memory system. | [Code and documentation](https://github.com/concept-graphs/concept-graphs) |
+
+### Motion planning and control
+
+| Resource | Capability | Integration boundary | Official source |
+| --- | --- | --- | --- |
+| **cuRobo** | GPU-accelerated kinematics, collision checking, and motion generation | Requires CUDA, robot and collision-world configuration, and an execution adapter. Planning a trajectory does not verify task success. | [Code and documentation](https://github.com/NVlabs/curobo) |
+| **MPlib** | Lightweight Python motion planning decoupled from ROS | A planning backend for a custom tool; robot models, collision geometry, and execution must be supplied by the application. | [Code and documentation](https://github.com/haosulab/MPlib) |
+| **Mink** | MuJoCo-based differential inverse kinematics with joint limits and collision avoidance | A local kinematic solver, not a global task planner or a locomotion policy. The application supplies targets and the control loop. | [Code and documentation](https://github.com/kevinzakka/mink) |
+
+### Execution infrastructure
+
+| Resource | Capability | Integration boundary | Official source |
+| --- | --- | --- | --- |
+| **BehaviorTree.CPP** | Behavior-tree execution and composition in C++ | An execution backend for application-defined actions and conditions; robot bindings, agent integration, and outcome checks must be supplied separately. | [Code and documentation](https://github.com/BehaviorTree/BehaviorTree.CPP) |
 
 ### Closed-source multimodal model families
 
@@ -273,3 +297,18 @@ These are supporting capabilities for robot-use workflows, rather than direct ev
 Suggestions and corrections are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before opening an issue or pull request.
 
 [Back to top](#awesome-robot-use-agent-rua)
+
+## Citation
+
+If you find this collection helpful for your research, you can cite it with the following BibTeX entry:
+
+```bibtex
+@misc{awesome-robot-use-agent,
+  title   = {Awesome Robot Use Agent},
+  author  = {Kairun Wen and {Awesome Robot Use Agent Contributors}},
+  journal = {GitHub repository},
+  url     = {https://github.com/kairunwen/Awesome-Robot-Use-Agent},
+  year    = {2026},
+  note    = {A curated collection of resources for robot-use agents.}
+}
+```

@@ -48,8 +48,12 @@ def build():
 
     sections, nav, total = [], [], 0
     guide = ''
+    citation = ''
     for title, ident, content in groups:
         if title in ('Contents', 'Contributing'):
+            continue
+        if title == 'Citation':
+            citation = str(content)
             continue
         if title == 'Getting started':
             # The catalogue supplies its own counts and navigation.
@@ -113,7 +117,7 @@ def build():
         total += count
 
     template = (HERE / 'template.html').read_text()
-    for key, value in {'GUIDE':guide, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
+    for key, value in {'GUIDE':guide, 'CITATION':citation, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
         template = template.replace('{{'+key+'}}', value)
     assert not re.search(r'\{\{[A-Z]+\}\}', template)
     OUT.mkdir(exist_ok=True)

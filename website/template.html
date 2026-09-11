@@ -4,20 +4,22 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Awesome Robot Use Agent (RUA)</title>
   <meta name="description" content="Explore robot-use agents: research papers, tools, benchmarks, models, and real-world demonstrations. A curated, searchable resource collection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="logo.png"><link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body id="top">
 <a class="skip-link" href="#catalogue">Skip to resources</a>
+<div class="masthead">
 <header class="topbar"><a class="brand" href="#top"><img src="logo.png" width="36" height="36" alt=""><span>RUA<span class="brand-note"> / Awesome Robot Use Agent</span></span></a><nav aria-label="Main"><a href="#getting-started">About</a><a href="{{REPO}}/blob/main/CONTRIBUTING.md">Contribute <span aria-hidden="true">↗</span></a><a href="{{REPO}}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
-<main>
 <section class="hero shell" aria-labelledby="page-title">
-  <div class="hero-copy"><p class="eyebrow">A FIELD GUIDE TO ROBOT-USE AGENTS</p><h1 id="page-title">Awesome<br>Robot Use Agent <span>(RUA)</span></h1><p class="hero-description">From reasoning to action in the physical world.<br> A curated collection of papers, projects, tools, and demonstrations.</p><div class="hero-links"><a class="primary-link" href="#catalogue">Explore the resources <span aria-hidden="true">↓</span></a><a href="{{REPO}}">View on GitHub ↗</a></div></div>
-  <div class="hero-mark"><img src="logo.png" alt="RUA: a robotic hand gently petting a small cat" width="208" height="208"><p>Observe. Act. Adapt.</p></div>
+  <div class="hero-copy"><p class="eyebrow">A curated guide to agents that reason, plan, and act in the physical world.</p><h1 id="page-title">Awesome <br>Robot Use Agent<span class="title-abbr"> (RUA)</span></h1><p class="hero-description">Research papers, projects, frameworks, and demonstrations for robot-use agents.</p><p class="hero-meta">{{TOTAL}} curated entries <span>/</span> Maintained by <a href="https://github.com/kairunwen">@kairunwen</a> <span>/</span> Open to contributions</p><div class="hero-links"><a class="primary-link" href="#catalogue">Browse the list <span aria-hidden="true">↓</span></a><a href="{{REPO}}">View on GitHub ↗</a></div></div>
 </section>
-<div class="shell intro-strip"><span>ROBOTS AS TOOLS. AGENTS IN THE WORLD.</span><a href="#getting-started">What is a robot-use agent? <span aria-hidden="true">↗</span></a></div>
+<aside class="sidebar shell" aria-label="Resource categories"><details open><summary>Browse by category</summary><div class="filters"><button type="button" data-filter="all" aria-pressed="true"><span>All resources</span><span>{{TOTAL}}</span></button>{{NAV}}</div></details><a class="sidebar-link" href="#getting-started">Getting started ↗</a><p class="sidebar-note">Curated for researchers<br>and builders of embodied agents.</p></aside>
+</div>
+<main>
 <div class="shell catalogue-layout" id="catalogue">
-  <aside class="sidebar" aria-label="Resource categories"><details open><summary>Browse by category</summary><div class="filters"><button type="button" data-filter="all" aria-pressed="true"><span>All resources</span><span>{{TOTAL}}</span></button>{{NAV}}</div></details><a class="sidebar-link" href="#getting-started">Getting started ↗</a><p class="sidebar-note">Curated for researchers<br>and builders of embodied agents.</p></aside>
   <div class="catalogue-main"><div class="catalogue-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Find your next reference.</h2></div><a class="top-link" href="#top">Top ↑</a></div>
   <div class="search-tools"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search resources</span><input id="search" type="search" placeholder="Search papers, tools, authors, or tasks…" autocomplete="off"><kbd>/</kbd></label><button id="clear" type="button" hidden>Clear filters</button></div>
   <div class="result-line"><p id="result-count" role="status" aria-live="polite">{{TOTAL}} entries · all categories</p><span>Expand a row for sources and details</span></div>

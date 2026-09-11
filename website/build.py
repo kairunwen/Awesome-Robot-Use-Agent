@@ -120,7 +120,7 @@ def build():
     (OUT / 'index.html').write_text(template)
     for asset in ('style.css', 'app.js'):
         shutil.copyfile(HERE / asset, OUT / asset)
-    shutil.copyfile(ROOT / 'assets/logo.png', OUT / 'logo.png')
+    shutil.copyfile(HERE / 'logo-warm.png', OUT / 'logo.png')
     return total
 
 

@@ -4,7 +4,7 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 39](https://img.shields.io/badge/Resources-39-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![Tools](https://img.shields.io/badge/Tools-Explore-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 40](https://img.shields.io/badge/Resources-40-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![Tools](https://img.shields.io/badge/Tools-Explore-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
 [Getting started](#getting-started) · [Agents & frameworks](#agents-and-frameworks) · [Evaluation](#benchmarks-and-environments) · [Supporting components](#supporting-components) · [Blogs & demos](#blogs-and-demos)
 
@@ -90,10 +90,10 @@ Closed-loop feedback alone does not establish continuous streaming interaction. 
 | --- | --- | --- |
 | [Agents and frameworks](#agents-and-frameworks) | 20 | Planning, feedback, policy orchestration, agent runtimes, and robot interfaces |
 | [Agent evaluation](#agent-benchmarks-and-evaluation-frameworks) | 3 | Benchmarks and frameworks for assessing agent decisions and execution |
-| [Environments and task suites](#simulation-environments-and-task-suites) | 3 | Manipulation and household tasks, with associated data |
+| [Environments and task suites](#simulation-environments-and-task-suites) | 4 | Agent-controlled simulation, manipulation, and household tasks |
 | [Supporting components](#supporting-components) | 13 | Seven perception, planning, and execution components; three API model families; three policy/learning resources |
 
-[X / Twitter resources](#social-demos-and-evaluations): **14 original posts** covering robot demonstrations, evaluations, and research discussions. These supplement the 39 resources counted above.
+[X / Twitter resources](#social-demos-and-evaluations): **14 original posts** covering robot demonstrations, evaluations, and research discussions. These supplement the 40 resources counted above.
 
 **Reading the links:** `Paper` describes a method; `Project` may contain only descriptions and demos; `Code` points to implementation resources; `Docs` describes a platform interface. Code, weights, data, and full reproduction are separate release claims. “Unverified release” means this list has not confirmed the relevant artifact, not that it does not exist.
 
@@ -114,6 +114,8 @@ Agent-facing interfaces to robot observations, actions, and execution feedback b
 | **ROSA — Robot Operating System Agent** | Natural-language agent for ROS systems | Supports inspection, diagnosis, and robot operation through tools; custom robots need appropriate tools and context. | [Code and documentation](https://github.com/nasa-jpl/rosa) · [Paper](https://arxiv.org/abs/2410.06472) |
 | **ROS MCP Server** | MCP interface to ROS | Exposes robot communication and introspection through ROS/rosbridge. Planning and outcome evaluation depend on the connected agent and robot stack. | [Code and documentation](https://github.com/robotmcp/ros-mcp-server) |
 | **ros-skill** | Agent Skill with a Python CLI for ROS/ROS 2 | Exposes topic, service, node, parameter, and action commands via rosbridge WebSocket, returning JSON. Planning and outcome interpretation remain with the calling agent; a configured robot and rosbridge are required. | [Code and command reference](https://github.com/lpigeon/ros-skill) <br> [![GitHub stars](https://img.shields.io/github/stars/lpigeon/ros-skill?style=flat-square&label=stars)](https://github.com/lpigeon/ros-skill) |
+
+[OmniSim](#simulation-environments-and-task-suites) also exposes HTTP/JSON and MCP tools for controlling its simulator; its main entry is under simulation environments.
 
 ### Agent runtimes and orchestration
 
@@ -180,7 +182,7 @@ Frameworks for connecting agents, observations, skills, and execution backends. 
 | --- | --- | --- | --- |
 | **Embodied Agent Interface (EAI)** | Goal interpretation, subgoal decomposition, action sequencing, and transition modeling | Useful for identifying decision-making errors; symbolic module evaluation should be distinguished from end-to-end physical execution. | [Code and documentation](https://github.com/embodied-agent-interface/embodied-agent-interface) |
 | **EmbodiedBench** | Vision-driven embodied agents across high- and low-level tasks | Provides multiple environments and capability-oriented evaluation, including navigation and manipulation. | [Code and documentation](https://github.com/EmbodiedBench/EmbodiedBench) |
-| **Inspect Robots** | Evaluation framework connecting policies, embodiments, benchmarks, and logs | Supports compatible LLM-agent and VLA integrations; currently described by its maintainers as alpha software. | [Code and documentation](https://github.com/robocurve/inspect-robots) |
+| **Inspect Robots (Robocurve)** | Evaluation framework connecting LLM-agent/VLA policies, embodiments, benchmarks, and auditable logs | Alpha software. Robocurve's GPT-6 Astra report uses version 0.58.0 on YAM arms; the framework and that particular evaluation are distinct. See the [trial results and limitations](#real-robot-demonstrations). | [Code](https://github.com/robocurve/inspect-robots) · [Docs](https://docs.inspectrobots.org/) · [GPT-6 Astra report](https://openai.robocurve.org/gpt-6-astra/) <br> [![GitHub stars](https://img.shields.io/github/stars/robocurve/inspect-robots?style=flat-square&label=stars)](https://github.com/robocurve/inspect-robots) |
 
 [CaP-X](https://github.com/capgym/cap-x), listed under planning and code as policies, also provides CaP-Bench for comparing embodied coding agents at different interface abstraction and interaction levels.
 
@@ -190,6 +192,7 @@ These provide tasks and execution environments for agent research. An environmen
 
 | Resource | Useful for | Official source |
 | --- | --- | --- |
+| **OmniSim** | Newton-based robot simulation with HTTP/JSON and first-party MCP interfaces for scene loading, physics stepping, screenshots, and controller iteration. Public Beta: Windows binaries and Linux source builds; macOS unsupported. ROS 2 integration is partial and sim-to-real transfer is unproven. | [Code](https://github.com/omnilink-tech/omnisim) · [MCP server](https://github.com/omnilink-tech/omnisim/tree/main/packages/omnisim-mcp) · [Protocol](https://github.com/omnilink-tech/omnisim/blob/main/PROTOCOL.md) · [Demos](https://github.com/omnilink-tech/omnisim/blob/main/DEMOS.md) <br> [![GitHub stars](https://img.shields.io/github/stars/omnilink-tech/omnisim?style=flat-square&label=stars)](https://github.com/omnilink-tech/omnisim) |
 | **LIBERO** | Manipulation tasks and demonstrations for studying transfer across spatial, object, goal, and task variations | [Code and datasets](https://github.com/Lifelong-Robot-Learning/LIBERO) |
 | **RoboCasa / RoboCasa365** | Kitchen manipulation, atomic and composite tasks, and demonstration data | [Project, code, and datasets](https://robocasa.ai/) |
 | **BEHAVIOR-1K / OmniGibson** | Long-horizon household activities and rich object interactions | [Project and documentation](https://behavior.stanford.edu/) |
@@ -269,7 +272,7 @@ These summaries reflect author reports and public post-text snapshots collected 
 | 2026-09-10 | **Wenli Xiao / Tonghe Zhang — video-conditioned robot imitation** | A human demonstration video is supplied to a coding agent to guide a robot arm; authors report first-attempt success on the shown task. | [Xiao post](https://x.com/_wenlixiao/status/2097801944119349455) · [Zhang post](https://x.com/TongheZhang01/status/2097801107602911243) · [ENPIRE](https://github.com/NVlabs/ENPIRE). Related posts, not independent replications; no aggregate task success rate supplied. |
 | 2026-09-08 | **Thijs — SO-101 brush painting** | Camera-guided painting of the Golden Gate Bridge, with improvement over attempts. | [Post](https://x.com/cdngdev/status/2097339677128982873) · [Control details](https://x.com/cdngdev/status/2097339677745516710). Author supplied calibration anchors and feedback; roughly one-minute action segments with background monitoring. |
 | 2026-09-06 | **ARX — washing-machine knob operation** | Natural-language instruction to turn a knob in a new room; author says GPT plus a custom control layer, without a VLA. | [Post](https://x.com/ARXrobotics/status/2096328304794210604) · [Author clarification](https://x.com/ARXrobotics/status/2096449872782348475). Case demonstration; repeated success rate and control-layer capabilities remain unverified. |
-| 2026-09-05 | **Jay Chooi / Robocurve — pick-and-place and insertion** | Under Inspect Robots, Astra completed block-into-bowl in **19/20** trials and puzzle insertion in **2/20**. | [Post](https://x.com/chooi_jeq/status/2096064315115839904) · [Report and trial records](https://openai.robocurve.org/gpt-6-astra/). Human, non-blind grading; bowl comparisons used different rigs. The 95% figure applies only to the bowl task. |
+| 2026-09-05 | **Jay Chooi / Robocurve — GPT-6 Astra on robotic manipulation** | Inspect Robots 0.58.0 on bimanual YAM arms: **19/20** block-into-bowl completions and **2/20** puzzle insertions. Each turn supplies three camera views plus proprioception; the agent requests absolute end-effector poses through `move_to`. Medium reasoning, a 20-LLM-call budget, and a 25% speed cap. | [Post](https://x.com/chooi_jeq/status/2096064315115839904) · [Report (2026-09-04) and trial records](https://openai.robocurve.org/gpt-6-astra/) · [Framework](https://github.com/robocurve/inspect-robots). Human, non-blind grading and manual resets; trials were not interleaved. Bowl comparisons used different rigs; puzzle used the same rig. The 95% figure applies only to the bowl task. |
 
 #### Simulation demonstrations
 

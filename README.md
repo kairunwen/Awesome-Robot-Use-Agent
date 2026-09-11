@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="Robot Use Agent logo: a robotic arm reaching for a block" width="160" />
+<img src="assets/logo.png" alt="RUA logo: a robotic hand gently petting a happy cat" width="160" />
 
-# RUA — Awesome Robot Use Agent
+# Awesome Robot Use Agent (RUA)
 
 [![Resources: 24](https://img.shields.io/badge/resources-24-2563eb?style=flat-square)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-16a34a?style=flat-square)](#contributing) [![License: MIT](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)](LICENSE)
 
@@ -137,7 +137,7 @@ Grouped by the agent mechanism and ordered by first arXiv release month, newest 
 
 </details>
 
-[Back to top](#rua--awesome-robot-use-agent)
+[Back to top](#awesome-robot-use-agent-rua)
 
 ## Robot interfaces and tool frameworks
 
@@ -166,7 +166,7 @@ These provide tasks and execution environments for agent research. An environmen
 | **RoboCasa / RoboCasa365** | Kitchen manipulation, atomic and composite tasks, and demonstration data | [Project, code, and datasets](https://robocasa.ai/) |
 | **BEHAVIOR-1K / OmniGibson** | Long-horizon household activities and rich object interactions | [Project and documentation](https://behavior.stanford.edu/) |
 
-[Back to top](#rua--awesome-robot-use-agent)
+[Back to top](#awesome-robot-use-agent-rua)
 
 ## Supporting models and learning infrastructure
 
@@ -243,4 +243,4 @@ Keep paper rows newest-first within a category. Use a focused commit message suc
 
 This collection is distributed under the [MIT License](LICENSE). Linked papers, code, models, and datasets retain their respective licenses.
 
-[Back to top](#rua--awesome-robot-use-agent)
+[Back to top](#awesome-robot-use-agent-rua)

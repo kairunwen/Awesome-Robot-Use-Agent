@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Robot Use Agent (RUA)</title>
+  <meta name="description" content="Explore robot-use agents: research papers, tools, benchmarks, models, and real-world demonstrations. A curated, searchable resource collection.">
+  <link rel="icon" href="logo.png"><link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+<a class="skip-link" href="#catalogue">Skip to resources</a>
+<header class="topbar"><a class="brand" href="#top"><img src="logo.png" width="36" height="36" alt=""><span>RUA<span class="brand-note"> / Awesome Robot Use Agent</span></span></a><nav aria-label="Main"><a href="#getting-started">About</a><a href="{{REPO}}/blob/main/CONTRIBUTING.md">Contribute <span aria-hidden="true">↗</span></a><a href="{{REPO}}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
+<main>
+<section class="hero shell" aria-labelledby="page-title">
+  <div class="hero-copy"><p class="eyebrow">A FIELD GUIDE TO ROBOT-USE AGENTS</p><h1 id="page-title">Awesome<br>Robot Use Agent <span>(RUA)</span></h1><p class="hero-description">From reasoning to action in the physical world.<br> A curated collection of papers, projects, tools, and demonstrations.</p><div class="hero-links"><a class="primary-link" href="#catalogue">Explore the resources <span aria-hidden="true">↓</span></a><a href="{{REPO}}">View on GitHub ↗</a></div></div>
+  <div class="hero-mark"><img src="logo.png" alt="RUA: a robotic hand gently petting a small cat" width="208" height="208"><p>Observe. Act. Adapt.</p></div>
+</section>
+<div class="shell intro-strip"><span>ROBOTS AS TOOLS. AGENTS IN THE WORLD.</span><a href="#getting-started">What is a robot-use agent? <span aria-hidden="true">↗</span></a></div>
+<div class="shell catalogue-layout" id="catalogue">
+  <aside class="sidebar" aria-label="Resource categories"><details open><summary>Browse by category</summary><div class="filters"><button type="button" data-filter="all" aria-pressed="true"><span>All resources</span><span>{{TOTAL}}</span></button>{{NAV}}</div></details><a class="sidebar-link" href="#getting-started">Getting started ↗</a><p class="sidebar-note">Curated for researchers<br>and builders of embodied agents.</p></aside>
+  <div class="catalogue-main"><div class="catalogue-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Find your next reference.</h2></div><a class="top-link" href="#top">Top ↑</a></div>
+  <div class="search-tools"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search resources</span><input id="search" type="search" placeholder="Search papers, tools, authors, or tasks…" autocomplete="off"><kbd>/</kbd></label><button id="clear" type="button" hidden>Clear filters</button></div>
+  <div class="result-line"><p id="result-count" role="status" aria-live="polite">{{TOTAL}} entries · all categories</p><span>Expand a row for sources and details</span></div>
+  <noscript><p class="notice">All resources are listed below. Enable JavaScript to search and filter.</p></noscript>
+  <p class="empty-state" id="empty" hidden>No matching resources. Try a different keyword or clear the filters.</p>
+  <div id="resource-list">{{SECTIONS}}</div>
+  <section class="guide" id="getting-started"><details><summary>Getting started <span>Definitions, reading paths, and system layers</span></summary><div class="guide-content">{{GUIDE}}</div></details></section>
+  </div>
+</div>
+</main>
+<footer class="shell"><div><strong>Awesome Robot Use Agent (RUA)</strong><p>A curated guide to agents acting in the physical world.</p></div><nav aria-label="Footer"><a href="{{REPO}}">GitHub ↗</a><a href="{{REPO}}/blob/main/CONTRIBUTING.md">Contribute ↗</a><a href="#top">Back to top ↑</a></nav></footer>
+</body></html>

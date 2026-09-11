@@ -23,9 +23,10 @@ def build():
     for details in soup.select('details'):
         details.unwrap()
     for img in soup.select('img'):
-        img.decompose()  # Text links remain; no external badge requests in the catalogue.
+        if not img.find_parent('picture'):
+            img.decompose()  # Remove badges; retain the Star History picture.
     for link in list(soup.select('a[href]')):
-        if not link.get_text(strip=True):
+        if not link.get_text(strip=True) and not link.find('picture'):
             link.decompose()
     for link in soup.select('a[href]'):
         href = link['href']
@@ -49,8 +50,12 @@ def build():
     sections, nav, total = [], [], 0
     guide = ''
     citation = ''
+    history = ''
     for title, ident, content in groups:
         if title in ('Contents', 'Contributing'):
+            continue
+        if title == 'Star History':
+            history = str(content)
             continue
         if title == 'Citation':
             citation = str(content)
@@ -117,7 +122,7 @@ def build():
         total += count
 
     template = (HERE / 'template.html').read_text()
-    for key, value in {'GUIDE':guide, 'CITATION':citation, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
+    for key, value in {'GUIDE':guide, 'CITATION':citation, 'HISTORY':history, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
         template = template.replace('{{'+key+'}}', value)
     assert not re.search(r'\{\{[A-Z]+\}\}', template)
     OUT.mkdir(exist_ok=True)

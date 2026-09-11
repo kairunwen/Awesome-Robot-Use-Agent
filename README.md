@@ -4,7 +4,7 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 39](https://img.shields.io/badge/Resources-39-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Resources: 39](https://img.shields.io/badge/Resources-39-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#at-a-glance) [![Tools](https://img.shields.io/badge/Tools-Explore-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
 [Getting started](#getting-started) · [Agents & frameworks](#agents-and-frameworks) · [Evaluation](#benchmarks-and-environments) · [Supporting components](#supporting-components) · [Blogs & demos](#blogs-and-demos)
 
@@ -312,3 +312,13 @@ If you find this collection helpful for your research, you can cite it with the 
   note    = {A curated collection of resources for robot-use agents.}
 }
 ```
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=kairunwen%2FAwesome-Robot-Use-Agent&amp;type=date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=kairunwen/Awesome-Robot-Use-Agent&amp;type=date&amp;theme=dark&amp;legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=kairunwen/Awesome-Robot-Use-Agent&amp;type=date&amp;legend=top-left" />
+    <img alt="Awesome Robot Use Agent star history chart" src="https://api.star-history.com/chart?repos=kairunwen/Awesome-Robot-Use-Agent&amp;type=date&amp;legend=top-left" width="100%" />
+  </picture>
+</a>

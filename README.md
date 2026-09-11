@@ -1,27 +1,56 @@
+<div align="center">
+
 # Awesome Robot Use Agent
 
-A curated list of agents that use robots through skills, code, tools, and feedback.
+**Agents that use robots through skills, code, tools, and feedback.**
 
-From language-guided skill selection to embodied coding agents and execution harnesses: **observe → reason → act → verify → recover**.
+Observe → Reason → Act → Verify → Recover
 
-**Scope:** robot-use agents, embodied tool use, code-as-policy, policy orchestration, execution feedback, and evaluation. Selected VLA models and learning infrastructure are included as supporting resources.
+[![Resources: 24](https://img.shields.io/badge/resources-24-2563eb?style=flat-square)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-16a34a?style=flat-square)](#contributing) [![License: MIT](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)](LICENSE)
 
-**Last curated:** 2026-09-11 · **21 resources** · Initial curated selection, not an exhaustive survey.
+[Start here](#start-here) · [Papers](#research-papers) · [Projects](#robot-interfaces-and-tool-frameworks) · [Evaluation](#agent-benchmarks-and-evaluation-frameworks) · [Models](#supporting-models-and-learning-infrastructure)
+
+</div>
+
+A curated collection for researchers and builders working on **robot-use agents**: goal-driven systems that select robot skills, generate executable programs, call perception/control APIs, and use execution feedback to continue a task.
+
+**Last curated: 2026-09-11.** Includes 24 research and implementation resources, plus introductory reading and an external community link. This is a curated selection rather than an exhaustive survey.
 
 ## Contents
 
+<details open>
+<summary><strong>Browse by topic</strong></summary>
+
+- [At a glance](#at-a-glance)
 - [What is a robot-use agent?](#what-is-a-robot-use-agent)
 - [Start here](#start-here)
-- [Planning and code as policies](#planning-and-code-as-policies)
-- [Execution feedback and recovery](#execution-feedback-and-recovery)
-- [Embodied harnesses and policy orchestration](#embodied-harnesses-and-policy-orchestration)
+- [Research papers](#research-papers)
+  - [Planning and code as policies](#planning-and-code-as-policies)
+  - [Execution feedback and recovery](#execution-feedback-and-recovery)
+  - [Embodied harnesses and policy orchestration](#embodied-harnesses-and-policy-orchestration)
 - [Robot interfaces and tool frameworks](#robot-interfaces-and-tool-frameworks)
 - [Agent benchmarks and evaluation frameworks](#agent-benchmarks-and-evaluation-frameworks)
 - [Simulation environments and task suites](#simulation-environments-and-task-suites)
-- [Supporting policies and learning infrastructure](#supporting-policies-and-learning-infrastructure)
+- [Supporting models and learning infrastructure](#supporting-models-and-learning-infrastructure)
+  - [Closed-source multimodal model families](#closed-source-multimodal-model-families)
+  - [Supporting policies and learning infrastructure](#supporting-policies-and-learning-infrastructure)
 - [How to compare systems](#how-to-compare-systems)
 - [Contributing](#contributing)
 - [License](#license)
+
+</details>
+
+## At a glance
+
+| Collection | Entries | What you will find |
+| --- | --- | --- |
+| [Research papers](#research-papers) | 10 | Skill selection, embodied code, feedback, recovery, and policy orchestration |
+| [Robot interfaces](#robot-interfaces-and-tool-frameworks) | 2 | Agent-facing ROS tools and MCP connectivity |
+| [Agent evaluation](#agent-benchmarks-and-evaluation-frameworks) | 3 | Benchmarks and frameworks for assessing agent decisions and execution |
+| [Environments and task suites](#simulation-environments-and-task-suites) | 3 | Manipulation and household tasks, with associated data |
+| [Supporting models and infrastructure](#supporting-models-and-learning-infrastructure) | 6 | Three API model families plus three policy/learning resources |
+
+**Reading the links:** `Paper` describes a method; `Project` may contain only descriptions and demos; `Code` points to implementation resources; `Docs` describes a platform interface. Code, weights, data, and full reproduction are separate release claims. “Unverified release” means this list has not confirmed the relevant artifact, not that it does not exist.
 
 ## What is a robot-use agent?
 
@@ -40,6 +69,8 @@ The categories below are editorial groupings. Placement does not imply that ever
 
 ## Start here
 
+**Perspective:** [Robot-Use Agents](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html) — Phillip Isola, September 7, 2026. Discusses general-purpose AI agents using robots through sensor and actuator APIs, and the implications for deploying robotic intelligence. An introductory essay that also discusses latency and reliability limits.
+
 | If you want to understand… | Read / inspect |
 | --- | --- |
 | Language grounded in available robot skills | [SayCan](https://say-can.github.io/) |
@@ -50,34 +81,51 @@ The categories below are editorial groupings. Placement does not imply that ever
 | Runtime critics and recovery around a frozen policy | [Zetta](https://github.com/air-embodied-brain/Zetta-Embodiment) |
 | Connecting an agent to ROS | [ROSA](https://github.com/nasa-jpl/rosa) / [ROS MCP Server](https://github.com/robotmcp/ros-mcp-server) |
 
-## Planning and code as policies
+## Research papers
 
-Years refer to the first paper release. Links labeled **Code** point to official implementation resources; release scope is noted where relevant. A code link is not a claim that the complete paper setup can be reproduced from that repository alone.
+Grouped by the agent mechanism and ordered by first arXiv release month, newest first within each group. Full titles are retained for search and citation. Method summaries reflect the authors' descriptions; this list does not claim independent reproduction.
 
-| Work | Year | Why it belongs | Official resources |
+### Planning and code as policies
+
+<details open>
+<summary>Browse 4 papers</summary>
+
+| Work | First release | Agent mechanism | Official links and release notes |
 | --- | --- | --- | --- |
-| **SayCan — Do As I Can, Not As I Say: Grounding Language in Robotic Affordances** | 2022 | Combines language-model skill scoring with affordance/value estimates to select feasible robot behaviors. | [Paper](https://arxiv.org/abs/2204.01691) · [Project](https://say-can.github.io/) · [Code: tabletop simulation](https://github.com/google-research/google-research/tree/master/saycan) |
-| **Code as Policies: Language Model Programs for Embodied Control** | 2022 | Generates programs that compose perception outputs, control APIs, and feedback loops. | [Paper](https://arxiv.org/abs/2209.07753) · [Project](https://code-as-policies.github.io/) · [Code](https://github.com/google-research/google-research/tree/master/code_as_policies) |
-| **VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models** | 2023 | Uses generated code and visual grounding to construct 3D value maps for motion planning; the generated program can be reevaluated with visual feedback. | [Paper](https://arxiv.org/abs/2307.05973) · [Project](https://voxposer.github.io/) · [Code](https://github.com/huangwl18/VoxPoser) |
-| **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** | 2026 | Studies embodied coding agents through CaP-Gym, CaP-Bench, CaP-Agent0, and CaP-RL, including execution feedback and skill synthesis. | [Paper](https://arxiv.org/abs/2603.22435) · [Code](https://github.com/capgym/cap-x) |
+| **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** | 2026-03 | Studies embodied coding agents through CaP-Gym, CaP-Bench, CaP-Agent0, and CaP-RL, including execution feedback and skill synthesis. | [Paper](https://arxiv.org/abs/2603.22435) · [Code](https://github.com/capgym/cap-x) |
+| **VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models** | 2023-07 | Uses generated code and visual grounding to construct 3D value maps for motion planning; the generated program can be reevaluated with visual feedback. | [Paper](https://arxiv.org/abs/2307.05973) · [Project](https://voxposer.github.io/) · [Code](https://github.com/huangwl18/VoxPoser) |
+| **Code as Policies: Language Model Programs for Embodied Control** | 2022-09 | Generates programs that compose perception outputs, control APIs, and feedback loops. | [Paper](https://arxiv.org/abs/2209.07753) · [Project](https://code-as-policies.github.io/) · [Code](https://github.com/google-research/google-research/tree/master/code_as_policies) |
+| **SayCan — Do As I Can, Not As I Say: Grounding Language in Robotic Affordances** | 2022-04 | Combines language-model skill scoring with affordance/value estimates to select feasible robot behaviors. | [Paper](https://arxiv.org/abs/2204.01691) · [Project](https://say-can.github.io/) · [Code: tabletop simulation](https://github.com/google-research/google-research/tree/master/saycan) |
 
-## Execution feedback and recovery
+</details>
 
-| Work | Year | Why it belongs | Official resources |
+### Execution feedback and recovery
+
+<details open>
+<summary>Browse 2 papers</summary>
+
+| Work | First release | Agent mechanism | Official links and release notes |
 | --- | --- | --- | --- |
-| **Inner Monologue: Embodied Reasoning through Planning with Language Models** | 2022 | Feeds success detection, scene descriptions, and human feedback into language-based planning; demonstrates replanning and responses to changed goals. | [Paper](https://arxiv.org/abs/2207.05608) · [Project and demos](https://innermonologue.github.io/) |
-| **REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction** | 2023 | Summarizes multisensory execution history, explains failures, and conditions a planner on those explanations to produce corrective actions. | [Paper](https://arxiv.org/abs/2306.15724) · [Project](https://robot-reflect.github.io/) · [Code](https://github.com/real-stanford/reflect) |
+| **REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction** | 2023-06 | Summarizes multisensory execution history, explains failures, and conditions a planner on those explanations to produce corrective actions. | [Paper](https://arxiv.org/abs/2306.15724) · [Project](https://robot-reflect.github.io/) · [Code](https://github.com/real-stanford/reflect) |
+| **Inner Monologue: Embodied Reasoning through Planning with Language Models** | 2022-07 | Feeds success detection, scene descriptions, and human feedback into language-based planning; demonstrates replanning and responses to changed goals. | [Paper](https://arxiv.org/abs/2207.05608) · [Project and demos](https://innermonologue.github.io/) |
 
-## Embodied harnesses and policy orchestration
+</details>
 
-These works study the infrastructure and interaction loop around models and robot capabilities. Descriptions summarize the authors' stated methods; they do not equate release availability with independently verified performance.
+### Embodied harnesses and policy orchestration
 
-| Work | Year | Main mechanism | Official resources / release boundary |
+<details open>
+<summary>Browse 4 papers</summary>
+
+| Work | First release | Agent mechanism | Official links and release notes |
 | --- | --- | --- | --- |
-| **Guava: An Effective and Universal Harness for Embodied Manipulation** | 2026 | Studies iterative perception–reasoning–action, semantic action abstractions, and multimodal observations; also describes distillation into a smaller agent model. | [Paper](https://arxiv.org/abs/2606.18363). Implementation and checkpoint release not verified in this curation pass. |
-| **RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for Long-Horizon Planning** | 2026 | Uses execution memory to route among heterogeneous policies and a Memory Bridge to improve handoffs between policies. | [Paper](https://arxiv.org/abs/2607.18060). Implementation release not verified in this curation pass. |
-| **Thea — Towards the Harness of Embodied Agents** | 2026 | Wraps robot capabilities as callable tools, maintains symbolic scene context, and evaluates action termination, success, and failure causes. | [Paper](https://arxiv.org/abs/2608.11246) · [Project](https://eit-hai.github.io/thea/) · [Code](https://github.com/EIT-HAI/Thea). Public runtime and interfaces; robot/simulator deployment requires concrete adapters and capabilities. |
-| **Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence** | 2026 | Keeps the base policy frozen while developing runtime critics and recovery skills through execution, diagnosis, and gated updates. | [Paper](https://arxiv.org/abs/2608.16590) · [Project](https://air-embodied-brain.github.io/zetta/) · [Code](https://github.com/air-embodied-brain/Zetta-Embodiment). The separate `air-embodied-brain/zetta` repository hosts the project website. |
+| **Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence** | 2026-08 | Keeps the base policy frozen while developing runtime critics and recovery skills through execution, diagnosis, and gated updates. | [Paper](https://arxiv.org/abs/2608.16590) · [Project](https://air-embodied-brain.github.io/zetta/) · [Code](https://github.com/air-embodied-brain/Zetta-Embodiment). The separate `air-embodied-brain/zetta` repository hosts the project website. |
+| **Thea — Towards the Harness of Embodied Agents** | 2026-08 | Wraps robot capabilities as callable tools, maintains symbolic scene context, and evaluates action termination, success, and failure causes. | [Paper](https://arxiv.org/abs/2608.11246) · [Project](https://eit-hai.github.io/thea/) · [Code](https://github.com/EIT-HAI/Thea). Public runtime and interfaces; robot/simulator deployment requires concrete adapters and capabilities. |
+| **RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for Long-Horizon Planning** | 2026-07 | Uses execution memory to route among heterogeneous policies and a Memory Bridge to improve handoffs between policies. | [Paper](https://arxiv.org/abs/2607.18060). **Unverified release:** implementation. |
+| **Guava: An Effective and Universal Harness for Embodied Manipulation** | 2026-06 | Studies iterative perception–reasoning–action, semantic action abstractions, and multimodal observations; also describes distillation into a smaller agent model. | [Paper](https://arxiv.org/abs/2606.18363). **Unverified release:** implementation and checkpoints. |
+
+</details>
+
+[Back to top](#awesome-robot-use-agent)
 
 ## Robot interfaces and tool frameworks
 
@@ -106,7 +154,25 @@ These provide tasks and execution environments for agent research. An environmen
 | **RoboCasa / RoboCasa365** | Kitchen manipulation, atomic and composite tasks, and demonstration data | [Project, code, and datasets](https://robocasa.ai/) |
 | **BEHAVIOR-1K / OmniGibson** | Long-horizon household activities and rich object interactions | [Project and documentation](https://behavior.stanford.edu/) |
 
-## Supporting policies and learning infrastructure
+[Back to top](#awesome-robot-use-agent)
+
+## Supporting models and learning infrastructure
+
+These are building blocks for an agent: perception/reasoning models, robot policies, and learning tools. Their inclusion does not establish an end-to-end robot-use capability.
+
+### Closed-source multimodal model families
+
+Selected API model families with documented visual input and tool-calling interfaces. The suggested roles below are integration possibilities, not a robot-performance ranking. Capabilities vary by model version; record the exact model ID and access date in experiments.
+
+| Family / provider | Documented interfaces | Possible role in a robot-use agent | Official sources |
+| --- | --- | --- | --- |
+| **GPT / OpenAI** | Image input and function calling on supported models | Interpret camera observations and propose calls to explicitly exposed robot skills | [Vision](https://developers.openai.com/api/docs/guides/images-vision) · [Tool calling](https://developers.openai.com/api/docs/guides/function-calling) |
+| **Claude / Anthropic** | Image input and tool use | Reason over visual observations and execution reports; request perception or action tools | [Vision](https://platform.claude.com/docs/en/build-with-claude/vision) · [Tool use](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) |
+| **Gemini / Google** | Image understanding and function calling | Interpret scene observations and select structured calls through a robot adapter | [Vision](https://ai.google.dev/gemini-api/docs/image-understanding) · [Tool calling](https://ai.google.dev/gemini-api/docs/function-calling) |
+
+The application implements the tools, executes actions, and returns observations. A model-generated tool call is a request, not confirmation that the physical task succeeded.
+
+### Supporting policies and learning infrastructure
 
 These resources can supply action models, data workflows, or deployment components. They are listed as foundations rather than complete robot-use agents.
 
@@ -117,6 +183,9 @@ These resources can supply action models, data workflows, or deployment componen
 | **LeRobot** | Robot learning library with policies, datasets, hardware integrations, and training workflows | [Code and documentation](https://github.com/huggingface/lerobot) |
 
 ## How to compare systems
+
+<details>
+<summary><strong>Comparison checklist: observations, actions, feedback, timing, and evidence</strong></summary>
 
 Use the following questions when reading a paper or adding a resource. These are curation dimensions, not claims that every listed system supports them.
 
@@ -133,13 +202,18 @@ Use the following questions when reading a paper or adding a resource. These are
 
 Closed-loop feedback alone does not establish continuous streaming interaction. A simulator alone does not establish that world time advances during model inference. Compare systems under matched observation access, action interfaces, task conditions, and budgets before comparing success rates.
 
+</details>
+
+
 ## Contributing
 
 Suggestions and corrections are welcome through an issue or pull request.
 
+**External discussion:** [X community](https://x.com/i/communities/1874549355442802764), linked by [ACU](https://github.com/trycua/acu) for computer-use discussions. This is an adjacent community, not an official community of this repository.
+
 - Add a primary source: the authors' paper, project page, repository, or official documentation.
 - Explain the resource's connection to robot-use agents in one sentence and place it in the closest existing category.
-- For papers, include the full title, first-release year, and verified official links. Describe the mechanism rather than repeating promotional claims.
+- For papers, include the full title, first-release month (`YYYY-MM`), and verified official links. Describe the mechanism rather than repeating promotional claims.
 - Check what is actually released. Label website-only repositories, partial releases, and unverified code availability explicitly.
 - Cite the original work separately from third-party implementations. Social posts and demonstrations need an original source and clearly stated evidence scope.
 - Keep general VLA, world-model, and dataset additions selective: explain their direct role as an agent component or evaluation resource.
@@ -148,9 +222,15 @@ Suggestions and corrections are welcome through an issue or pull request.
 Suggested paper row:
 
 ```markdown
-| **Full paper title** | First-release year | One-sentence mechanism and relevance | [Paper](URL) · [Project](URL) · [Code](URL), with release scope if needed |
+| **Full paper title** | YYYY-MM | One-sentence agent mechanism | [Paper](URL) · [Project](URL) · [Code](URL); state release limits |
 ```
+
+For a project or model family, include its interface, intended role, official repository/docs, and current availability. Count each resource once in the overview; cross-links do not add to the total.
+
+Keep paper rows newest-first within a category. Use a focused commit message such as `docs(papers): add <work>` or `docs(readme): update <section>`, following `type(scope): description`.
 
 ## License
 
 This collection is distributed under the [MIT License](LICENSE). Linked papers, code, models, and datasets retain their respective licenses.
+
+[Back to top](#awesome-robot-use-agent)

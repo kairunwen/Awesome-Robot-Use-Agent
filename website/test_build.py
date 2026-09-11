@@ -11,10 +11,9 @@ class WebsiteTest(unittest.TestCase):
         page = BeautifulSoup(html, 'html.parser')
         self.assertEqual(len(page.select('.entry')), total)
         source = (ROOT / 'README.md').read_text()
-        papers = source.split('## Research papers\n', 1)[1].split('\n## ', 1)[0]
-        self.assertEqual(len(page.select('#research-papers .entry')), len(re.findall(r'^\| \d{4}-\d{2} \|', papers, re.M)))
-        resources = source.split('## Resource\n', 1)[1].split('\n## ', 1)[0]
-        self.assertEqual(len(page.select('#resource .entry')), len(re.findall(r'^- \[', resources, re.M)))
+        agents = source.split('## Agents and frameworks\n', 1)[1].split('\n## ', 1)[0]
+        self.assertEqual(len(page.select('#agents-and-frameworks .entry')), len(re.findall(r'^\| (?:\d{4}-\d{2} \||\*\*)', agents, re.M)))
+        self.assertIsNone(page.find(id='resource'))
         posts = set(re.findall(r'https://x\.com/[^\s)]+', source))
         for url in posts:
             self.assertIn(url, html)

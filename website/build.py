@@ -24,7 +24,7 @@ def build():
         details.unwrap()
     for img in soup.select('img'):
         img.decompose()  # Text links remain; no external badge requests in the catalogue.
-    for link in list(soup.select('a')):
+    for link in list(soup.select('a[href]')):
         if not link.get_text(strip=True):
             link.decompose()
     for link in soup.select('a[href]'):
@@ -61,8 +61,8 @@ def build():
             guide = str(content)
             continue
         count = 0
-        if title == 'Research papers':
-            content.find('p').string = 'Grouped by agent mechanism, newest first within each group. Dates refer to the first arXiv release. Expand a row for paper, code, and project links. Summaries reflect author reports; unverified releases are marked explicitly.'
+        if title == 'Agents and frameworks':
+            content.find('p').string = 'One main entry per work, grouped by its role: planning, feedback, orchestration, or robot interfaces. Expand a row for its paper, code, project, and demo links. Dates refer to first arXiv release; summaries reflect author reports.'
         for table in list(content.select('table')):
             labels = [c.get_text(' ', strip=True) for c in table.select('thead th')]
             if title == 'Benchmarks and environments' and labels == ['Dimension', 'Record']:
@@ -77,17 +77,17 @@ def build():
                 primary = cells[name_index]
                 strong = primary.find('strong')
                 name = strong.get_text(' ', strip=True) if strong else primary.get_text(' ', strip=True)
-                description_index = len(cells)-1 if title == 'Research papers' else name_index+1
+                description_index = labels.index('Mechanism / release notes') if 'Mechanism / release notes' in labels else name_index+1
                 description = cells[description_index].get_text(' ', strip=True)
                 date = cells[0].get_text(strip=True) if has_date else ''
                 fields = ''.join(f'<div><dt>{escape(label)}</dt><dd>{cell.decode_contents()}</dd></div>' for label, cell in zip(labels, cells) if cell is not primary and label != 'Date')
                 project = ''.join(str(a) for a in primary.find_all('a'))
                 if project:
-                    fields = f'<div><dt>Project</dt><dd>{project}</dd></div>' + fields
+                    fields = f'<div><dt>Related links</dt><dd>{project}</dd></div>' + fields
                 rows.append(entry(name, description, date, fields, ident, count))
                 count += 1
             table.replace_with(BeautifulSoup(''.join(rows), 'html.parser'))
-        if title in ('Blogs and demos', 'Resource'):
+        if title == 'Blogs and demos':
             for listing in list(content.find_all('ul')):
                 rows = []
                 for item in listing.find_all('li', recursive=False):

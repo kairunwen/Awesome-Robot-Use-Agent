@@ -1,20 +1,18 @@
 <div align="center">
 
-# Awesome Robot Use Agent
+<img src="assets/logo.png" alt="Robot Use Agent logo: a robotic arm reaching for a block" width="160" />
 
-**Agents that use robots through skills, code, tools, and feedback.**
-
-Observe → Reason → Act → Verify → Recover
+# RUA — Awesome Robot Use Agent
 
 [![Resources: 24](https://img.shields.io/badge/resources-24-2563eb?style=flat-square)](#at-a-glance) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-16a34a?style=flat-square)](#contributing) [![License: MIT](https://img.shields.io/badge/license-MIT-64748b?style=flat-square)](LICENSE)
 
-[Start here](#start-here) · [Papers](#research-papers) · [Projects](#robot-interfaces-and-tool-frameworks) · [Evaluation](#agent-benchmarks-and-evaluation-frameworks) · [Models](#supporting-models-and-learning-infrastructure)
+[Start here](#start-here) · [Blogs](#blogs-and-perspectives) · [Demos](#videos-and-demonstrations) · [Papers](#research-papers) · [Projects](#robot-interfaces-and-tool-frameworks) · [Evaluation](#agent-benchmarks-and-evaluation-frameworks) · [Models](#supporting-models-and-learning-infrastructure)
 
 </div>
 
-A curated collection for researchers and builders working on **robot-use agents**: goal-driven systems that select robot skills, generate executable programs, call perception/control APIs, and use execution feedback to continue a task.
+> A **robot-use agent** is an AI system that can **reason** about tasks, **plan** sequences of actions, and **act** in the physical world through robot skills, generated code, and perception/control APIs. It combines observations with execution feedback to track progress, revise plans, and recover from failures while pursuing a user-specified goal.
 
-**Last curated: 2026-09-11.** Includes 24 research and implementation resources, plus introductory reading and an external community link. This is a curated selection rather than an exhaustive survey.
+A curated collection of research papers, blogs, demos, projects, frameworks, and tools for **robot-use agents**, with selected models and datasets as supporting foundations.
 
 ## Contents
 
@@ -24,6 +22,8 @@ A curated collection for researchers and builders working on **robot-use agents*
 - [At a glance](#at-a-glance)
 - [What is a robot-use agent?](#what-is-a-robot-use-agent)
 - [Start here](#start-here)
+- [Blogs and perspectives](#blogs-and-perspectives)
+- [Videos and demonstrations](#videos-and-demonstrations)
 - [Research papers](#research-papers)
   - [Planning and code as policies](#planning-and-code-as-policies)
   - [Execution feedback and recovery](#execution-feedback-and-recovery)
@@ -69,10 +69,9 @@ The categories below are editorial groupings. Placement does not imply that ever
 
 ## Start here
 
-**Perspective:** [Robot-Use Agents](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html) — Phillip Isola, September 7, 2026. Discusses general-purpose AI agents using robots through sensor and actuator APIs, and the implications for deploying robotic intelligence. An introductory essay that also discusses latency and reliability limits.
-
 | If you want to understand… | Read / inspect |
 | --- | --- |
+| The robot-as-a-tool perspective | [Robot-Use Agents](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html) |
 | Language grounded in available robot skills | [SayCan](https://say-can.github.io/) |
 | Robot behavior expressed as generated code | [Code as Policies](https://code-as-policies.github.io/) |
 | Replanning from execution feedback | [Inner Monologue](https://innermonologue.github.io/) |
@@ -80,6 +79,19 @@ The categories below are editorial groupings. Placement does not imply that ever
 | A tool-based embodied harness | [Thea](https://github.com/EIT-HAI/Thea) |
 | Runtime critics and recovery around a frozen policy | [Zetta](https://github.com/air-embodied-brain/Zetta-Embodiment) |
 | Connecting an agent to ROS | [ROSA](https://github.com/nasa-jpl/rosa) / [ROS MCP Server](https://github.com/robotmcp/ros-mcp-server) |
+
+## Blogs and perspectives
+
+- **[Robot-Use Agents](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html)** — Phillip Isola · 2026-09-07 · **Perspective**. General-purpose AI agents using robots through sensor and actuator APIs, with discussion of deployment, latency, and reliability.
+- **[Robots That Write Their Own Code](https://research.google/blog/robots-that-write-their-own-code/)** — Jacky Liang and Andy Zeng, Google Research · 2022-11-02 · **Technical blog**. An introduction to Code as Policies: composing robot APIs, generating functions, and expressing feedback loops, with examples and limitations.
+
+## Videos and demonstrations
+
+- **[Code as Policies — experiment videos and generated code](https://code-as-policies.github.io/)** — Compare natural-language commands, generated programs, and robot behavior across tabletop manipulation, drawing, and mobile-robot tasks.
+- **[Inner Monologue — video walkthrough and failure-recovery demos](https://innermonologue.github.io/)** — See how scene descriptions, success feedback, and human interventions affect replanning.
+- **[VoxPoser — video and interactive value maps](https://voxposer.github.io/)** — Explore how language instructions become spatial constraints and robot trajectories, including execution under disturbances.
+
+These are author-provided demonstrations; consult the linked papers for evaluation protocols and aggregate results. Blog and demo links supplement the research entries and are not counted again in the overview.
 
 ## Research papers
 
@@ -125,7 +137,7 @@ Grouped by the agent mechanism and ordered by first arXiv release month, newest 
 
 </details>
 
-[Back to top](#awesome-robot-use-agent)
+[Back to top](#rua--awesome-robot-use-agent)
 
 ## Robot interfaces and tool frameworks
 
@@ -154,7 +166,7 @@ These provide tasks and execution environments for agent research. An environmen
 | **RoboCasa / RoboCasa365** | Kitchen manipulation, atomic and composite tasks, and demonstration data | [Project, code, and datasets](https://robocasa.ai/) |
 | **BEHAVIOR-1K / OmniGibson** | Long-horizon household activities and rich object interactions | [Project and documentation](https://behavior.stanford.edu/) |
 
-[Back to top](#awesome-robot-use-agent)
+[Back to top](#rua--awesome-robot-use-agent)
 
 ## Supporting models and learning infrastructure
 
@@ -209,8 +221,6 @@ Closed-loop feedback alone does not establish continuous streaming interaction. 
 
 Suggestions and corrections are welcome through an issue or pull request.
 
-**External discussion:** [X community](https://x.com/i/communities/1874549355442802764), linked by [ACU](https://github.com/trycua/acu) for computer-use discussions. This is an adjacent community, not an official community of this repository.
-
 - Add a primary source: the authors' paper, project page, repository, or official documentation.
 - Explain the resource's connection to robot-use agents in one sentence and place it in the closest existing category.
 - For papers, include the full title, first-release month (`YYYY-MM`), and verified official links. Describe the mechanism rather than repeating promotional claims.
@@ -233,4 +243,4 @@ Keep paper rows newest-first within a category. Use a focused commit message suc
 
 This collection is distributed under the [MIT License](LICENSE). Linked papers, code, models, and datasets retain their respective licenses.
 
-[Back to top](#awesome-robot-use-agent)
+[Back to top](#rua--awesome-robot-use-agent)

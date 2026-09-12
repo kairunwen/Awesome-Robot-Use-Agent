@@ -4,7 +4,7 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources: 39](https://img.shields.io/badge/Resources-39-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-Watch-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources: 40](https://img.shields.io/badge/Resources-40-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-Watch-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
 <br>
 [![Tools](https://img.shields.io/badge/Tools-Explore-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent/stargazers) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
@@ -55,7 +55,7 @@ Robot-use agents turn goals into robot actions through skills, generated code, a
 
 ## Papers
 
-Paper references are grouped by contribution. Dates refer to first arXiv release. Method summaries reflect author reports; code, weights, and complete reproduction are separate release claims. Implementation entries and benchmark descriptions are cross-linked rather than counted as additional distinct works.
+Paper references are grouped by contribution. Dates refer to first arXiv release unless noted. Method summaries reflect author reports; code, weights, and complete reproduction are separate release claims. Implementation entries and benchmark descriptions are cross-linked rather than counted as additional distinct works.
 
 <a id="research-papers"></a>
 
@@ -63,6 +63,7 @@ Paper references are grouped by contribution. Dates refer to first arXiv release
 
 | Date | Work | Focus | Sources |
 | --- | --- | --- | --- |
+| 2026-09 (release) | **Survey on Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use** | Unifies computer-use and robot-use through PAPAV: Perceive, Anticipate, Plan, Act, and Verify; examines physical constraints and benchmark coverage. | [Paper](https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf) · [Repository](https://github.com/showlab/Awesome-Multimodal-Embodied-Agent) |
 | 2024-04 | **A Survey on Integration of Large Language Models with Intelligent Robots** | LLM integration across communication, perception, planning, and control. | [Paper](https://arxiv.org/abs/2404.09228) |
 
 ### Models & Frameworks

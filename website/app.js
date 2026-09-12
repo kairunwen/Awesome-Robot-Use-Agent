@@ -15,6 +15,10 @@ function update() {
       entry.hidden = !(category === 'all' || category === group.dataset.category) || !terms.every(term => text.get(entry).includes(term));
       if (!entry.hidden) matches++;
     }
+    for (const disclosure of group.querySelectorAll('.project-group')) {
+      disclosure.hidden = !disclosure.querySelector('.entry:not([hidden])');
+      if (terms.length && !disclosure.hidden) disclosure.open = true;
+    }
     group.hidden = matches === 0;
     group.querySelector('.group-heading > span').textContent = String(matches).padStart(2, '0');
     count += matches;
@@ -24,7 +28,7 @@ function update() {
   document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'entry' : 'entries'} · ${category === 'all' ? 'all categories' : selected.firstElementChild.textContent}`;
   document.querySelector('#empty').hidden = count !== 0;
   clear.hidden = category === 'all' && terms.length === 0;
-  document.querySelector('#resource-list').classList.toggle('is-filtering', !clear.hidden);
+  document.querySelector('#resource-list').classList.toggle('is-filtering', terms.length > 0);
 }
 
 search.addEventListener('input', update);

@@ -19,21 +19,34 @@ def slug(text):
 def build():
     soup = BeautifulSoup(MarkdownIt('commonmark').enable('table').render((ROOT / 'README.md').read_text()), 'html.parser')
     for summary in soup.select('summary'):
-        summary.decompose()
+        if not set(summary.parent.get('class', [])) & {'project-group', 'entry-notes'}:
+            summary.decompose()
     for details in soup.select('details'):
-        details.unwrap()
+        if not set(details.get('class', [])) & {'project-group', 'entry-notes'}:
+            details.unwrap()
     for img in soup.select('img'):
-        if not img.find_parent('picture'):
-            img.decompose()  # Remove badges; retain the Star History picture.
+        cell = img.find_parent('td')
+        table = img.find_parent('table')
+        is_preview = cell and not cell.find_previous_sibling('td') and table.find('th').get_text(strip=True) == 'Preview'
+        if not is_preview:
+            img.decompose()  # Keep resource previews; remove badges and star charts.
     for link in list(soup.select('a[href]')):
-        if not link.get_text(strip=True) and not link.find('picture'):
+        if not link.get_text(strip=True) and not link.find(['picture', 'img']):
             link.decompose()
     for link in soup.select('a[href]'):
         href = link['href']
         if href == 'CONTRIBUTING.md':
             link['href'] = REPO + '/blob/main/CONTRIBUTING.md'
-    for heading in soup.select('h1,h2,h3,h4'):
-        heading['id'] = slug(heading.get_text())
+    heading_ids = set()
+    for heading in soup.select('h1,h2,h3,h4,h5,h6'):
+        base = slug(heading.get_text())
+        ident = base
+        suffix = 0
+        while ident in heading_ids:
+            suffix += 1
+            ident = f'{base}-{suffix}'
+        heading['id'] = ident
+        heading_ids.add(ident)
     for paragraph in soup.select('p'):
         if paragraph.get_text(strip=True) == 'Back to top':
             paragraph.decompose()
@@ -50,12 +63,8 @@ def build():
     sections, nav, total = [], [], 0
     guide = ''
     citation = ''
-    history = ''
     for title, ident, content in groups:
-        if title in ('Contents', 'Contributing'):
-            continue
-        if title == 'Star History':
-            history = str(content)
+        if title in ('Contents', 'Contributing', 'Star History'):
             continue
         if title == 'Citation':
             citation = str(content)
@@ -70,12 +79,18 @@ def build():
             guide = str(content)
             continue
         count = 0
-        if title == 'Agents and frameworks':
-            content.find('p').string = 'One main entry per work, grouped by its role: planning, feedback, orchestration, or robot interfaces. Expand a row for its paper, code, project, and demo links. Dates refer to first arXiv release; summaries reflect author reports.'
         for table in list(content.select('table')):
             labels = [c.get_text(' ', strip=True) for c in table.select('thead th')]
-            if title == 'Benchmarks and environments' and labels == ['Dimension', 'Record']:
-                table['class'] = 'guide-table'
+            if labels[0] == 'Preview':
+                table['class'] = 'preview-table'
+                for row in table.select('tbody tr'):
+                    cells = row.find_all('td', recursive=False)
+                    assert len(cells) == len(labels), (title, labels)
+                    row['class'] = ['entry', 'preview-entry']
+                    row['id'] = f'{ident}-entry-{count}'
+                    row['data-date'] = cells[2].get_text(strip=True)
+                    count += 1
+                table.wrap(content.new_tag('div', attrs={'class': 'preview-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': f'{title} previews'}))
                 continue
             rows = []
             for row in table.select('tbody tr'):
@@ -96,7 +111,7 @@ def build():
                 rows.append(entry(name, description, date, fields, ident, count))
                 count += 1
             table.replace_with(BeautifulSoup(''.join(rows), 'html.parser'))
-        if title == 'Blogs and demos':
+        if title == 'Articles':
             for listing in list(content.find_all('ul')):
                 rows = []
                 for item in listing.find_all('li', recursive=False):
@@ -122,7 +137,7 @@ def build():
         total += count
 
     template = (HERE / 'template.html').read_text()
-    for key, value in {'GUIDE':guide, 'CITATION':citation, 'HISTORY':history, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
+    for key, value in {'GUIDE':guide, 'CITATION':citation, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
         template = template.replace('{{'+key+'}}', value)
     assert not re.search(r'\{\{[A-Z]+\}\}', template)
     OUT.mkdir(exist_ok=True)

@@ -87,7 +87,24 @@ kbd { padding: 0 8px; border: 1px solid var(--line); border-radius: 5px; color: 
 .group-heading h2 { margin: 0; font-size: 19px; letter-spacing: -.025em; font-weight: 800; }
 .group-heading>span { font: 12px var(--body); color: var(--muted); font-variant-numeric: tabular-nums; }
 .resource-group h3 { margin: 25px 0 12px; font-size: 12px; font-weight: 800; color: var(--accent); }
-.resource-group h4 { margin: 20px 0 12px; font-size: 12px; font-weight: 800; }
+.resource-group h4, .resource-group h5 { margin: 20px 0 12px; font-size: 12px; font-weight: 800; }
+.project-group { margin-bottom: 16px; }
+.project-group>summary>h4 { display: inline; margin: 0; }
+.project-group>summary { cursor: pointer; padding: 10px 0; color: var(--accent); font-size: 12px; font-weight: 700; }
+.preview-scroll { overflow-x: auto; margin: 16px 0; }
+.preview-table { border-collapse: collapse; width: 100%; min-width: 850px; font-size: 12px; }
+.preview-table th, .preview-table td { border: 1px solid var(--line); padding: 12px; text-align: left; vertical-align: top; }
+.preview-table th { color: var(--muted); }
+.preview-table td:first-child { width: 200px; min-width: 200px; }
+.preview-table img { width: 200px; max-width: 100%; height: auto; }
+.preview-table td:nth-child(2) { min-width: 140px; }
+.preview-table td:nth-child(3) { min-width: 65px; }
+.preview-table td:nth-child(4) { min-width: 100px; }
+.preview-table td:last-child { min-width: 220px; }
+.entry-notes { margin-top: 8px; }
+.preview-entry .entry-notes>summary { display: list-item; list-style: disclosure-closed; padding: 4px 0; cursor: pointer; color: var(--accent); }
+.preview-entry .entry-notes[open]>summary { list-style: disclosure-open; }
+.preview-entry .entry-notes>summary::-webkit-details-marker { display: inline; }
 .resource-group>p { max-width: 1080px; color: var(--muted); font-size: 12px; line-height: 1.85; }
 .entry { background: #fffbf380; border-bottom: 1px solid var(--line); }
 .entry:first-of-type { border-top: 1px solid var(--line); }
@@ -120,7 +137,7 @@ kbd { padding: 0 8px; border: 1px solid var(--line); border-radius: 5px; color: 
 .guide-content th, .guide-content td, .guide-table td, .guide-table th { padding: 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
 .guide-content th { color: var(--muted); }
 .empty-state, .notice { padding: 30px 20px; background: var(--soft); border-radius: 5px; color: var(--accent); font-size: 14px; }
-.is-filtering .resource-group>p, .is-filtering .resource-group>h3, .is-filtering .resource-group>h4, .is-filtering .reading-notes { display: none; }
+.is-filtering .resource-group>p, .is-filtering .resource-group>h3, .is-filtering .resource-group>h4, .is-filtering .resource-group>h5, .is-filtering .reading-notes { display: none; }
 .is-filtering .resource-group { margin-bottom: 24px; }
 footer { margin-top: 64px !important; padding-block: 32px !important; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 30px; font-size: 12px; }
 footer strong { font-size: 13px; }

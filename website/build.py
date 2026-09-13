@@ -71,7 +71,7 @@ def build():
     citation = ''
     acknowledgements = ''
     for title, ident, content in groups:
-        if title in ('Contents', 'Contributing', 'Star History'):
+        if title in ('Contents', 'Contributing', '🤝 Contributing', 'Star History'):
             continue
         if title in ('Citation', '📖 Citation'):
             citation = str(content)

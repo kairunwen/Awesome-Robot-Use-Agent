@@ -67,6 +67,8 @@ for (const image of document.querySelectorAll('.reading-cover img')) {
 const filters = [...document.querySelectorAll('[data-filter]')];
 const text = new Map(entries.map(entry => [entry, entry.textContent.toLowerCase()]));
 const demoFilter = document.querySelector('#demo-filter');
+const demoTask = document.querySelector('#demo-task');
+const tasks = new Map(entries.map(entry => [entry, JSON.parse(entry.dataset.tasks || '[]')]));
 const codeFilter = document.querySelector('#code-filter');
 const demoOrder = document.querySelector('#demo-order');
 const demoTables = [...document.querySelectorAll('.demo-grid')].map(body => ({body, rows: [...body.children]}));
@@ -123,23 +125,32 @@ for (const list of readingLists) {
 function sortDemos() {
   for (const {body, rows} of demoTables) {
     const sorted = [...rows];
-    if (demoOrder.value !== 'curated') sorted.sort((a, b) => demoOrder.value === 'newest' ? b.dataset.date.localeCompare(a.dataset.date) : a.dataset.date.localeCompare(b.dataset.date));
+    sorted.sort((a, b) => Number(b.dataset.demoPinned === 'true') - Number(a.dataset.demoPinned === 'true')
+      || (demoOrder.value === 'curated' ? 0 : demoOrder.value === 'newest' ? b.dataset.date.localeCompare(a.dataset.date) : a.dataset.date.localeCompare(b.dataset.date)));
     for (const row of sorted) body.append(row);
   }
 }
 function resetFilters() {
+  demoTask.value = 'all';
   category = 'all'; search.value = ''; demoFilter.value = 'all'; codeFilter.checked = false; demoOrder.value = 'curated'; sortDemos(); for (const list of readingLists) { list.order = 'newest'; sortReadingList(list); }
 }
 
 function update() {
   const terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
   let count = 0;
+  const demoCounts = {demos: 0, real: 0, simulation: 0, perception: 0};
   for (const group of groups) {
     let matches = 0;
     for (const entry of group.querySelectorAll('.entry')) {
-      entry.hidden = !(category === 'all' || category === group.dataset.category) || !terms.every(term => text.get(entry).includes(term))
-        || (demoFilter.value !== 'all' && !(demoFilter.value === 'demos' ? entry.dataset.demo : entry.dataset.demo === demoFilter.value))
-        || (codeFilter.checked && entry.dataset.code !== 'true');
+      const matchesContext = terms.every(term => text.get(entry).includes(term))
+        && (demoTask.value === 'all' || tasks.get(entry).includes(demoTask.value))
+        && (!codeFilter.checked || entry.dataset.code === 'true');
+      if (entry.dataset.demo && matchesContext) {
+        demoCounts.demos++;
+        demoCounts[entry.dataset.demo]++;
+      }
+      entry.hidden = !(category === 'all' || category === group.dataset.category) || !matchesContext
+        || (demoFilter.value !== 'all' && !(demoFilter.value === 'demos' ? entry.dataset.demo : entry.dataset.demo === demoFilter.value));
       if (!entry.hidden) matches++;
       else entry.querySelector('video')?.pause();
     }
@@ -147,13 +158,16 @@ function update() {
     for (const intro of group.querySelectorAll('[data-demo-intro]')) intro.hidden = !group.querySelector(`.entry[data-demo="${intro.dataset.demoIntro}"]:not([hidden])`);
     for (const disclosure of group.querySelectorAll('.project-group')) {
       disclosure.hidden = !disclosure.querySelector('.entry:not([hidden])');
-      if ((terms.length || demoFilter.value !== 'all' || codeFilter.checked) && !disclosure.hidden) disclosure.open = true;
+      if ((terms.length || demoFilter.value !== 'all' || demoTask.value !== 'all' || codeFilter.checked) && !disclosure.hidden) disclosure.open = true;
     }
     group.hidden = matches === 0;
     group.querySelector('.group-heading > span').textContent = String(matches).padStart(2, '0');
     count += matches;
   }
-  for (const button of demoTabs) button.setAttribute('aria-pressed', String(button.dataset.demoKind === (demoFilter.value === 'all' ? 'demos' : demoFilter.value)));
+  for (const button of demoTabs) {
+    button.setAttribute('aria-pressed', String(button.dataset.demoKind === (demoFilter.value === 'all' ? 'demos' : demoFilter.value)));
+    button.querySelector('.demo-tab-count').textContent = demoCounts[button.dataset.demoKind];
+  }
   const demoCount = document.querySelectorAll('.demo-card:not([hidden])').length;
   if (demoToolbar) {
     demoToolbar.hidden = category !== 'all' && category !== 'projects';
@@ -163,8 +177,8 @@ function update() {
   for (const button of filters) button.setAttribute('aria-pressed', String(button === selected));
   document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'entry' : 'entries'} · ${category === 'all' ? 'all categories' : selected.firstElementChild.textContent}`;
   document.querySelector('#empty').hidden = count !== 0;
-  clear.hidden = category === 'all' && terms.length === 0 && demoFilter.value === 'all' && !codeFilter.checked && demoOrder.value === 'curated' && readingLists.every(list => list.order === 'newest');
-  document.querySelector('#resource-list').classList.toggle('is-filtering', terms.length > 0 || demoFilter.value !== 'all' || codeFilter.checked);
+  clear.hidden = category === 'all' && terms.length === 0 && demoFilter.value === 'all' && demoTask.value === 'all' && !codeFilter.checked && demoOrder.value === 'curated' && readingLists.every(list => list.order === 'newest');
+  document.querySelector('#resource-list').classList.toggle('is-filtering', terms.length > 0 || demoFilter.value !== 'all' || demoTask.value !== 'all' || codeFilter.checked);
 }
 
 for (const button of demoTabs) button.addEventListener('click', () => {
@@ -176,6 +190,11 @@ for (const disclosure of document.querySelectorAll('.project-group')) disclosure
   if (!disclosure.open) for (const video of disclosure.querySelectorAll('video')) video.pause();
 });
 search.addEventListener('input', update);
+demoTask.addEventListener('change', () => {
+  category = 'all';
+  if (demoFilter.value === 'all') demoFilter.value = 'demos';
+  update();
+});
 for (const control of [demoFilter, codeFilter]) control.addEventListener('change', update);
 demoOrder.addEventListener('change', () => { sortDemos(); update(); });
 for (const button of filters) button.addEventListener('click', () => {

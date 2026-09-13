@@ -2,6 +2,10 @@
 
 A static, searchable catalogue generated from the repository's `README.md`. Layout inspired by [Awesome Python](https://awesome-python.com/); RUA branding and implementation are original.
 
+## Contributing
+
+To add a resource, edit the root [README.md](../README.md); this website is generated from it. Start with [CONTRIBUTING.md](../CONTRIBUTING.md) for categories, row formats, metadata, and the short PR checklist. The sections below cover local development and maintainer operations.
+
 ## Build and preview
 
 From the repository root:
@@ -13,7 +17,9 @@ website/.venv/bin/python website/build.py
 python3 -m http.server 8000 --directory website/dist
 ```
 
-Open http://localhost:8000. Edit the root README to update resources, then rebuild. Search, category and demo filters, Code linked filtering, demo date sorting within groups, keyboard shortcuts, and expandable source details run entirely in the browser. No API key, database, or external JavaScript is required. With JavaScript disabled, the complete catalogue remains readable.
+The README uses HTML tables for the compact Papers, Benchmarks, and Social Demos layouts. Keep the `layout-paper`, `layout-benchmark`, `demo-gallery`, `demo-gallery-card`, `layout-meta`, and `layout-links` classes when editing these tables: the website reader uses them to recover dates, source labels, and video links. Badge image alt text supplies the link label; retain labels such as `Paper`, `Code · GitHub stars`, and `Models`.
+
+Open http://localhost:8000. Edit the root README to update resources, then rebuild. Search, category and demo filters, Code linked filtering, demo date sorting within groups (RoboCurve / StationeryBench stays first when it matches the active filters), keyboard shortcuts, and expandable source details run entirely in the browser. No API key, database, or external JavaScript is required. With JavaScript disabled, the complete catalogue remains readable.
 
 `website/dist` is generated and ignored by Git. Its files can be published to GitHub Pages or any static host, including under a repository subpath. Building does not publish the site.
 
@@ -24,8 +30,6 @@ website/.venv/bin/python -m unittest discover -s website -p 'test_*.py'
 ```
 
 For external links and preview images, run `python website/check_links.py` (or use repeated `--url URL` arguments for changed destinations). HTTP errors are reported separately from access restrictions and network failures. This network check is manual; temporary third-party failures do not block site deployment.
-
-The Getting started guide contains a horizontally scrollable comparison of existing systems; its rows are not counted as resources.
 
 An optional browser smoke check is available as `node website/check_browser.cjs` when Playwright and Chrome are already installed. Set `PLAYWRIGHT_PATH` if the package is outside the normal Node search path, and `PREVIEW_URL` to your running preview URL. It checks demo/code filters, date ordering, reset, anchor navigation, mobile overflow, and the no-JavaScript fallback.
 
@@ -64,3 +68,11 @@ Citation counts use Google Scholar through [SerpApi](https://serpapi.com/google-
 Paper matching uses exact arXiv links, or the exact normalized title if no conflicting arXiv ID exists. Citation-only fragments and ambiguous matches are excluded. Verified Scholar clusters are reused for subsequent queries. An indexed result without a Cited by link displays `0`; unmatched papers display `—`. Errors preserve previously verified counts and their timestamps. The browser links to the Scholar record and shows its source and last successful update on hover. Semantic Scholar counts are never relabeled as Google Scholar or combined with them.
 
 The checked-in `citations.json` supplies local previews and first deployment; the published snapshot preserves later refreshes and the eight-day cooldown. Build first, then run `website/.venv/bin/python website/update_citations.py` to refresh locally with `SERPAPI_KEY` set, and copy `dist/citations.json` back to `website/citations.json` if retaining the new snapshot across local rebuilds. Without a key, a Google Scholar snapshot stays unchanged. Older Semantic Scholar snapshots can still use the original exact-arXiv-ID batch updater.
+
+The first Social Demos source row is marked `data-demo-pinned="true"`. Preserve it when adding demos: the build carries this flag into its card, and both date orders keep it ahead of unpinned cards. New cards use original-post dates in UTC+8, and same-task follow-ups stay in Details. Text-only development logs remain separate notes. Posts with videos use demo cards even when their methods are unverified; preserve a visible status and source limitations instead of hiding the media in text notes.
+
+Social Demos show one main task badge in `.layout-tasks`; its image alt text starts with `Task: `. Add other evidenced activities as `<p>Tasks: Pick &amp; place, Insertion.</p>` inside `.demo-notes`. The task selector includes both the badge and these additional tasks. Reuse existing labels; they describe activities, not successful outcomes or control methods. Task, scene, search, and code filters intersect. Reset clears them all, and RoboCurve stays first whenever it matches.
+
+Demo scene buttons show counts after task, search, and code filters, before the scene filter, so switching scenes does not zero out the other choices. Check this interaction with `DEMO_COUNTS_ONLY=1 node website/check_browser.cjs`.
+
+Social Demos use three-column `demo-gallery` tables in the README. The build converts their four `gallery-*` fields back into catalogue rows, preserving website cards, filters, and pinned ordering.

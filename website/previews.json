@@ -230,5 +230,13 @@
   "https://www.waddlelabs.ai/research/introducing-waddle": {
     "image": "https://i.ytimg.com/vi/fGRYBtmzwoI/hqdefault.jpg",
     "source": "https://www.waddlelabs.ai/research/introducing-waddle"
+  },
+  "https://doi.org/10.6084/m9.figshare.33529048": {
+    "image": "previews/b021d80f3e33d466.jpg",
+    "source": "https://raw.githubusercontent.com/showlab/Awesome-Multimodal-Embodied-Agent/main/assets/Awesome_Multimodal_Embodied_Agent.pdf"
+  },
+  "https://arxiv.org/abs/2605.26637": {
+    "image": "previews/d27cf8ac75626400.jpg",
+    "source": "https://arxiv.org/pdf/2605.26637"
   }
 }

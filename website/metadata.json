@@ -104,7 +104,7 @@
         "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
       }
     ],
-    "date": "2026-09",
+    "date": "2026-09-10",
     "authors": [
       "Yanzhe Chen",
       "Ziyi Yang",
@@ -125,12 +125,13 @@
       "Mike Zheng Shou"
     ],
     "publication": {
-      "venue": "Technical report",
+      "venue": "ArXiv",
       "year": 2026,
-      "source": "https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf",
-      "note": "No conference or journal publication verified",
-      "checked_at": "2026-09-14"
-    }
+      "verification_note": "Venue supplied by maintainer; arXiv identifier not independently verified. No conference or journal acceptance verified.",
+      "checked_at": "2026-09-14",
+      "source": "https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf"
+    },
+    "date_source": "https://doi.org/10.6084/m9.figshare.33529048"
   },
   "https://arxiv.org/abs/2510.10991": {
     "date": "2025-10-13",
@@ -185,7 +186,7 @@
       "venue": "arXiv",
       "year": 2025,
       "source": "https://arxiv.org/abs/2510.10991",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -242,7 +243,7 @@
       "venue": "arXiv",
       "year": 2025,
       "source": "https://arxiv.org/abs/2508.05294",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -301,7 +302,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2609.10522",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -342,7 +343,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.16590",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -373,7 +374,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.11246",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -425,7 +426,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.03924",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -460,7 +461,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.04933",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -496,7 +497,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.11350",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -517,7 +518,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.07555",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -548,7 +549,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.21725",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -597,7 +598,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.18060",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -659,7 +660,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.08448",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -719,7 +720,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.05369",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -760,7 +761,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.16636",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -805,7 +806,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.15275",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -861,7 +862,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.00272",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -915,7 +916,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2606.18363",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -964,7 +965,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2606.19980",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1008,7 +1009,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2606.19419",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1037,7 +1038,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2606.10267",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1094,7 +1095,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2605.10332",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1142,7 +1143,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2605.00416",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1187,10 +1188,9 @@
     ],
     "date_source": "https://arxiv.org/abs/2604.26988",
     "publication": {
-      "venue": "arXiv",
+      "venue": "IROS",
       "year": 2026,
-      "source": "https://arxiv.org/abs/2604.26988",
-      "note": "Preprint; acceptance not verified",
+      "source": "https://aoloo-r.github.io/updates/",
       "checked_at": "2026-09-14"
     }
   },
@@ -1240,7 +1240,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2603.11558",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1292,7 +1292,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2603.02772",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -1326,7 +1326,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2602.12063",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2024,7 +2024,7 @@
       "venue": "Dataset directory",
       "year": 2026,
       "source": "https://datasets.bot/",
-      "note": "No conference or journal publication verified",
+      "verification_note": "No conference or journal publication verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2123,7 +2123,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2607.24744",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2176,7 +2176,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2606.18363",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2263,10 +2263,9 @@
     ],
     "date_source": "https://arxiv.org/abs/2603.22435",
     "publication": {
-      "venue": "arXiv",
+      "venue": "ICML",
       "year": 2026,
-      "source": "https://arxiv.org/abs/2603.22435",
-      "note": "Preprint; acceptance not verified",
+      "source": "https://rpl.cs.utexas.edu/publications/2026/07/19/fu-icml26-capx/",
       "checked_at": "2026-09-14"
     }
   },
@@ -2366,7 +2365,7 @@
     ],
     "date_source": "https://arxiv.org/abs/2410.07166",
     "publication": {
-      "venue": "NeurIPS",
+      "venue": "NeurIPS D&B",
       "year": 2024,
       "source": "https://arxiv.org/abs/2410.07166",
       "checked_at": "2026-09-14"
@@ -2429,7 +2428,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2609.01437",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2488,7 +2487,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.31111",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2541,7 +2540,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2608.31100",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2792,7 +2791,7 @@
       "venue": "arXiv",
       "year": 2024,
       "source": "https://arxiv.org/abs/2402.14623",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2907,7 +2906,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2605.18746",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -2955,7 +2954,7 @@
       "venue": "arXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2605.30326",
-      "note": "Preprint; acceptance not verified",
+      "verification_note": "Preprint; acceptance not verified",
       "checked_at": "2026-09-14"
     }
   },
@@ -3007,7 +3006,7 @@
     ],
     "date_source": "https://arxiv.org/abs/2410.07166",
     "publication": {
-      "venue": "NeurIPS",
+      "venue": "NeurIPS D&B",
       "year": 2024,
       "source": "https://arxiv.org/abs/2410.07166",
       "checked_at": "2026-09-14"
@@ -3072,12 +3071,14 @@
       }
     ],
     "publication": {
-      "venue": "Evaluation report",
+      "venue": "Technical Report",
       "year": 2026,
-      "source": "https://andonlabs.com/evals/drone-bench",
-      "note": "No conference or journal publication verified",
+      "source": "https://andonlabs.com/docs/Drone_Bench.pdf",
+      "verification_note": "No conference or journal publication verified",
       "checked_at": "2026-09-14"
-    }
+    },
+    "date": "2026-07-24",
+    "date_source": "https://andonlabs.com/docs/Drone_Bench.pdf"
   },
   "https://x.com/chooi_jeq/status/2098427488787730636": {
     "source": "https://github.com/robocurve/stationerybench",
@@ -3090,10 +3091,89 @@
       }
     ],
     "publication": {
-      "venue": "Project release",
+      "venue": "Research Blog",
       "year": 2026,
-      "source": "https://github.com/robocurve/stationerybench",
-      "note": "No conference or journal publication verified",
+      "source": "https://openai.robocurve.org/stationerybench/",
+      "verification_note": "No conference or journal publication verified",
+      "checked_at": "2026-09-14"
+    },
+    "date": "2026-09-10",
+    "date_source": "https://openai.robocurve.org/stationerybench/"
+  },
+  "https://doi.org/10.6084/m9.figshare.33529048": {
+    "source": "https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf",
+    "institutions": [
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      }
+    ],
+    "date": "2026-09-10",
+    "authors": [
+      "Yanzhe Chen",
+      "Ziyi Yang",
+      "Jifeng Zhu",
+      "Qiming Huang",
+      "Ruihe An",
+      "Peiyao Xu",
+      "Hesen Yang",
+      "Runda Liu",
+      "Chang Gong",
+      "Zhijun Cao",
+      "Zechen Bai",
+      "Wenzheng Zeng",
+      "Yiqi Lin",
+      "Guoqiang Liang",
+      "Kevin Yuchen Ma",
+      "Kevin Qinghong Lin",
+      "Mike Zheng Shou"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "verification_note": "Venue supplied by maintainer; arXiv identifier not independently verified. No conference or journal acceptance verified.",
+      "checked_at": "2026-09-14",
+      "source": "https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf"
+    },
+    "date_source": "https://doi.org/10.6084/m9.figshare.33529048"
+  },
+  "https://arxiv.org/abs/2605.26637": {
+    "source": "https://arxiv.org/html/2605.26637v1",
+    "date": "2026-05-26",
+    "date_source": "https://arxiv.org/abs/2605.26637",
+    "authors": [
+      "Xueyang Zhou",
+      "Zijia Wang",
+      "Qianjiang Li",
+      "Yibo Hu",
+      "Guiyao Tie",
+      "Li Wan",
+      "Yidan Liu",
+      "Pan Zhou",
+      "Lichao Sun",
+      "Yongchao Chen"
+    ],
+    "institutions": [
+      {
+        "name": "Huazhong University of Science and Technology",
+        "url": "https://www.hust.edu.cn/",
+        "logo": "institutions/7940b8a35d1b.ico",
+        "logo_source": "https://www.hust.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2605.26637",
+      "verification_note": "Preprint; no conference or journal acceptance verified",
       "checked_at": "2026-09-14"
     }
   }

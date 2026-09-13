@@ -10,7 +10,7 @@ from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
-from markdown_it import MarkdownIt
+from build import read_readme
 
 HERE = Path(__file__).resolve().parent
 
@@ -21,7 +21,7 @@ def fetch(url):
 
 
 def refresh():
-    soup = BeautifulSoup(MarkdownIt('commonmark').enable('table').render((HERE.parent / 'README.md').read_text()), 'html.parser')
+    soup = read_readme((HERE.parent / 'README.md').read_text())
     manifest_path = HERE / 'previews.json'
     manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
     jobs = {}

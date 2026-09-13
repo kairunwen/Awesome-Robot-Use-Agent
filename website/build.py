@@ -16,21 +16,103 @@ REPO = 'https://github.com/kairunwen/Awesome-Robot-Use-Agent'
 def slug(text):
     return re.sub(r'[^\w\- ]', '', text.lower()).replace(' ', '-')
 
+def read_readme(source):
+    """Read compact README tables into the website's catalogue fields."""
+    soup = BeautifulSoup(MarkdownIt('commonmark').enable('table').render(source), 'html.parser')
+    for gallery in soup.select('table.demo-gallery'):
+        table = soup.new_tag('table', attrs={'class': 'layout-benchmark layout-social'})
+        table.append(soup.new_tag('thead'))
+        body = soup.new_tag('tbody'); table.append(body)
+        for card in gallery.select('td.demo-gallery-card'):
+            row = soup.new_tag('tr')
+            if card.has_attr('data-demo-pinned'):
+                row['data-demo-pinned'] = card['data-demo-pinned']
+            for field in ('preview', 'name', 'environment', 'description'):
+                cell = card.select_one('.gallery-' + field)
+                if field == 'environment':
+                    tasks = cell.select_one('.layout-tasks')
+                    if tasks and tasks.select('img[alt]'):
+                        tasks.string = ' · '.join(badge['alt'] for badge in tasks.select('img[alt]'))
+                    for badge in cell.select('img[alt]'):
+                        badge.replace_with(badge['alt'])
+                for detail in cell.select('details.gallery-description'):
+                    detail.find('summary', recursive=False).decompose()
+                    detail.unwrap()
+                for note in cell.select('.demo-notes'):
+                    note.name = 'details'
+                    note['class'] = ['entry-notes']
+                    summary = soup.new_tag('summary'); summary.string = 'Details'
+                    note.insert(0, summary)
+                cell.name = 'td'
+                row.append(cell.extract())
+            body.append(row)
+        gallery.replace_with(table)
+    for table in soup.select('table.layout-paper, table.layout-benchmark'):
+        paper = 'layout-paper' in table.get('class', [])
+        social = 'layout-social' in table.get('class', [])
+        for img in table.select('.layout-links img'):
+            label = img.get('alt', '').split(' · GitHub stars')[0]
+            if 'github/stars/' in img['src'] and not re.search(r'\bcode\b', label, re.I):
+                label = 'Code'
+            img.replace_with(label)
+        for row in table.select('tbody tr'):
+            cells = row.find_all('td', recursive=False)
+            name = cells[0] if paper else cells[1]
+            metadata = name.select_one('.layout-meta')
+            assert metadata is not None, name.get_text()
+            date = metadata.get_text(' ', strip=True)
+            metadata.extract()
+            for br in name.select('br'):
+                br.decompose()
+            date_cell = soup.new_tag('td')
+            date_cell.string = date.split(' · ')[0] if paper or social else date
+            if paper and date.endswith('⭐'):
+                date_cell.string += ' ⭐'
+            if paper:
+                # Keep link and description fields separate for the reading-list renderer.
+                ordered = [date_cell, name, cells[2], cells[1]]
+            else:
+                ordered = [cells[0], name, date_cell, cells[2], cells[3]]
+                linkbar = cells[3].select_one('.layout-links')
+                if social and linkbar:
+                    # Video links moved out of the thumbnail in the README.
+                    video = next((a for a in linkbar.select('a[href]') if a.get_text(strip=True) in ('Video', '▶ Video')), None)
+                    if video:
+                        cells[0].append(BeautifulSoup(str(video), 'html.parser'))
+                if linkbar:
+                    notes = cells[3].find('details')
+                    if notes:
+                        notes.append(linkbar.extract())
+            row.clear()
+            for cell in ordered:
+                row.append(cell)
+        labels = ['Date', 'Name', 'Mechanism / release notes', 'Paper'] if paper else ['Preview', 'Name', 'Date', 'Environment', 'Description']
+        table.thead.clear()
+        head = soup.new_tag('tr')
+        for label in labels:
+            th = soup.new_tag('th'); th.string = label; head.append(th)
+        table.thead.append(head)
+    return soup
+
+
 def build():
     previews_path = HERE / 'previews.json'
     previews = json.loads(previews_path.read_text()) if previews_path.exists() else {}
     metadata_path = HERE / 'metadata.json'
     reading_metadata = json.loads(metadata_path.read_text()) if metadata_path.exists() else {}
-    soup = BeautifulSoup(MarkdownIt('commonmark').enable('table').render((ROOT / 'README.md').read_text()), 'html.parser')
+    source = (ROOT / 'README.md').read_text()
+    # This invitation belongs in the README; visitors are already on the website.
+    source = re.sub(r'(, better| Better) viewed on the \[website\]\(https://kairunwen.github.io/Awesome-Robot-Use-Agent/#social-demos\)\.', lambda match: '.' if match[1].startswith(',') else '', source)
+    soup = read_readme(source)
     star_callout = soup.find(id="star-callout").extract()
     # Section borders are styled outside collapsible content on the website.
     for divider in soup.find_all("hr", recursive=False):
         divider.decompose()
     for summary in soup.select('summary'):
-        if not set(summary.parent.get('class', [])) & {'project-group', 'entry-notes', 'system-comparison'}:
+        if not set(summary.parent.get('class', [])) & {'project-group', 'entry-notes'}:
             summary.decompose()
     for details in soup.select('details'):
-        if not set(details.get('class', [])) & {'project-group', 'entry-notes', 'system-comparison'}:
+        if not set(details.get('class', [])) & {'project-group', 'entry-notes'}:
             details.unwrap()
     for img in soup.select('img'):
         cell = img.find_parent('td')
@@ -91,8 +173,6 @@ def build():
                 for node in list(glance.next_siblings):
                     node.extract()
                 glance.extract()
-            for table in content.select('.system-comparison table'):
-                table.wrap(content.new_tag('div', attrs={'class': 'comparison-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': 'System comparison'}))
             guide = str(content)
             continue
         count = 0
@@ -115,7 +195,7 @@ def build():
                 for row in table.select('tbody tr'):
                     cells = row.find_all('td', recursive=False)
                     assert len(cells) == 5, (title, labels)
-                    cards.append(demo_card(cells, kind, ident, count))
+                    cards.append(demo_card(cells, kind, ident, count, row.get('data-demo-pinned') == 'true'))
                     count += 1
                 table.replace_with(BeautifulSoup(f'<div class="demo-grid" data-demo="{kind}">{"".join(cards)}</div>', 'html.parser'))
                 continue
@@ -197,13 +277,17 @@ def build():
                 listing.replace_with(BeautifulSoup(''.join(rows), 'html.parser'))
         demo_heading = content.find(id='social-demos')
         if demo_heading:
+            tasks = sorted({task for card in content.select('.demo-card') for task in json.loads(card['data-tasks'])})
+            task_options = ''.join(f'<option value="{escape(task, quote=True)}">{escape(task)}</option>' for task in tasks)
+            for navigation in content.select('p:has(> a[href="#real-robot-demonstrations"]):has(> a[href="#simulation-demonstrations"])'):
+                navigation.decompose()  # The website provides demo filter buttons above.
             demo_heading.insert_after(BeautifulSoup('''<div class="demo-toolbar" hidden>
 <div class="demo-tabs" role="group" aria-label="Demo scenes">
-<button type="button" data-demo-kind="demos" aria-pressed="true">All demos</button>
-<button type="button" data-demo-kind="real" aria-pressed="false">Real robots</button>
-<button type="button" data-demo-kind="simulation" aria-pressed="false">Simulation</button>
-<button type="button" data-demo-kind="perception" aria-pressed="false">Perception &amp; reconstruction</button>
-</div><span id="demo-count" role="status" aria-live="polite"></span></div>''', 'html.parser'))
+<button type="button" data-demo-kind="demos" aria-pressed="true">All demos <span class="demo-tab-count">0</span></button>
+<button type="button" data-demo-kind="real" aria-pressed="false">Real robots <span class="demo-tab-count">0</span></button>
+<button type="button" data-demo-kind="simulation" aria-pressed="false">Simulation <span class="demo-tab-count">0</span></button>
+<button type="button" data-demo-kind="perception" aria-pressed="false">Perception &amp; reconstruction <span class="demo-tab-count">0</span></button>
+</div><label class="demo-task-filter">Task <select id="demo-task"><option value="all">All tasks</option>TASK_OPTIONS</select></label><span id="demo-count" role="status" aria-live="polite"></span></div>'''.replace('TASK_OPTIONS', task_options), 'html.parser'))
         for item in content.select('.entry'):
             item['data-code'] = str(any(re.search(r'\bcode\b', a.get_text(), re.I) and a.get('href', '').startswith('https://github.com/') for a in item.select('a[href]'))).lower()
         # Comparison guidance remains available without competing with resources.
@@ -242,6 +326,7 @@ def build():
         shutil.copyfile(HERE / asset, OUT / asset)
     if (HERE / 'citations.json').exists():
         shutil.copyfile(HERE / 'citations.json', OUT / 'citations.json')
+    shutil.copytree(ROOT / 'assets' / 'demos', OUT / 'assets' / 'demos', dirs_exist_ok=True)
     shutil.copyfile(HERE / 'logo-warm.png', OUT / 'logo.png')
     if (HERE / 'previews').exists():
         shutil.copytree(HERE / 'previews', OUT / 'previews', dirs_exist_ok=True)
@@ -261,6 +346,8 @@ def reading_entry(name, description, metadata, fields, category, index, links, p
     sources, seen = [], set()
     resources = {'Data': [], 'Models': [], 'Code': [], 'Citation': []}
     for link in links:
+        if link.find_parent('details', class_='entry-notes') and not link.find_parent(class_='layout-links'):
+            continue  # Contextual references remain beside the notes they support.
         url = link['href']
         label = link.get_text(' ', strip=True)
         if not label or url in seen:
@@ -280,7 +367,7 @@ def reading_entry(name, description, metadata, fields, category, index, links, p
         if types:
             continue
         tone = 'code' if 'code' in label.lower() else 'paper' if label == 'Paper' else 'source'
-        sources.append(f'<a class="reading-link reading-link-{tone}" href="{escape(url, quote=True)}">{escape(label)}</a>')
+        sources.append((label, f'<a class="reading-link reading-link-{tone}" href="{escape(url, quote=True)}">{escape(label)}</a>'))
     citation = next((a['href'] for a in links if a.get_text(strip=True) == 'Paper'), record.get('date_source') or (primary if kind in ('Article', 'Benchmark') else None))
     if citation:
         resources['Citation'].append((citation, 'Citation source'))
@@ -310,6 +397,19 @@ def reading_entry(name, description, metadata, fields, category, index, links, p
         actions.append('</div>')
     # Source links already appear in the visible link bar or resource panel.
     detail_fields = BeautifulSoup(fields, 'html.parser')
+    for linkbar in detail_fields.select('.layout-links'):
+        linkbar.decompose()
+    for paragraph in detail_fields.select('.layout-description'):
+        if paragraph.get_text(' ', strip=True) == description:
+            paragraph.decompose()
+    for note in detail_fields.select('details.entry-notes'):
+        summary = note.find('summary', recursive=False)
+        if summary:
+            summary.decompose()
+            first = note.find(string=lambda text: bool(text.strip()))
+            if first and description and first.lstrip().startswith(description):
+                first.replace_with(first.lstrip()[len(description):].lstrip())
+            note.unwrap()
     for field in list(detail_fields.find_all('div', recursive=False)):
         label = field.find('dt').get_text(strip=True)
         if label in ('Paper', 'Code', 'Related links'):
@@ -327,7 +427,8 @@ def reading_entry(name, description, metadata, fields, category, index, links, p
     institutions = record.get('institutions', [])
     meta = [f'<time datetime="{escape(date, quote=True)}">{escape(date)}</time>'] if date else []
     if authors:
-        author_text = ', '.join(authors[:3]) + (f', +{len(authors)-3} authors' if len(authors) > 3 else '')
+        extra = len(authors) - 3
+        author_text = ', '.join(authors[:3]) + (f', +{extra} {"author" if extra == 1 else "authors"}' if extra > 0 else '')
         meta.append(f'<span class="reading-authors" title="{escape(", ".join(authors), quote=True)}">{escape(author_text)}</span>')
         fields = f'<div><dt>Authors</dt><dd>{escape(", ".join(authors))}</dd></div>' + fields
     if institutions:
@@ -346,59 +447,86 @@ def reading_entry(name, description, metadata, fields, category, index, links, p
     if kind in ('Paper', 'Benchmark'):
         publication = record.get('publication')
         if publication:
-            label = f'{publication["venue"]} · {publication["year"]}'
+            venue = 'ArXiv' if publication['venue'].lower() == 'arxiv' else publication['venue']
+            label = f'{venue} {publication["year"]}'
+            label += " · ⭐" if metadata.endswith("⭐") else ""
             publication_html = f'<a href="{escape(publication["source"], quote=True)}">{escape(label)}</a>'
             if publication.get('note'):
                 publication_html += f' — {escape(publication["note"])}'
         else:
             arxiv_source = next((u for u in (primary, record.get('date_source', ''), record.get('source', '')) if 'arxiv.org/' in u), '')
-            label = f'arXiv preprint · {date[:4]}' if arxiv_source else f'Online resource · {date[:4]}'
-            publication_html = f'{escape(label)} — publication venue unverified'
+            label = f'ArXiv {date[:4]}' if arxiv_source else f'Online resource {date[:4]}'
+            label += " · ⭐" if metadata.endswith("⭐") else ""
+            publication_html = escape(label)
         fields = f'<div class="reading-publication"><dt>Publication</dt><dd>{publication_html}</dd></div>' + fields
     environment = detail_fields.find('dt', string='Environment')
     environment_html = f'<p class="reading-meta reading-environment"><strong>Environment:</strong> {environment.find_next_sibling("dd").decode_contents()}</p>' if environment else ''
+    # Environment is already visible; retain only additional context in Details.
+    rendered_fields = BeautifulSoup(fields, 'html.parser')
+    for field in rendered_fields.find_all('div', recursive=False):
+        label = field.find('dt')
+        if label and (label.get_text() in ('Environment', 'Source and context') or not field.dd.get_text(strip=True)):
+            field.decompose()
+    fields = str(rendered_fields)
     logos = []
     for institution in institutions[:2]:
         if institution.get('logo'):
             logos.append(f'<a class="institution-logo" href="{escape(institution["url"], quote=True)}" title="{escape(institution["name"], quote=True)}"><img src="{escape(institution["logo"], quote=True)}" alt="{escape(institution["name"], quote=True)}" width="20" height="20" loading="lazy"></a>')
-    for url, label in [(record.get('source'), 'PDF' if '/pdf/' in record.get('source', '') else 'Metadata source'),
-                       (record.get('date_source'), 'Paper' if kind == 'Benchmark' else 'Release date')]:
+    for url, label in [(record.get('source'), 'PDF' if re.search(r'/pdf/|\.pdf(?:[?#]|$)', record.get('source', ''), re.I) else 'Source'),
+                       (record.get('date_source'), 'Paper' if kind == 'Benchmark' and 'arxiv.org/' in record.get('date_source', '') else 'Source')]:
         if url and url not in seen:
-            sources.append(f'<a class="reading-link reading-link-source" href="{escape(url, quote=True)}">{label}</a>')
+            sources.append((label, f'<a class="reading-link reading-link-source" href="{escape(url, quote=True)}">{label}</a>'))
             seen.add(url)
+    sources.sort(key=lambda item: {'Paper': 0, 'Report': 1, 'Project': 2, 'PDF': 3}.get(item[0], 4))
+    cover_accessibility = f'aria-label="Preview for {escape(name, quote=True)}"' if kind == 'Benchmark' else 'tabindex="-1" aria-hidden="true"'
     return f'''<article class="entry reading-entry" id="{category}-entry-{index}" data-date="{escape(date, quote=True)}">
-<a class="reading-cover reading-cover-{category}" href="{escape(primary, quote=True)}" tabindex="-1" aria-hidden="true">{media}</a>
+<a class="reading-cover reading-cover-{category}" href="{escape(primary, quote=True)}" {cover_accessibility}>{media}</a>
 <div class="reading-content"><h4 class="reading-title"><a href="{escape(primary, quote=True)}">{escape(name)}</a>{' ' + ''.join(logos) if logos else ''}</h4>
 <p class="reading-meta">{' · '.join(meta) if meta else kind}</p>
 {environment_html}
 <p class="reading-description">{escape(description)}</p>
-<nav class="reading-links" aria-label="Sources for {escape(name, quote=True)}">{''.join(sources)}</nav>
+<nav class="reading-links" aria-label="Sources for {escape(name, quote=True)}">{''.join(html for label, html in sources)}</nav>
 <details class="reading-details"><summary>Details &amp; sources</summary><dl class="entry-body">{fields}</dl></details>
 </div><nav class="reading-resources" aria-label="Resources for {escape(name, quote=True)}">{''.join(actions)}</nav></article>'''
 
 
-def demo_card(cells, kind, category, index):
+def demo_card(cells, kind, category, index, pinned=False):
     preview, name_cell, date_cell, environment, description = cells
+    annotation = environment.select_one('.layout-tasks')
+    tasks = annotation.get_text(strip=True).removeprefix('Task: ').split(' · ') if annotation else []
+    if annotation:
+        annotation.extract()
+    task_labels = ''.join(f'<span class="demo-task">{escape(task)}</span>' for task in tasks)
+    # Additional documented tasks remain searchable without adding more badges.
+    for paragraph in description.select('.entry-notes p'):
+        text = paragraph.get_text(' ', strip=True)
+        if text.startswith('Tasks: '):
+            tasks = list(dict.fromkeys(tasks + text[7:].rstrip('.').split(', ')))
     name = name_cell.get_text(' ', strip=True)
     author, separator, task = name.partition(' — ')
     date = date_cell.get_text(strip=True)
     image = preview.find('img')
-    post = preview.find('a', href=True)['href']
-    video = next((a['href'] for a in preview.select('a[href]') if '▶ Video' in a.get_text()), None)
+    post = next((a['href'] for a in description.select('.layout-links a[href]') if a.get_text(strip=True).lower().endswith('post') or a.get_text(strip=True) == 'RedNote'), preview.find('a', href=True)['href'])
+    video = next((a['href'] for a in preview.select('a[href]') if a.get_text(strip=True) in ('Video', '▶ Video')), None)
+    extra_links = []
+    for linkbar in description.select('.layout-links'):
+        extra_links.extend(str(a) for a in linkbar.select('a[href]') if a['href'] not in (post, video))
+        linkbar.decompose()
     notes = description.select_one('details.entry-notes')
     notes_html = str(notes.extract()) if notes else ''
     if video:
         media = f'<video controls playsinline preload="none" poster="{escape(image["src"], quote=True)}" aria-label="{escape(name, quote=True)}"><source src="{escape(video, quote=True)}" type="video/mp4"><a href="{escape(video, quote=True)}">Watch video</a></video>'
     else:
         media = f'<a href="{escape(post, quote=True)}"><img src="{escape(image["src"], quote=True)}" alt="{escape(image.get("alt", name), quote=True)}" loading="lazy" decoding="async"></a>'
-    return f'''<article class="entry demo-card" id="{category}-entry-{index}" data-date="{escape(date)}" data-demo="{kind}">
+    return f'''<article class="entry demo-card" id="{category}-entry-{index}" data-date="{escape(date)}" data-demo="{kind}" data-demo-pinned="{str(pinned).lower()}" data-tasks="{escape(json.dumps(tasks), quote=True)}">
 <div class="demo-media">{media}</div>
 <div class="demo-content"><div class="demo-meta"><span class="demo-environment">{escape(environment.get_text(' ', strip=True))}</span><time datetime="{escape(date)}">{escape(date)}</time></div>
 <p class="demo-author">{escape(author) if separator else 'Community demo'}</p>
 <h4 class="demo-title">{escape(task if separator else name)}</h4>
+<div class="demo-tasks" aria-label="Task categories">{task_labels}</div>
 <div class="demo-description">{description.decode_contents()}</div>
 <p class="demo-media-error" hidden>Video unavailable here. Use the original post below.</p>
-<div class="demo-links"><a href="{escape(post, quote=True)}">Open original post ↗</a>{f'<a href="{escape(video, quote=True)}">Video ↗</a>' if video else '<span>Image preview</span>'}</div>
+<div class="demo-links"><a href="{escape(post, quote=True)}">Open original post ↗</a>{f'<a href="{escape(video, quote=True)}">Video ↗</a>' if video else ''}{''.join(extra_links)}</div>
 {notes_html}</div></article>'''
 
 

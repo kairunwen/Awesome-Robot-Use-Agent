@@ -28,7 +28,7 @@ Keep supporting resources selective. Robot-specific tools such as cuRobo and Pin
 | Section | What to add |
 | --- | --- |
 | **Articles** | Introductions, technical blogs, and perspectives on robot-use agents. |
-| **Papers** | Research references under Surveys, Models & Frameworks, Datasets, or Benchmarks. Keep a paper and its code links together. |
+| **Papers** | Research references under Surveys, Models & Frameworks, Datasets, Benchmarks, or Related Agent Self-Improvement. Clearly label non-robot methodological references in the latter. Keep a paper and its code links together. |
 | **Projects → Systems & Frameworks** | Agent runtimes and systems that connect reasoning to robot execution and feedback. |
 | **Projects → Environment & Sandbox** | Simulators, task environments, and scene-reconstruction workflows that supply a setting for robot interaction. |
 | **Projects → Tool Box** | Reusable perception, grasping, planning, control, execution, and learning tools. Use **Other Tools** for interfaces, evaluation utilities, and data workflows that do not fit the more specific subsections. |

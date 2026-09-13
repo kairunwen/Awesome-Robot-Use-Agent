@@ -216,3 +216,40 @@ footer a { text-decoration: none; }
 
 .resource-group, .guide { border-top: 4px solid #d1d9e0; }
 .resource-group { padding-top: 24px; }
+
+/* Social demos: keep the full evidence beside a playable, uncropped preview. */
+.demo-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 18px 0; }
+.demo-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.demo-tabs button { padding: 10px 15px; border: 1px solid var(--line); border-radius: 99px; background: var(--paper); color: var(--muted); font: 600 12px var(--body); }
+.demo-tabs button:hover { border-color: var(--accent); }
+.demo-tabs button[aria-pressed=true] { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+#demo-count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.demo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 20px 0 36px; }
+.demo-card.entry { min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--paper); display: flex; flex-direction: column; }
+.demo-card.entry:hover { background: var(--paper); border-color: #ab9983; }
+.demo-media { aspect-ratio: 16 / 10; background: #252c30; overflow: hidden; }
+.demo-media > a { display: block; height: 100%; }
+.demo-media video, .demo-media img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.demo-content { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+.demo-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 17px; }
+.demo-meta time { color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.demo-environment { padding: 4px 8px; border-radius: 4px; background: #e5ede7; color: #365b46; font-size: 10px; font-weight: 700; }
+.demo-card[data-demo=simulation] .demo-environment { background: #e5ebf1; color: #365b76; }
+.demo-card[data-demo=perception] .demo-environment { background: #eee6d8; color: #775b30; }
+.demo-author { margin: 0 0 5px; color: var(--muted); font-size: 11px; }
+.resource-group .demo-title { margin: 0 0 12px; font-size: 18px; line-height: 1.35; font-weight: 800; letter-spacing: -.025em; }
+.demo-description { font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.demo-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 18px; margin-top: auto; font-size: 11px; font-weight: 700; }
+.demo-links span { color: var(--muted); font-weight: 400; }
+.demo-card .entry-notes { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 14px; font-size: 11px; line-height: 1.9; overflow-wrap: anywhere; }
+.demo-card .entry-notes > summary { font-weight: 700; }
+.demo-media-error { color: var(--accent); font-size: 12px; }
+@media (max-width: 1100px) { .demo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+  .demo-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .demo-tabs button { padding: 10px 12px; font-size: 11px; }
+  .demo-content { padding: 18px; }
+  .resource-group .demo-title { font-size: 20px; }
+  .demo-meta time, .demo-environment, .demo-author, .demo-links, .demo-card .entry-notes { font-size: 12px; }
+  .demo-description { font-size: 13px; }
+}

@@ -7,8 +7,20 @@ const text = new Map(entries.map(entry => [entry, entry.textContent.toLowerCase(
 const demoFilter = document.querySelector('#demo-filter');
 const codeFilter = document.querySelector('#code-filter');
 const demoOrder = document.querySelector('#demo-order');
-const demoTables = [...document.querySelectorAll('table[data-demo] tbody')].map(body => ({body, rows: [...body.rows]}));
+const demoTables = [...document.querySelectorAll('.demo-grid')].map(body => ({body, rows: [...body.children]}));
 document.querySelector('#discovery-tools').hidden = false;
+const demoTabs = [...document.querySelectorAll('[data-demo-kind]')];
+const demoToolbar = document.querySelector('.demo-toolbar');
+if (demoToolbar) demoToolbar.hidden = false;
+const videos = [...document.querySelectorAll('.demo-card video')];
+for (const video of videos) {
+  video.addEventListener('play', () => {
+    for (const other of videos) if (other !== video) other.pause();
+  });
+  const showError = () => { video.closest('.demo-card').querySelector('.demo-media-error').hidden = false; };
+  video.addEventListener('error', showError);
+  video.querySelector('source').addEventListener('error', showError);
+}
 let category = 'all';
 
 function sortDemos() {
@@ -32,8 +44,9 @@ function update() {
         || (demoFilter.value !== 'all' && !(demoFilter.value === 'demos' ? entry.dataset.demo : entry.dataset.demo === demoFilter.value))
         || (codeFilter.checked && entry.dataset.code !== 'true');
       if (!entry.hidden) matches++;
+      else entry.querySelector('video')?.pause();
     }
-    for (const table of group.querySelectorAll('.preview-scroll')) table.hidden = !table.querySelector('.entry:not([hidden])');
+    for (const table of group.querySelectorAll('.preview-scroll, .demo-grid')) table.hidden = !table.querySelector('.entry:not([hidden])');
     for (const intro of group.querySelectorAll('[data-demo-intro]')) intro.hidden = !group.querySelector(`.entry[data-demo="${intro.dataset.demoIntro}"]:not([hidden])`);
     for (const disclosure of group.querySelectorAll('.project-group')) {
       disclosure.hidden = !disclosure.querySelector('.entry:not([hidden])');
@@ -43,6 +56,12 @@ function update() {
     group.querySelector('.group-heading > span').textContent = String(matches).padStart(2, '0');
     count += matches;
   }
+  for (const button of demoTabs) button.setAttribute('aria-pressed', String(button.dataset.demoKind === (demoFilter.value === 'all' ? 'demos' : demoFilter.value)));
+  const demoCount = document.querySelectorAll('.demo-card:not([hidden])').length;
+  if (demoToolbar) {
+    demoToolbar.hidden = category !== 'all' && category !== 'projects';
+    document.querySelector('#demo-count').textContent = `${demoCount} demos`;
+  }
   const selected = filters.find(button => button.dataset.filter === category);
   for (const button of filters) button.setAttribute('aria-pressed', String(button === selected));
   document.querySelector('#result-count').textContent = `${count} ${count === 1 ? 'entry' : 'entries'} · ${category === 'all' ? 'all categories' : selected.firstElementChild.textContent}`;
@@ -51,6 +70,14 @@ function update() {
   document.querySelector('#resource-list').classList.toggle('is-filtering', terms.length > 0 || demoFilter.value !== 'all' || codeFilter.checked);
 }
 
+for (const button of demoTabs) button.addEventListener('click', () => {
+  category = 'all';
+  demoFilter.value = button.dataset.demoKind;
+  update();
+});
+for (const disclosure of document.querySelectorAll('.project-group')) disclosure.addEventListener('toggle', () => {
+  if (!disclosure.open) for (const video of disclosure.querySelectorAll('video')) video.pause();
+});
 search.addEventListener('input', update);
 for (const control of [demoFilter, codeFilter]) control.addEventListener('change', update);
 demoOrder.addEventListener('change', () => { sortDemos(); update(); });

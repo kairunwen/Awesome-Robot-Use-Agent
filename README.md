@@ -277,6 +277,8 @@ Interfaces and utilities for robot observations, actions, evaluation, execution 
 
 ### Social Demos
 
+[Better viewed on the website →](https://kairunwen.github.io/Awesome-Robot-Use-Agent/#social-demos)
+
 <details class="project-group" open>
 <summary>Browse 32 demos and evaluations</summary>
 

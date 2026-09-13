@@ -102,6 +102,16 @@ def build():
                         node['data-demo-intro'] = kind
         for table in list(content.select('table')):
             labels = [c.get_text(' ', strip=True) for c in table.select('thead th')]
+            if labels[0] == 'Preview' and table.has_attr('data-demo'):
+                kind = table['data-demo']
+                cards = []
+                for row in table.select('tbody tr'):
+                    cells = row.find_all('td', recursive=False)
+                    assert len(cells) == 5, (title, labels)
+                    cards.append(demo_card(cells, kind, ident, count))
+                    count += 1
+                table.replace_with(BeautifulSoup(f'<div class="demo-grid" data-demo="{kind}">{"".join(cards)}</div>', 'html.parser'))
+                continue
             if labels[0] == 'Preview':
                 table['class'] = 'preview-table'
                 for row in table.select('tbody tr'):
@@ -149,6 +159,15 @@ def build():
                     rows.append(entry(name, description, '', '<div><dt>Source and context</dt><dd>'+item.decode_contents()+'</dd></div>', ident, count))
                     count += 1
                 listing.replace_with(BeautifulSoup(''.join(rows), 'html.parser'))
+        demo_heading = content.find(id='social-demos')
+        if demo_heading:
+            demo_heading.insert_after(BeautifulSoup('''<div class="demo-toolbar" hidden>
+<div class="demo-tabs" role="group" aria-label="Demo scenes">
+<button type="button" data-demo-kind="demos" aria-pressed="true">All demos</button>
+<button type="button" data-demo-kind="real" aria-pressed="false">Real robots</button>
+<button type="button" data-demo-kind="simulation" aria-pressed="false">Simulation</button>
+<button type="button" data-demo-kind="perception" aria-pressed="false">Perception &amp; reconstruction</button>
+</div><span id="demo-count" role="status" aria-live="polite"></span></div>''', 'html.parser'))
         for item in content.select('.entry'):
             item['data-code'] = str(any(re.search(r'\bcode\b', a.get_text(), re.I) and a.get('href', '').startswith('https://github.com/') for a in item.select('a[href]'))).lower()
         # Comparison guidance remains available without competing with resources.
@@ -174,6 +193,31 @@ def build():
         shutil.copyfile(HERE / asset, OUT / asset)
     shutil.copyfile(HERE / 'logo-warm.png', OUT / 'logo.png')
     return total
+
+
+def demo_card(cells, kind, category, index):
+    preview, name_cell, date_cell, environment, description = cells
+    name = name_cell.get_text(' ', strip=True)
+    author, separator, task = name.partition(' — ')
+    date = date_cell.get_text(strip=True)
+    image = preview.find('img')
+    post = preview.find('a', href=True)['href']
+    video = next((a['href'] for a in preview.select('a[href]') if '▶ Video' in a.get_text()), None)
+    notes = description.select_one('details.entry-notes')
+    notes_html = str(notes.extract()) if notes else ''
+    if video:
+        media = f'<video controls playsinline preload="none" poster="{escape(image["src"], quote=True)}" aria-label="{escape(name, quote=True)}"><source src="{escape(video, quote=True)}" type="video/mp4"><a href="{escape(video, quote=True)}">Watch video</a></video>'
+    else:
+        media = f'<a href="{escape(post, quote=True)}"><img src="{escape(image["src"], quote=True)}" alt="{escape(image.get("alt", name), quote=True)}" loading="lazy" decoding="async"></a>'
+    return f'''<article class="entry demo-card" id="{category}-entry-{index}" data-date="{escape(date)}" data-demo="{kind}">
+<div class="demo-media">{media}</div>
+<div class="demo-content"><div class="demo-meta"><span class="demo-environment">{escape(environment.get_text(' ', strip=True))}</span><time datetime="{escape(date)}">{escape(date)}</time></div>
+<p class="demo-author">{escape(author) if separator else 'Community demo'}</p>
+<h4 class="demo-title">{escape(task if separator else name)}</h4>
+<div class="demo-description">{description.decode_contents()}</div>
+<p class="demo-media-error" hidden>Video unavailable here. Use the original post below.</p>
+<div class="demo-links"><a href="{escape(post, quote=True)}">Open original post ↗</a>{f'<a href="{escape(video, quote=True)}">Video ↗</a>' if video else '<span>Image preview</span>'}</div>
+{notes_html}</div></article>'''
 
 
 def entry(name, description, date, fields, category, index):

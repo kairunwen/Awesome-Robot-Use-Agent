@@ -10,6 +10,8 @@ class WebsiteTest(unittest.TestCase):
         total = build()
         html = (OUT / 'index.html').read_text()
         page = BeautifulSoup(html, 'html.parser')
+        # Video CDN rejects a localhost Referer; media requests must omit it.
+        self.assertIsNotNone(page.select_one('meta[name="referrer"][content="no-referrer"]'))
         self.assertEqual(len(page.select('.entry')), total)
         bibtex = re.search(r'```bibtex\n(.*?)```', (ROOT / 'README.md').read_text(), re.S).group(1)
         code = page.select_one('#citation code.language-bibtex')
@@ -22,7 +24,7 @@ class WebsiteTest(unittest.TestCase):
         projects = source.split('## Projects\n', 1)[1].split('\n## ', 1)[0]
         project_source = BeautifulSoup(MarkdownIt('commonmark').enable('table').render(projects), 'html.parser')
         self.assertEqual(len(page.select('#projects .entry')), len(project_source.select('tbody tr')))
-        self.assertEqual([(h.name, h.get_text()) for h in page.select('#projects h3, #projects h4, #projects h5')], [
+        self.assertEqual([(h.name, h.get_text()) for h in page.select('#projects h3, #projects h4:not(.demo-title), #projects h5')], [
             ('h3', 'Open Source'), ('h4', 'Systems & Frameworks'),
             ('h4', 'Environment & Sandbox'), ('h4', 'Tool Box'),
             ('h3', 'Social Demos'),
@@ -40,7 +42,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertTrue(all(d.find('summary', recursive=False) for d in disclosures))
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tool Box'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
-        self.assertEqual(len(page.select('#projects .preview-entry img')), 32)
+        self.assertEqual(len(page.select('#projects .demo-card')), 32)
         self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 7)
         self.assertFalse(page.select('#papers .preview-table, #papers img'))
         for row in page.select('.preview-entry'):
@@ -61,6 +63,28 @@ class WebsiteTest(unittest.TestCase):
         show = page.select_one('#papers .entry:has(.entry-notes)')
         self.assertIn('not independently deployed here', show.select_one('.entry-body').get_text())
         self.assertNotIn('not independently deployed here', show.select_one('.entry-description').get_text())
+        source_demos = project_source.select('table:has(th:first-child)')
+        source_demos = [t for t in source_demos if t.select_one('th').get_text() == 'Preview']
+        cards = page.select('.demo-card')
+        source_rows = [r for t in source_demos for r in t.select('tbody tr')]
+        self.assertEqual(len(cards), len(source_rows))
+        self.assertEqual(len(page.select('.demo-grid')), 3)
+        for row, card in zip(source_rows, cards):
+            cells = row.find_all('td', recursive=False)
+            for link in row.select('a[href]'):
+                self.assertIn(link['href'], str(card), 'A demo source link was lost')
+            self.assertEqual(card['data-date'], cells[2].get_text(strip=True))
+            self.assertIn(cells[0].find('img')['src'].replace('&', '&amp;'), str(card))
+            self.assertEqual(card.select_one('.entry-notes').get_text(), cells[4].select_one('.entry-notes').get_text())
+            self.assertNotIn(card.select_one('.entry-notes').get_text(), card.select_one('.demo-description').get_text())
+            video = card.select_one('video')
+            if video:
+                self.assertEqual(video['preload'], 'none')
+                self.assertTrue(video.has_attr('controls') and video.has_attr('playsinline'))
+                self.assertFalse(video.has_attr('autoplay'))
+                self.assertTrue(video['aria-label'])
+            else:
+                self.assertEqual(card.select_one('img')['loading'], 'lazy')
         self.assertEqual(len(page.select('.entry[data-demo]')), 32)
         self.assertEqual({e['data-demo'] for e in page.select('.entry[data-demo]')}, {'real', 'simulation', 'perception'})
         self.assertTrue(page.select('.entry[data-demo][data-code="true"]'))
@@ -72,7 +96,8 @@ class WebsiteTest(unittest.TestCase):
             self.assertTrue(img['src'].startswith('https://'))
         self.assertIn('binary operator verdicts', page.select_one('#benchmarks-1').get_text())
         self.assertIsNone(page.find(id='resource'))
-        posts = set(re.findall(r'https://x\.com/[^\s)]+', source))
+        rendered_source = BeautifulSoup(MarkdownIt('commonmark').enable('table').render(source), 'html.parser')
+        posts = {a['href'] for a in rendered_source.select('a[href^="https://x.com/"]')}
         for url in posts:
             self.assertIn(url, html)
         ids = [tag['id'] for tag in page.select('[id]')]

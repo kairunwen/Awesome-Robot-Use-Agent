@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script id="google-analytics">
+    if (location.origin === 'https://kairunwen.github.io' && location.pathname.startsWith('/Awesome-Robot-Use-Agent/')) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-BH0XB730MF', {
+        page_location: 'https://kairunwen.github.io/Awesome-Robot-Use-Agent/',
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+      const tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-BH0XB730MF';
+      document.head.append(tag);
+    }
+  </script>
   <meta name="referrer" content="no-referrer">
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Awesome Robot Use Agent (RUA)</title>
@@ -41,4 +57,6 @@
 </main>
 <footer class="shell"><div><strong>Awesome Robot Use Agent (RUA)</strong><p>A curated guide to agents acting in the physical world.</p></div><nav aria-label="Footer"><a href="#citation">📖 Citation</a><a href="{{REPO}}">GitHub ↗</a><a href="{{REPO}}/blob/main/CONTRIBUTING.md">Contribute ↗</a><a href="#top">Back to top ↑</a></nav></footer>
 {{STAR}}
+<p class="site-views">This site uses Google Analytics to measure visits. <a href="https://policies.google.com/technologies/partner-sites">How Google uses data</a>.</p>
+<p class="site-views" aria-live="polite">Total views · <span id="view-count" title="View count is not connected yet">—</span></p>
 </body></html>

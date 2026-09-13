@@ -253,3 +253,5 @@ footer a { text-decoration: none; }
   .demo-meta time, .demo-environment, .demo-author, .demo-links, .demo-card .entry-notes { font-size: 12px; }
   .demo-description { font-size: 13px; }
 }
+
+.site-views { margin: 0; padding: 0 24px 24px; text-align: center; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }

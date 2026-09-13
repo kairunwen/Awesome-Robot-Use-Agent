@@ -22,6 +22,12 @@
 <div class="shell catalogue-layout" id="catalogue">
   <div class="catalogue-main"><div class="catalogue-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Find your next reference.</h2></div><a class="top-link" href="#top">Top ↑</a></div>
   <div class="search-tools"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search resources</span><input id="search" type="search" placeholder="Search papers, tools, authors, or tasks…" autocomplete="off"><kbd>/</kbd></label><button id="clear" type="button" hidden>Clear filters</button></div>
+  <div class="discovery-tools" id="discovery-tools" hidden>
+    <label>Show <select id="demo-filter"><option value="all">All resources</option><option value="demos">All demos</option><option value="real">Real robot demos</option><option value="simulation">Simulation demos</option><option value="perception">Perception &amp; reconstruction</option></select></label>
+    <label><input id="code-filter" type="checkbox"> Code linked</label>
+    <label>Demo order <select id="demo-order"><option value="curated">Curated</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label>
+    <span>Dates sort within demo groups. Code links do not imply verified reproduction.</span>
+  </div>
   <div class="result-line"><p id="result-count" role="status" aria-live="polite">{{TOTAL}} entries · all categories</p><span>Expand a row for sources and details</span></div>
   <noscript><p class="notice">All resources are listed below. Enable JavaScript to search and filter.</p></noscript>
   <p class="empty-state" id="empty" hidden>No matching resources. Try a different keyword or clear the filters.</p>

@@ -79,6 +79,17 @@ def build():
             guide = str(content)
             continue
         count = 0
+        for anchor, kind in [('real-robot-demonstrations', 'real'), ('simulation-demonstrations', 'simulation'), ('perception-and-reconstruction', 'perception')]:
+            marker = content.find(id=anchor)
+            if marker:
+                demo_table = marker.find_next('table')
+                demo_table['data-demo'] = kind
+                marker_block = marker.parent if marker.parent.name == 'p' else marker
+                for node in marker_block.next_siblings:
+                    if node is demo_table:
+                        break
+                    if getattr(node, 'name', None) == 'p':
+                        node['data-demo-intro'] = kind
         for table in list(content.select('table')):
             labels = [c.get_text(' ', strip=True) for c in table.select('thead th')]
             if labels[0] == 'Preview':
@@ -89,6 +100,8 @@ def build():
                     row['class'] = ['entry', 'preview-entry']
                     row['id'] = f'{ident}-entry-{count}'
                     row['data-date'] = cells[2].get_text(strip=True)
+                    if table.has_attr('data-demo'):
+                        row['data-demo'] = table['data-demo']
                     count += 1
                 table.wrap(content.new_tag('div', attrs={'class': 'preview-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': f'{title} previews'}))
                 continue
@@ -102,7 +115,10 @@ def build():
                 strong = primary.find('strong')
                 name = strong.get_text(' ', strip=True) if strong else primary.get_text(' ', strip=True)
                 description_index = labels.index('Mechanism / release notes') if 'Mechanism / release notes' in labels else name_index+1
-                description = cells[description_index].get_text(' ', strip=True)
+                abstract = BeautifulSoup(cells[description_index].decode_contents(), 'html.parser')
+                for note in abstract.select('details.entry-notes'):
+                    note.decompose()
+                description = abstract.get_text(' ', strip=True)
                 date = cells[0].get_text(strip=True) if has_date else ''
                 fields = ''.join(f'<div><dt>{escape(label)}</dt><dd>{cell.decode_contents()}</dd></div>' for label, cell in zip(labels, cells) if cell is not primary and label != 'Date')
                 project = ''.join(str(a) for a in primary.find_all('a'))
@@ -123,6 +139,8 @@ def build():
                     rows.append(entry(name, description, '', '<div><dt>Source and context</dt><dd>'+item.decode_contents()+'</dd></div>', ident, count))
                     count += 1
                 listing.replace_with(BeautifulSoup(''.join(rows), 'html.parser'))
+        for item in content.select('.entry'):
+            item['data-code'] = str(any(re.search(r'\bcode\b', a.get_text(), re.I) and a.get('href', '').startswith('https://github.com/') for a in item.select('a[href]'))).lower()
         # Comparison guidance remains available without competing with resources.
         comparison = content.find(id='how-to-compare-systems')
         if comparison:

@@ -6,9 +6,11 @@
 
 [![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-91-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
 <br>
-[![Tools](https://img.shields.io/badge/Tools-Explore-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
+[![Tools](https://img.shields.io/badge/Tools-16-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
-[Articles](#articles) · [Papers](#papers) · [Projects](#projects) · [Benchmarks](#benchmarks-1)
+[Articles](#articles) · [Papers](#papers) · [Projects](#projects) · [Benchmarks](#benchmarks-1) · [Social Demos](#social-demos)
+
+<img src="assets/teaser-spacing-v1.png" alt="Robot-use agents: from computer use, through connected robot interfaces, to interaction with the physical world" width="100%" />
 
 </div>
 

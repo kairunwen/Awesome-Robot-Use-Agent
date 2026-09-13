@@ -1,0 +1,234 @@
+{
+  "https://www.anthropic.com/research/claude-plays-robotics": {
+    "image": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+    "source": "https://www.anthropic.com/research/claude-plays-robotics"
+  },
+  "https://www.generalrobotics.company/post/introducing-auto-engineering-for-robotics": {
+    "image": "https://cdn.prod.website-files.com/6aa0328c48614f5ed0e1f12d/6aa10723d83167e10f50c8d2_Video%20Thumbnail.jpg",
+    "source": "https://www.generalrobotics.company/post/introducing-auto-engineering-for-robotics"
+  },
+  "https://huggingface.co/blog/nvidia-reachy-mini": {
+    "image": "https://huggingface.co/blog/assets/nvidia-reachy-mini/new_thumbnail.png",
+    "source": "https://huggingface.co/blog/nvidia-reachy-mini"
+  },
+  "https://deepmind.google/models/gemini-robotics/embodied-reasoning/": {
+    "image": "https://lh3.googleusercontent.com/iQ3FgmoN8wDpfAmlPDNmi5T6UEfQmC1IN2SP8fz3lZKzftzNkW5iL06wgKX2K3eEIQtwuhGtmhHHXKbiBsw6dwI3MvRNsxACg3wk6uzmM--fgclupA=w1200-h630-n-nu-rw",
+    "source": "https://deepmind.google/models/gemini-robotics/embodied-reasoning/"
+  },
+  "https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf": {
+    "image": "previews/b021d80f3e33d466.jpg",
+    "source": "https://raw.githubusercontent.com/showlab/Awesome-Multimodal-Embodied-Agent/main/assets/Awesome_Multimodal_Embodied_Agent.pdf"
+  },
+  "https://arxiv.org/abs/2510.10991": {
+    "image": "previews/9ca733f9d0d2aaf6.jpg",
+    "source": "https://arxiv.org/pdf/2510.10991"
+  },
+  "https://arxiv.org/abs/2508.05294": {
+    "image": "previews/66dbd0914a729344.jpg",
+    "source": "https://arxiv.org/pdf/2508.05294"
+  },
+  "https://arxiv.org/abs/2404.09228": {
+    "image": "previews/dac143c913b6c82f.jpg",
+    "source": "https://arxiv.org/pdf/2404.09228"
+  },
+  "https://arxiv.org/abs/2609.10522": {
+    "image": "previews/79d6ea3fdd0d71a9.jpg",
+    "source": "https://arxiv.org/pdf/2609.10522"
+  },
+  "https://arxiv.org/abs/2608.16590": {
+    "image": "previews/c3b32595174320eb.jpg",
+    "source": "https://arxiv.org/pdf/2608.16590"
+  },
+  "https://arxiv.org/abs/2608.11246": {
+    "image": "previews/567bf1ab3bc77725.jpg",
+    "source": "https://arxiv.org/pdf/2608.11246"
+  },
+  "https://arxiv.org/abs/2608.03924": {
+    "image": "previews/c0fd33421a4894f4.jpg",
+    "source": "https://arxiv.org/pdf/2608.03924"
+  },
+  "https://arxiv.org/abs/2608.04933": {
+    "image": "previews/47bd68092e317aad.jpg",
+    "source": "https://arxiv.org/pdf/2608.04933"
+  },
+  "https://arxiv.org/abs/2608.11350": {
+    "image": "previews/6cb117b2c374fc98.jpg",
+    "source": "https://arxiv.org/pdf/2608.11350"
+  },
+  "https://arxiv.org/abs/2608.07555": {
+    "image": "previews/7b0057fd795ecd08.jpg",
+    "source": "https://arxiv.org/pdf/2608.07555"
+  },
+  "https://arxiv.org/abs/2607.21725": {
+    "image": "previews/bbacc99e550159f0.jpg",
+    "source": "https://arxiv.org/pdf/2607.21725"
+  },
+  "https://arxiv.org/abs/2607.18060": {
+    "image": "previews/435ef6964aa497e6.jpg",
+    "source": "https://arxiv.org/pdf/2607.18060"
+  },
+  "https://arxiv.org/abs/2607.08448": {
+    "image": "previews/5f2f5bbe44d38af1.jpg",
+    "source": "https://arxiv.org/pdf/2607.08448"
+  },
+  "https://arxiv.org/abs/2607.05369": {
+    "image": "previews/0b7de25d626af2fa.jpg",
+    "source": "https://arxiv.org/pdf/2607.05369"
+  },
+  "https://arxiv.org/abs/2607.16636": {
+    "image": "previews/1b1ccc18b4f06781.jpg",
+    "source": "https://arxiv.org/pdf/2607.16636"
+  },
+  "https://arxiv.org/abs/2607.15275": {
+    "image": "previews/da23fd3c282aab54.jpg",
+    "source": "https://arxiv.org/pdf/2607.15275"
+  },
+  "https://arxiv.org/abs/2607.00272": {
+    "image": "previews/30e4ab2f14897340.jpg",
+    "source": "https://arxiv.org/pdf/2607.00272"
+  },
+  "https://arxiv.org/abs/2606.18363": {
+    "image": "previews/a5c7b420634ff4d2.jpg",
+    "source": "https://arxiv.org/pdf/2606.18363"
+  },
+  "https://arxiv.org/abs/2606.19980": {
+    "image": "previews/2550c26299227a45.jpg",
+    "source": "https://arxiv.org/pdf/2606.19980"
+  },
+  "https://arxiv.org/abs/2606.19419": {
+    "image": "previews/30a1bf861cb9f900.jpg",
+    "source": "https://arxiv.org/pdf/2606.19419"
+  },
+  "https://arxiv.org/abs/2606.10267": {
+    "image": "previews/70fa6e04063cbcc3.jpg",
+    "source": "https://arxiv.org/pdf/2606.10267"
+  },
+  "https://arxiv.org/abs/2605.10332": {
+    "image": "previews/99f62620ee72fb75.jpg",
+    "source": "https://arxiv.org/pdf/2605.10332"
+  },
+  "https://arxiv.org/abs/2605.00416": {
+    "image": "previews/46a5a2816b349119.jpg",
+    "source": "https://arxiv.org/pdf/2605.00416"
+  },
+  "https://arxiv.org/abs/2604.26988": {
+    "image": "previews/4df314d5d17737c9.jpg",
+    "source": "https://arxiv.org/pdf/2604.26988"
+  },
+  "https://arxiv.org/abs/2603.11558": {
+    "image": "previews/35d424cac1ea7fff.jpg",
+    "source": "https://arxiv.org/pdf/2603.11558"
+  },
+  "https://arxiv.org/abs/2603.02772": {
+    "image": "previews/dc5ba31e17bc6d63.jpg",
+    "source": "https://arxiv.org/pdf/2603.02772"
+  },
+  "https://arxiv.org/abs/2602.12063": {
+    "image": "previews/a52c22e84f138b68.jpg",
+    "source": "https://arxiv.org/pdf/2602.12063"
+  },
+  "https://arxiv.org/abs/2509.15155": {
+    "image": "previews/d2ca3fa6e4b41418.jpg",
+    "source": "https://arxiv.org/pdf/2509.15155"
+  },
+  "https://arxiv.org/abs/2502.19417": {
+    "image": "previews/b383bc15c3dbb742.jpg",
+    "source": "https://arxiv.org/pdf/2502.19417"
+  },
+  "https://arxiv.org/abs/2412.04455": {
+    "image": "previews/d15d84386355f82f.jpg",
+    "source": "https://arxiv.org/pdf/2412.04455"
+  },
+  "https://arxiv.org/abs/2410.22662": {
+    "image": "previews/c31f558b505f357e.jpg",
+    "source": "https://arxiv.org/pdf/2410.22662"
+  },
+  "https://arxiv.org/abs/2410.00371": {
+    "image": "previews/5d1e417775866290.jpg",
+    "source": "https://arxiv.org/pdf/2410.00371"
+  },
+  "https://arxiv.org/abs/2409.01652": {
+    "image": "previews/a7c56cf957e1c615.jpg",
+    "source": "https://arxiv.org/pdf/2409.01652"
+  },
+  "https://arxiv.org/abs/2307.05973": {
+    "image": "previews/f79fb2b155acb905.jpg",
+    "source": "https://arxiv.org/pdf/2307.05973"
+  },
+  "https://arxiv.org/abs/2307.06135": {
+    "image": "previews/e764930e25c096cb.jpg",
+    "source": "https://arxiv.org/pdf/2307.06135"
+  },
+  "https://arxiv.org/abs/2307.04738": {
+    "image": "previews/1f619d14046b0c20.jpg",
+    "source": "https://arxiv.org/pdf/2307.04738"
+  },
+  "https://arxiv.org/abs/2307.01928": {
+    "image": "previews/c94f80c8f1a5249b.jpg",
+    "source": "https://arxiv.org/pdf/2307.01928"
+  },
+  "https://arxiv.org/abs/2307.00329": {
+    "image": "previews/75fc2e848db16b0f.jpg",
+    "source": "https://arxiv.org/pdf/2307.00329"
+  },
+  "https://arxiv.org/abs/2306.15724": {
+    "image": "previews/28b3674ba266c8d8.jpg",
+    "source": "https://arxiv.org/pdf/2306.15724"
+  },
+  "https://arxiv.org/abs/2306.11706": {
+    "image": "previews/8fdc200da97154a0.jpg",
+    "source": "https://arxiv.org/pdf/2306.11706"
+  },
+  "https://arxiv.org/abs/2209.07753": {
+    "image": "previews/84182cdf0db88456.jpg",
+    "source": "https://arxiv.org/pdf/2209.07753"
+  },
+  "https://arxiv.org/abs/2209.11302": {
+    "image": "previews/9c776509f5d82caf.jpg",
+    "source": "https://arxiv.org/pdf/2209.11302"
+  },
+  "https://arxiv.org/abs/2207.05608": {
+    "image": "previews/6e48551f8ddd757f.jpg",
+    "source": "https://arxiv.org/pdf/2207.05608"
+  },
+  "https://arxiv.org/abs/2204.01691": {
+    "image": "previews/38ad622810c54c27.jpg",
+    "source": "https://arxiv.org/pdf/2204.01691"
+  },
+  "https://arxiv.org/abs/2607.24744": {
+    "image": "previews/530f1c647ca6cfa9.jpg",
+    "source": "https://arxiv.org/pdf/2607.24744"
+  },
+  "https://arxiv.org/abs/2506.06677": {
+    "image": "previews/d7fa3b43e1e9ec3d.jpg",
+    "source": "https://arxiv.org/pdf/2506.06677"
+  },
+  "https://arxiv.org/abs/2603.22435": {
+    "image": "previews/3536b0ebb5f72149.jpg",
+    "source": "https://arxiv.org/pdf/2603.22435"
+  },
+  "https://arxiv.org/abs/2502.09560": {
+    "image": "previews/c4485d074f6307ea.jpg",
+    "source": "https://arxiv.org/pdf/2502.09560"
+  },
+  "https://arxiv.org/abs/2410.07166": {
+    "image": "previews/6f4edfd842061b88.jpg",
+    "source": "https://arxiv.org/pdf/2410.07166"
+  },
+  "https://arxiv.org/abs/2609.01437": {
+    "image": "previews/b91d75ff5d4147c0.jpg",
+    "source": "https://arxiv.org/pdf/2609.01437"
+  },
+  "https://arxiv.org/abs/2608.31111": {
+    "image": "previews/8ea47d655c89bf56.jpg",
+    "source": "https://arxiv.org/pdf/2608.31111"
+  },
+  "https://arxiv.org/abs/2608.31100": {
+    "image": "previews/5115234ebf17feb0.jpg",
+    "source": "https://arxiv.org/pdf/2608.31100"
+  },
+  "https://www.waddlelabs.ai/research/introducing-waddle": {
+    "image": "https://i.ytimg.com/vi/fGRYBtmzwoI/hqdefault.jpg",
+    "source": "https://www.waddlelabs.ai/research/introducing-waddle"
+  }
+}

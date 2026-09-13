@@ -49,8 +49,66 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tool Box'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .demo-card')), 32)
-        self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 18)
-        self.assertFalse(page.select('#papers .preview-table, #papers img'))
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 18)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 18)
+        self.assertFalse(page.select('#benchmarks-1 .preview-table'))
+        benchmark_source = BeautifulSoup(MarkdownIt('commonmark').enable('table').render(source.rsplit('## Benchmarks\n', 1)[1].split('\n## ', 1)[0]), 'html.parser')
+        for index, row in enumerate(benchmark_source.select('tbody tr')):
+            card = page.select_one(f'#benchmarks-1-entry-{index}')
+            cells = row.find_all('td')
+            self.assertIn(cells[3].get_text(' ', strip=True), card.select_one('.reading-environment').get_text(' ', strip=True))
+            self.assertIn(cells[2].get_text(' ', strip=True), card.get_text(' ', strip=True))
+            self.assertEqual(cells[0].find('img')['src'], card.select_one('.reading-cover img')['src'])
+            for link in row.select('a[href]'):
+                self.assertIsNotNone(card.find('a', href=link['href']), 'Benchmark source link lost')
+            self.assertEqual(cells[4].select_one('.entry-notes').get_text(' ', strip=True), card.select_one('.entry-notes').get_text(' ', strip=True))
+        for section in ('papers', 'benchmarks-1'):
+            cards = page.select(f'#{section} .reading-entry')
+            dates = [(c['data-date'] + '-01-01')[:10] if c['data-date'] else '' for c in cards]
+            self.assertEqual(dates, sorted(dates, reverse=True))
+            self.assertEqual([b.get_text() for b in page.select(f'#{section} [data-reading-sort]')], ['Newest', 'Most stars', 'Most cited'])
+        self.assertFalse(page.select('#papers .preview-table'))
+        self.assertEqual(len(page.select('#papers .reading-entry')), 56)
+        self.assertEqual(len(page.select('#articles .reading-entry')), 6)
+        for card in page.select('.reading-entry'):
+            self.assertIsNotNone(card.select_one('.reading-title a[href]'))
+            self.assertTrue(card.select_one('.reading-description').get_text(strip=True))
+            self.assertTrue(card.select('.reading-links a[href]'))
+            self.assertIsNotNone(card.select_one('.reading-details .entry-body'))
+            image = card.select_one('.reading-cover img')
+            if image and not image['src'].startswith('https://'):
+                self.assertTrue((OUT / image['src']).is_file())
+            if card['data-date']:
+                meta = card.select_one('.reading-meta')
+                self.assertEqual(meta.find().name, 'time')
+                self.assertEqual(meta.find()['datetime'], card['data-date'])
+            for logo in card.select('.institution-logo img'):
+                self.assertTrue(logo['alt'])
+                self.assertTrue((OUT / logo['src']).is_file())
+        cap = page.select_one('.reading-title a[href="https://arxiv.org/abs/2209.07753"]').find_parent('article')
+        self.assertEqual(cap['data-date'], '2022-09-16')
+        self.assertIn('Jacky Liang, Wenlong Huang, Fei Xia, +5 authors', cap.select_one('.reading-meta').get_text())
+        self.assertIn('Robotics at Google', cap.select_one('.reading-meta').get_text())
+        self.assertIn('Andy Zeng', cap.select_one('.reading-details').get_text())
+        self.assertEqual(cap.select_one('.reading-publication dd').get_text(), 'ICRA · 2023')
+        for card in page.select('#papers .reading-entry, #benchmarks-1 .reading-entry'):
+            publication = card.select_one('.reading-details .reading-publication dd')
+            self.assertIsNotNone(publication)
+            self.assertIsNotNone(publication.select_one('a[href]'))
+            self.assertRegex(publication.get_text(), r'20\d{2}')
+        embodied = [c.select_one('.reading-publication').get_text(' ', strip=True) for c in page.select('.reading-entry') if c.select_one('[data-citation-id="ARXIV:2502.09560"]')]
+        self.assertEqual(embodied, ['Publication ICML · 2025'] * 2)
+        show_harness = page.select_one('#papers [data-citation-id="ARXIV:2609.10522"]').find_parent('article')
+        self.assertIn('Preprint; acceptance not verified', show_harness.select_one('.reading-publication').get_text())
+        # Paper/project/code links stay outside the disclosure; evidence stays inside.
+        doremi = page.select_one('.reading-title a[href="https://arxiv.org/abs/2307.00329"]').find_parent('article')
+        self.assertEqual([a['href'] for a in doremi.select('.reading-links a')], [
+            'https://arxiv.org/abs/2307.00329', 'https://sites.google.com/view/doremi-paper',
+            'https://arxiv.org/pdf/2307.00329',
+        ])
+        self.assertIn('implementation availability is unverified', doremi.select_one('.reading-details').get_text())
+        for field in page.select('.reading-details .entry-body > div > dt'):
+            self.assertNotIn(field.get_text(), ['Paper', 'Code', 'Related links', 'Metadata source', 'Release date'])
         for row in page.select('.preview-entry'):
             self.assertEqual(len(row.find_all('td', recursive=False)), 5)
             self.assertTrue(row.select_one('td:first-child a img')['alt'])
@@ -67,8 +125,17 @@ class WebsiteTest(unittest.TestCase):
                 note_text = note.get_text(' ', strip=True)
                 self.assertNotIn(note_text, item.select_one('.entry-description').get_text())
         show = page.select_one('#papers .entry:has(.entry-notes)')
+        self.assertEqual([a.find('span').get_text(strip=True) for a in show.select('.reading-resources a')], ['Data', 'Models', 'Code', 'Citation'])
+        self.assertEqual([a['href'] for a in show.select('.reading-resources a')], [
+            'https://huggingface.co/datasets/showlab/Show-Harness-Data',
+            'https://huggingface.co/showlab/Show-Harness-VLMs',
+            'https://github.com/showlab/Show-Harness',
+            'https://arxiv.org/abs/2609.10522',
+        ])
+        self.assertFalse(page.select('.reading-resource.is-unlisted[href]'))
+        self.assertEqual(len(page.select('#articles .reading-resources')), 6)
         self.assertIn('not independently deployed here', show.select_one('.entry-body').get_text())
-        self.assertNotIn('not independently deployed here', show.select_one('.entry-description').get_text())
+        self.assertNotIn('not independently deployed here', show.select_one('.reading-description').get_text())
         source_demos = project_source.select('table:has(th:first-child)')
         source_demos = [t for t in source_demos if t.select_one('th').get_text() == 'Preview']
         cards = page.select('.demo-card')
@@ -115,7 +182,11 @@ class WebsiteTest(unittest.TestCase):
         self.assertNotIn('localhost', html)
         self.assertNotIn('127.0.0.1', html)
         self.assertNotIn('star-history', html)
-        self.assertNotIn('img.shields.io/github/stars', html)
+        for link in page.select('.reading-resources a[href^="https://github.com/"]'):
+            if link.find('span').get_text(strip=True) != 'Code':
+                continue
+            repo = '/'.join(link['href'].split('/')[3:5])
+            self.assertEqual(f'https://img.shields.io/github/stars/{repo}.json', link.select_one('.reading-stars')['data-stars-url'])
 
 
 if __name__ == '__main__':

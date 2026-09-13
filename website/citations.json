@@ -1,0 +1,251 @@
+{
+  "source": "Google Scholar",
+  "papers": {
+    "ARXIV:2508.05294": {
+      "count": 27,
+      "title": "Towards embodied agentic ai: Review and classification of llm-and vlm-driven robot autonomy and interaction",
+      "url": "https://scholar.google.com/scholar?cluster=17443684984886757354&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Towards Embodied Agentic AI\""
+    },
+    "ARXIV:2404.09228": {
+      "count": 244,
+      "title": "A survey on integration of large language models with intelligent robots",
+      "url": "https://scholar.google.com/scholar?cluster=2352516774480409865&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"A survey on integration of large language models with intelligent robots\""
+    },
+    "ARXIV:2609.10522": {
+      "count": 0,
+      "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+      "url": "https://scholar.google.com/scholar?q=intitle%3A%22Show-Harness%22&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Show-Harness\""
+    },
+    "ARXIV:2608.16590": {
+      "count": 0,
+      "title": "Zetta : An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
+      "url": "https://scholar.google.com/scholar?cluster=7941871506997289466&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Zetta $\\zeta$\""
+    },
+    "ARXIV:2608.11246": {
+      "count": 0,
+      "title": "Towards the Harness of Embodied Agents",
+      "url": "https://scholar.google.com/scholar?cluster=7699186029319084221&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Towards the Harness of Embodied Agents\""
+    },
+    "ARXIV:2608.04933": {
+      "count": 0,
+      "title": "Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents in Interactive Environments",
+      "url": "https://scholar.google.com/scholar?q=intitle%3A%22Mimir%22&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Mimir\""
+    },
+    "ARXIV:2608.11350": {
+      "count": 0,
+      "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+      "url": "https://scholar.google.com/scholar?cluster=5038316638588920448&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Self-Evolving Embodied Agents via Skill-Harness Evolution\""
+    },
+    "ARXIV:2608.07555": {
+      "count": 0,
+      "title": "You Don't Need To Stay in The Loop: An Agentic Robotics Loop for Robot-Policy Improvement",
+      "url": "https://scholar.google.com/scholar?q=intitle%3A%22You+Don%27t+Need+To+Stay+in+The+Loop%22&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"You Don't Need To Stay in The Loop\""
+    },
+    "ARXIV:2607.21725": {
+      "count": 1,
+      "title": "Addressing the Orchestration Gap in Generalist Robots via Physical Agency",
+      "url": "https://scholar.google.com/scholar?cluster=5514450592439257297&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Addressing the Orchestration Gap in Generalist Robots via Physical Agency\""
+    },
+    "ARXIV:2607.16636": {
+      "count": 1,
+      "title": "PhyAgentOS: A Self-Evolving Operating System for Embodied Agents with Decoupled Cognitive Planning and Physical Execution",
+      "url": "https://scholar.google.com/scholar?cluster=16687322466098831378&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"PhyAgentOS\""
+    },
+    "ARXIV:2605.10332": {
+      "count": 9,
+      "title": "EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents",
+      "url": "https://scholar.google.com/scholar?cluster=12200290515652207140&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"EmbodiSkill\""
+    },
+    "ARXIV:2605.00416": {
+      "count": 9,
+      "title": "Learning while deploying: Fleet-scale reinforcement learning for generalist robot policies",
+      "url": "https://scholar.google.com/scholar?cluster=5085533990440876657&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Learning while Deploying\""
+    },
+    "ARXIV:2604.26988": {
+      "count": 0,
+      "title": "Robot Planning and Situation Handling with Active Perception",
+      "url": "https://scholar.google.com/scholar?cluster=12358963790025440221&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Robot Planning and Situation Handling with Active Perception\""
+    },
+    "ARXIV:2409.01652": {
+      "count": 458,
+      "title": "Rekep: Spatio-temporal reasoning of relational keypoint constraints for robotic manipulation",
+      "url": "https://scholar.google.com/scholar?cluster=11870520317462391689&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"ReKep\""
+    },
+    "ARXIV:2307.05973": {
+      "count": 1302,
+      "title": "Voxposer: Composable 3d value maps for robotic manipulation with language models",
+      "url": "https://scholar.google.com/scholar?cluster=7844573100140075704&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"VoxPoser\""
+    },
+    "ARXIV:2307.06135": {
+      "count": 721,
+      "title": "Sayplan: Grounding large language models using 3d scene graphs for scalable robot task planning",
+      "url": "https://scholar.google.com/scholar?cluster=3875993055660234789&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"SayPlan\""
+    },
+    "ARXIV:2307.04738": {
+      "count": 549,
+      "title": "Roco: Dialectic multi-robot collaboration with large language models",
+      "url": "https://scholar.google.com/scholar?cluster=12422903619663887095&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"RoCo\""
+    },
+    "ARXIV:2307.00329": {
+      "count": 111,
+      "title": "Doremi: Grounding language model by detecting and recovering from plan-execution misalignment",
+      "url": "https://scholar.google.com/scholar?cluster=2130659032626678516&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"DoReMi\""
+    },
+    "ARXIV:2209.07753": {
+      "count": 2262,
+      "title": "Code as policies: Language model programs for embodied control",
+      "url": "https://scholar.google.com/scholar?cluster=12996700922335668599&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Code as Policies\""
+    },
+    "ARXIV:2209.11302": {
+      "count": 1598,
+      "title": "Progprompt: Generating situated robot task plans using large language models",
+      "url": "https://scholar.google.com/scholar?cluster=9673159642461183952&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"ProgPrompt\""
+    },
+    "ARXIV:2607.24744": {
+      "count": 2,
+      "title": "Data Pyramid for Embodied Manipulation",
+      "url": "https://scholar.google.com/scholar?cluster=11948869253820703606&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Data Pyramid for Embodied Manipulation\""
+    },
+    "ARXIV:2603.22435": {
+      "count": 27,
+      "title": "CaP-X: A framework for benchmarking and improving coding agents for robot manipulation",
+      "url": "https://scholar.google.com/scholar?cluster=8725411135407615199&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"CaP-X\""
+    },
+    "ARXIV:2502.09560": {
+      "count": 257,
+      "title": "Embodiedbench: Comprehensive benchmarking multi-modal large language models for vision-driven embodied agents",
+      "url": "https://scholar.google.com/scholar?cluster=12673131308644522405&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"EmbodiedBench\""
+    },
+    "ARXIV:2410.07166": {
+      "count": 294,
+      "title": "Embodied agent interface: Benchmarking llms for embodied decision making",
+      "url": "https://scholar.google.com/scholar?cluster=2488405281591567279&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"Embodied Agent Interface\""
+    },
+    "ARXIV:2609.01437": {
+      "count": 0,
+      "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+      "url": "https://scholar.google.com/scholar?q=intitle%3A%22HarnessDev%22&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"HarnessDev\""
+    },
+    "ARXIV:2608.31100": {
+      "count": 0,
+      "title": "S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?",
+      "url": "https://scholar.google.com/scholar?q=intitle%3A%22S3Gym%22&hl=en",
+      "updated_at": "2026-09-13T14:52:21.828118+00:00",
+      "search_query": "intitle:\"S3Gym\""
+    },
+    "ARXIV:2608.03924": {
+      "count": 0,
+      "title": "ETA: A New Agentic Paradigm for Embodied Tasks",
+      "url": "https://scholar.google.com/scholar?q=%22ETA%3A+A+New+Agentic+Paradigm+for+Embodied+Tasks%22&hl=en",
+      "updated_at": "2026-09-13T14:56:40.833031+00:00",
+      "search_query": "\"ETA: A New Agentic Paradigm for Embodied Tasks\""
+    },
+    "ARXIV:2606.18363": {
+      "count": 4,
+      "title": "Guava: An Effective and Universal Harness for Embodied Manipulation",
+      "url": "https://scholar.google.com/scholar?cluster=8979001489110299186&hl=en",
+      "updated_at": "2026-09-13T14:57:02.490281+00:00",
+      "search_query": "\"Guava: An Effective and Universal Harness for Embodied Manipulation\""
+    },
+    "ARXIV:2606.19419": {
+      "count": 4,
+      "title": "Playful Agentic Robot Learning",
+      "url": "https://scholar.google.com/scholar?cluster=16376354935385363790&hl=en",
+      "updated_at": "2026-09-13T14:57:07.136235+00:00",
+      "search_query": "\"Playful Agentic Robot Learning\""
+    },
+    "ARXIV:2606.10267": {
+      "count": 3,
+      "title": "What Matters in Orchestrating Robot Policies: A Systematic Study of Hierarchical VLA Agents",
+      "url": "https://scholar.google.com/scholar?cluster=13575704559382240057&hl=en",
+      "updated_at": "2026-09-13T14:57:08.846052+00:00",
+      "search_query": "\"What Matters in Orchestrating Robot Policies: A Systematic Study of Hierarchical VLA Agents\""
+    },
+    "ARXIV:2603.02772": {
+      "count": 1,
+      "title": "Agentic Self-Evolutionary Replanning for Embodied Navigation",
+      "url": "https://scholar.google.com/scholar?cluster=1532682451993817552&hl=en",
+      "updated_at": "2026-09-13T14:57:14.242362+00:00",
+      "search_query": "\"Agentic Self-Evolutionary Replanning for Embodied Navigation\""
+    },
+    "ARXIV:2502.19417": {
+      "count": 241,
+      "title": "Hi robot: Open-ended instruction following with hierarchical vision-language-action models",
+      "url": "https://scholar.google.com/scholar?cluster=4773441681178938121&hl=en",
+      "updated_at": "2026-09-13T14:57:23.474943+00:00",
+      "search_query": "\"Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models\""
+    },
+    "ARXIV:2412.04455": {
+      "count": 76,
+      "title": "Code-as-monitor: Constraint-aware visual programming for reactive and proactive robotic failure detection",
+      "url": "https://scholar.google.com/scholar?cluster=16169047717651091410&hl=en",
+      "updated_at": "2026-09-13T14:57:25.328833+00:00",
+      "search_query": "\"Code-as-Monitor: Constraint-aware Visual Programming for Reactive and Proactive Robotic Failure Detection\""
+    },
+    "ARXIV:2307.01928": {
+      "count": 506,
+      "title": "Robots that ask for help: Uncertainty alignment for large language model planners",
+      "url": "https://scholar.google.com/scholar?cluster=751643712331399494&hl=en",
+      "updated_at": "2026-09-13T14:57:36.486762+00:00",
+      "search_query": "\"Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners\""
+    },
+    "ARXIV:2608.31111": {
+      "count": 0,
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "url": "https://scholar.google.com/scholar?q=%22Aspire%3A+Can+Models+Self-Evolve+from+Vague+Goals%3F%22&hl=en",
+      "updated_at": "2026-09-13T14:57:49.264113+00:00",
+      "search_query": "\"Aspire: Can Models Self-Evolve from Vague Goals?\""
+    }
+  },
+  "scholar_last_attempt_at": "2026-09-13T14:52:21.828118+00:00"
+}

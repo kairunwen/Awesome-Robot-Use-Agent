@@ -4,9 +4,9 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-96-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-99-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
 <br>
-[![Tools](https://img.shields.io/badge/Tools-21-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#tool-box) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
+[![Tools](https://img.shields.io/badge/Tools-22-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#tool-box) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
 [Articles](#articles) · [Papers](#papers) · [Projects](#projects) · [Benchmarks](#benchmarks-1) · [Social Demos](#social-demos)
 
@@ -15,6 +15,8 @@
 > A **robot-use agent** is an AI system that can **reason** about tasks, **plan** sequences of actions, and **act** in the physical world through robot skills, generated code, and perception/control APIs. It combines observations with execution feedback to track progress, revise plans, and recover from failures while pursuing a user-specified goal.
 
 A curated collection of articles, papers, open-source projects, community demos, and benchmarks for **robot-use agents**. Explore how AI agents connect to robots, use perception and control tools, generate executable code, and learn from execution feedback to carry out tasks in simulation and the **physical world.**
+
+---
 
 ## Contents
 
@@ -33,7 +35,9 @@ A curated collection of articles, papers, open-source projects, community demos,
   - [Social Demos](#social-demos)
 - [Benchmarks](#benchmarks-1)
 
-[Contributing](#contributing) · [Citation](#citation)
+[Contributing](#contributing) · [📖 Citation](#citation)
+
+---
 
 ## Getting started
 
@@ -44,6 +48,8 @@ Robot-use agents turn goals into robot actions through skills, generated code, a
 - **Watch:** [Social Demos](#social-demos) — community demonstrations.
 - **Evaluate:** [CaP-X / CaP-Bench](https://github.com/capgym/cap-x) · [RoboCurve](https://robocurve.org/).
 
+---
+
 ## Articles
 
 <a id="blogs-and-demos"></a>
@@ -53,9 +59,16 @@ Robot-use agents turn goals into robot actions through skills, generated code, a
 
 - **[Claude plays robotics](https://www.anthropic.com/research/claude-plays-robotics)** — Anthropic · 2026-07-09 · **Research article**. Compares direct motor commands, generated controllers, pretrained-policy supervision, and RL training across control, locomotion, and manipulation tasks. Author-reported results show that robot embodiment and control interface strongly affect performance. Direct-control simulations pause between model calls; physical Go2 explorations should be distinguished from simulated benchmark results.
 
-- **[Gemini Robotics ER 2](https://deepmind.google/models/gemini-robotics/embodied-reasoning/)** — Google DeepMind · **Model overview**. Describes embodied reasoning for multi-step planning, tool use, success tracking, and multi-robot coordination. ER 2 provides high-level decisions while a connected VLA handles motor execution; the page presents developer-reported capabilities and evaluations.
+- **[Introducing Auto Engineering for Robotics](https://www.generalrobotics.company/post/introducing-auto-engineering-for-robotics)** — General Robotics · 2026-09-09 · **Research Blog**. Introduces GRID’s agent-driven workflow for robot integration, simulation, skill creation, and deployment evaluation. Demonstrates laboratory manipulation tasks and describes how execution feedback helps agents diagnose failures, repair components, and retain reusable skills and engineering knowledge.
+
+- **[Introducing Waddle: agents that control robots](https://www.waddlelabs.ai/research/introducing-waddle)** — Waddle Labs · 2026-07 · **Research Blog**. Describes agents that observe camera feeds, generate robot-control programs, and call action models as tools. Presents real-robot demonstrations of task decomposition, outcome verification, replanning, and multi-agent coordination, with reusable skills shared across agents.
+
 
 - **[NVIDIA brings agents to life with DGX Spark and Reachy Mini](https://huggingface.co/blog/nvidia-reachy-mini)** — Hugging Face & NVIDIA · 2026-01-05 · **Technical tutorial**. Connects Nemotron reasoning and vision models, NeMo Agent Toolkit, and Pipecat to Reachy Mini for voice, camera input, and robot behaviors. Describes ReAct tool calling and Python interfaces for hardware or simulation; focuses on a desktop interactive robot rather than general manipulation.
+
+- **[Gemini Robotics ER 2](https://deepmind.google/models/gemini-robotics/embodied-reasoning/)** — Google DeepMind · **Model overview**. Describes embodied reasoning for multi-step planning, tool use, success tracking, and multi-robot coordination. ER 2 provides high-level decisions while a connected VLA handles motor execution; the page presents developer-reported capabilities and evaluations.
+
+---
 
 ## Papers
 
@@ -116,6 +129,8 @@ Research references; see the [benchmark catalogue](#benchmarks-1) for evaluation
 | 2025-02 | **EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents** | [Paper](https://arxiv.org/abs/2502.09560) | [Code](https://github.com/EmbodiedBench/EmbodiedBench) | Vision-driven embodied-agent evaluation; see the [benchmark catalogue](#benchmarks-1). |
 | 2024-10 | **Embodied Agent Interface: Benchmarking LLMs for Embodied Decision Making** | [Paper](https://arxiv.org/abs/2410.07166) | [Code](https://github.com/embodied-agent-interface/embodied-agent-interface) | Evaluation of embodied decision-making modules; see the [benchmark catalogue](#benchmarks-1). |
 
+
+---
 
 ## Projects
 
@@ -201,6 +216,7 @@ Reusable tools and libraries for perception, grasp generation, motion planning, 
 | **PyRoki** | JAX-based robot kinematic optimization, inverse kinematics, and configurable collision costs | A default ASPIRE simulation service and an ENPIRE planning backend. Collision handling depends on the integration; ENPIRE’s documented RoboCasa IK path has no scene collision checking. | [Code and documentation](https://github.com/chungmin99/pyroki) · [ASPIRE integration](https://github.com/NVlabs/ASPIRE/blob/main/aspire/sim/docs/configuration.md) |
 | **MPlib** | Lightweight Python motion planning decoupled from ROS | A planning backend for a custom tool; robot models, collision geometry, and execution must be supplied by the application. | [Code and documentation](https://github.com/haosulab/MPlib) |
 | **Mink** | MuJoCo-based differential inverse kinematics with joint limits and collision avoidance | A local kinematic solver, not a global task planner or a locomotion policy. The application supplies targets and the control loop. | [Code and documentation](https://github.com/kevinzakka/mink) |
+| **Pink** | Task-weighted differential inverse kinematics using Pinocchio and quadratic-programming solvers | ENPIRE’s YAM environment uses Pink to convert end-effector targets into joint velocities. Requires a robot model, task targets, and a control loop; it is not a global motion planner. | [Code and documentation](https://github.com/pink-kinematics/pink) · [ENPIRE integration](https://github.com/NVlabs/ENPIRE/blob/main/enpire/env/forge/cap/env/yam.py) |
 
 <a id="execution-infrastructure"></a>
 
@@ -313,6 +329,8 @@ These are supporting capabilities for robot-use workflows, rather than direct ev
 
 </details>
 
+---
+
 ## Benchmarks
 
 <a id="benchmarks-and-environments"></a>
@@ -326,15 +344,23 @@ These are supporting capabilities for robot-use workflows, rather than direct ev
 | <a href="https://capgym.github.io/"><img src="https://arxiv.org/html/2603.22435v1/assets/figures/splash_figure_v3.png" alt="CaP-X paper overview: CaP-Bench and CaP-Gym" width="200"></a> | **CaP-X / CaP-Bench** | 2026 | Robosuite / LIBERO-PRO / BEHAVIOR | Evaluates robot-control coding agents across API abstraction levels, single-/multi-turn interaction, and visual grounding <details class="entry-notes"><summary>Sources & notes</summary>[Paper](https://arxiv.org/abs/2603.22435) · [Code](https://github.com/capgym/cap-x) · [Project](https://capgym.github.io/)<br>Preview: Figure 1 of the paper.</details> |
 | <a href="https://x.com/chooi_jeq/status/2098427488787730636"><img src="https://pbs.twimg.com/media/HR8eAsCacAACY8b.jpg" alt="Jay Chooi / Robocurve — StationeryBench — original post preview" width="200"></a><br>[▶ Video](https://video.twimg.com/amplify_video/2098427417312546816/vid/avc1/1920x1080/EzYWIs63EscjJMd7.mp4?tag=29) | **StationeryBench** | 2026 | Real robots · bimanual YAM; abstract mock | Five desk-stationery tasks built on [Inspect Robots](https://github.com/robocurve/inspect-robots): uncap a marker, retrieve an eraser, extract a sticky pad, pour paper clips, and hand over a ruler. <details class="entry-notes"><summary>Sources & notes</summary>[Code](https://github.com/robocurve/stationerybench) · [Task reference](https://robocurve.github.io/stationerybench/) · [Evaluation report](https://openai.robocurve.org/stationerybench/) · [Community report](#social-demos). The package records binary operator verdicts; the report uses 0–4 stage scores. The package defaults to 120 seconds; the report's agent condition uses 90 seconds. The bundled mock has no physics and does not evaluate manipulation ability.</details> |
 
+---
+
 ## Contributing
 
-Suggestions and corrections are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before opening an issue or pull request.
+Suggestions and corrections are welcome! Please read the [CONTRIBUTING.md](https://github.com/kairunwen/Awesome-Robot-Use-Agent/blob/main/CONTRIBUTING.md) before opening an issue or pull request.
 
-[Back to top](#awesome-robot-use-agent-rua)
+---
 
-## Citation
+## 🙏 Acknowledgements
 
-If you find this collection helpful for your research, you can cite it with the following BibTeX entry:
+This collection takes inspiration from [Awesome Computer Use Agent](https://github.com/trycua/acu) in its curation, organization, and presentation. We thank the authors and maintainers of the resources featured here for sharing their research, code, and demonstrations, and everyone who contributes suggestions and corrections.
+
+<a id="citation"></a>
+
+---
+
+## 📖 Citation
 
 ```bibtex
 @misc{awesome-robot-use-agent,
@@ -347,12 +373,7 @@ If you find this collection helpful for your research, you can cite it with the 
 }
 ```
 
-## Star History
-
-<a href="https://www.star-history.com/?repos=kairunwen%2FAwesome-Robot-Use-Agent&amp;type=date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=kairunwen/Awesome-Robot-Use-Agent&amp;type=date&amp;theme=dark&amp;legend=top-left" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=kairunwen/Awesome-Robot-Use-Agent&amp;type=date&amp;legend=top-left" />
-    <img alt="Awesome Robot Use Agent star history chart" src="https://api.star-history.com/chart?repos=kairunwen/Awesome-Robot-Use-Agent&amp;type=date&amp;legend=top-left" width="100%" />
-  </picture>
-</a>
+<div id="star-callout" align="center">
+<hr>
+<p><strong>If you find this collection help your work, please consider giving it a ⭐ Star.</strong></p>
+</div>

@@ -1,33 +1,83 @@
 # Contributing to Awesome Robot Use Agent
 
-Suggestions and corrections are welcome through an issue or pull request.
+Help make robot-use agents easier to discover, understand, and build. New resources, corrections, broken-link reports, and clearer descriptions are welcome.
 
-- Add a primary source: the authors' paper, project page, repository, or official documentation.
-- Explain the resource's connection to robot-use agents in one sentence and place it in the closest existing category.
-- Use the current sections: Articles for perspectives; Papers for research references (Surveys, Models & Frameworks, Datasets, Benchmarks); Projects for implementations and Social Demos; Benchmarks for evaluation protocols and projects.
-- In Projects, distinguish Systems & Frameworks, Environment & Sandbox, and Tool Box (reusable libraries and agent-facing robot interfaces). Keep papers and their code links together in Papers; do not add a duplicate implementation-only row under Projects. Cross-link benchmark descriptions where useful. Repeated views are not additional distinct works.
-- Keep a separate social post only when it adds a distinct demonstration, evaluation, or discussion. Link the underlying work and merge posts about the same demonstration.
-- For papers, include the full title, first-release month (`YYYY-MM`), and verified official links. Describe the mechanism rather than repeating promotional claims.
-- Check what is actually released. Label website-only repositories, partial releases, and unverified code availability explicitly.
-- Cite the original work separately from third-party implementations. Social posts and demonstrations need an original source and clearly stated evidence scope.
-- Keep general VLA, world-model, and dataset additions selective: explain their direct role as an agent component or evaluation resource.
-- Preserve the distinction between a proposed method, an author-reported result, and an independently reproduced result.
+## Suggest a resource
 
-Suggested paper row:
+Open an [issue](https://github.com/kairunwen/Awesome-Robot-Use-Agent/issues) with the resource name, a primary-source link, and one sentence explaining its relevance. A suggested category is helpful but optional. You do not need to edit the README or run code to make a suggestion.
 
-```markdown
-| YYYY-MM | **Full paper title** <br> [Project](URL) | [Paper](URL) | [Code](URL) or Unverified | One-sentence mechanism. <details class="entry-notes"><summary>Release & evidence</summary>Release or deployment limits, if applicable.</details> |
+For a pull request, edit [README.md](README.md), follow the nearest entry's format, and keep the change focused. Check for an existing entry before adding a new one; update or cross-link it when appropriate.
+
+## What belongs here
+
+The collection focuses on agents that turn goals into robot actions through skills, generated code, or perception and control APIs, then use observations and execution feedback to track progress and recover from failures.
+
+We welcome:
+
+- Research, implementations, and demonstrations of robot-use agents, including planning, tool use, execution, verification, and recovery.
+- Environments and benchmarks that let agents interact with robots or evaluate their behavior.
+- Tools that directly provide robot capabilities or make agent integration, execution, and feedback easier.
+- Selected policies, datasets, and surveys with a clear role in building or evaluating these systems.
+
+A resource does not need a paper or a minimum number of GitHub stars. Explain what it contributes and support the description with evidence.
+
+Keep supporting resources selective. Robot-specific tools such as cuRobo and Pink fit; general dependencies such as PyTorch, Open3D, and Trimesh are not standalone entries. A package appearing in an agent's requirements file is not sufficient evidence of relevance. Likewise, include a VLA, world model, or dataset only when its connection to robot use is explicit.
+
+## Choose a category
+
+| Section | What to add |
+| --- | --- |
+| **Articles** | Introductions, technical blogs, and perspectives on robot-use agents. |
+| **Papers** | Research references under Surveys, Models & Frameworks, Datasets, or Benchmarks. Keep a paper and its code links together. |
+| **Projects → Systems & Frameworks** | Agent runtimes and systems that connect reasoning to robot execution and feedback. |
+| **Projects → Environment & Sandbox** | Simulators, task environments, and scene-reconstruction workflows that supply a setting for robot interaction. |
+| **Projects → Tool Box** | Reusable perception, grasping, planning, control, execution, and learning tools. Use **Other Tools** for interfaces, evaluation utilities, and data workflows that do not fit the more specific subsections. |
+| **Projects → Social Demos** | Original demonstrations, grouped as Real-robot, Simulation, or Perception and reconstruction. |
+| **Benchmarks** | Evaluation protocols, task suites, and benchmark implementations, with their environment and scoring scope. |
+
+Classify a resource by its main function, not every capability it exposes. Do not add a second implementation-only row merely because a paper releases code. A separate benchmark or demo entry should add useful information; cross-link related entries. Multiple views of one work are not independent works.
+
+## Write an informative entry
+
+Use English, the official resource name, and a concise description of what it does. Prefer concrete capabilities over promotional claims.
+
+- **Sources:** Link to the authors' paper, repository, project page, documentation, or original post. Label third-party implementations separately.
+- **Availability:** Distinguish released code, model weights, datasets, and a project website. State when an implementation is partial or its availability is unverified.
+- **Integration:** For tools and systems, identify the interface and material setup requirements, such as robot adapters, calibration, model access, or hardware. Claim an integration only when documentation or a code path supports it.
+- **Evidence:** Distinguish real robots, simulation, perception-only demonstrations, and mock environments. Attribute results to their authors unless independently reproduced. Keep success rate, task progress, retries, and selected demo clips distinct.
+- **Dates:** Use `YYYY-MM` for papers, based on the first arXiv release unless another basis is stated. Keep papers newest-first within each subsection. Use `YYYY-MM-DD` for demos, following the README's UTC+8 convention.
+
+Copy a row from the target subsection so its columns remain compatible with the website. Keep the main description short; use the existing `<details class="entry-notes">` pattern for setup, release status, and limitations. Systems & Frameworks and Other Tools use **Feedback / workflow**, **Setup**, and **Limits** inside these notes.
+
+For Social Demos, merge posts about the same demonstration unless they add distinct evidence. Link the underlying project where available. Use an original or official HTTPS preview with meaningful alt text and a source link; keep a text link if no suitable preview exists. Do not substitute an unrelated image.
+
+Label direct implementation links `Code` or `Project / code`. The website's **Code linked** filter recognizes GitHub links containing `code` in the label; do not apply that label to a website-only repository or an unrelated framework.
+
+## Check a pull request
+
+The website is generated from README.md. Edit the source rather than `website/dist/`, and preserve existing anchors and collapsible groups.
+
+For resource additions, removals, or moves:
+
+- Update the relevant badges: **Resources** counts catalogue entries, **Demo** counts Social Demos, and **Tools** counts all Tool Box entries, including Other Tools.
+- Update category counts or structure expectations in `website/test_build.py` when the intended catalogue changes. Investigate unexpected failures rather than weakening checks.
+- Inspect the rendered README and website for table layout, working anchors, and readable notes. See [website preview instructions](website/README.md).
+
+From the repository root, using the virtual environment described in those instructions:
+
+```sh
+website/.venv/bin/python -m unittest discover -s website -p 'test_*.py'
+git diff --check
 ```
 
-For Systems & Frameworks and the Other Tools subsection of Tool Box, use the same fields: Resource, Role, Interface, Deployment & evidence, and Official source. Keep the role to one sentence; in Deployment & evidence, use `<details class="entry-notes">` with Feedback / workflow, Setup, and Limits. Record only documented capabilities. For other projects or model families, include their interface, intended role, official repository/docs, and current availability. For benchmarks, distinguish the released protocol from any particular evaluation report, including scoring and time budgets. Website entry counts include category views; do not describe them as counts of unique works.
+The test command also rebuilds the website. Check changed external destinations with:
 
-Keep paper rows newest-first within a category. Use a focused commit message such as `docs: add <work>` or `docs: update <section>`, following `type: description`.
+```sh
+website/.venv/bin/python website/check_links.py --url 'https://github.com/OWNER/REPO'
+```
 
-## Previews, filters, and checks
+Repeat `--url` for additional links. Review failures: login requirements, rate limits, and bot protection do not necessarily mean a source is dead. Small wording-only changes need a rendered read-back and whitespace check; they do not require a full external-link scan.
 
-- For Social Demos, use the matching Real-robot, Simulation, or Perception and reconstruction group. State the actual environment and put evidence limits in Sources & notes.
-- Label direct implementation repository links `Code` or `Project / code`. The website's Code linked filter recognizes GitHub links with `code` in the label; a project page or framework link alone does not establish that a demo can be reproduced.
-- Keep dates in `YYYY-MM-DD` for demos. Website date sorting stays within the three demo groups.
-- Use an official or original-post preview URL over HTTPS, with meaningful alt text and a source link. Retain source text when a preview is unavailable; do not substitute an unrelated image.
-- Before submitting, run `python -m unittest discover -s website -p 'test_*.py'` and `git diff --check`. Build checks cover table structure, duplicate entries within a table, internal anchors, and preview metadata.
-- Run `python website/check_links.py` to check external destinations and image responses. You can pass `--url URL` repeatedly to check only changed links. Review HTTP failures before deleting anything: rate limits, login gates, and bot protection are not proof that a source is dead.
+In the PR description, explain what changed, why it belongs, and what you checked. Use commit messages in `type: description` form without a scope, for example `docs: add Pink to tool box` or `docs: clarify benchmark scoring`.
+
+Thank you for helping keep the collection useful and accurate.

@@ -15,9 +15,12 @@ REPO = 'https://github.com/kairunwen/Awesome-Robot-Use-Agent'
 def slug(text):
     return re.sub(r'[^\w\- ]', '', text.lower()).replace(' ', '-')
 
-
 def build():
     soup = BeautifulSoup(MarkdownIt('commonmark').enable('table').render((ROOT / 'README.md').read_text()), 'html.parser')
+    star_callout = soup.find(id="star-callout").extract()
+    # Section borders are styled outside collapsible content on the website.
+    for divider in soup.find_all("hr", recursive=False):
+        divider.decompose()
     for summary in soup.select('summary'):
         if not set(summary.parent.get('class', [])) & {'project-group', 'entry-notes'}:
             summary.decompose()
@@ -37,6 +40,9 @@ def build():
         href = link['href']
         if href == 'CONTRIBUTING.md':
             link['href'] = REPO + '/blob/main/CONTRIBUTING.md'
+    # The template provides the citation anchor.
+    for anchor in soup.select('a#citation'):
+        anchor.decompose()
     heading_ids = set()
     for heading in soup.select('h1,h2,h3,h4,h5,h6'):
         base = slug(heading.get_text())
@@ -63,11 +69,15 @@ def build():
     sections, nav, total = [], [], 0
     guide = ''
     citation = ''
+    acknowledgements = ''
     for title, ident, content in groups:
         if title in ('Contents', 'Contributing', 'Star History'):
             continue
-        if title == 'Citation':
+        if title in ('Citation', '📖 Citation'):
             citation = str(content)
+            continue
+        if title == '🙏 Acknowledgements':
+            acknowledgements = str(content)
             continue
         if title == 'Getting started':
             # The catalogue supplies its own counts and navigation.
@@ -155,7 +165,7 @@ def build():
         total += count
 
     template = (HERE / 'template.html').read_text()
-    for key, value in {'GUIDE':guide, 'CITATION':citation, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
+    for key, value in {'GUIDE':guide, 'CITATION':citation, 'STAR':str(star_callout), 'ACKNOWLEDGEMENTS':acknowledgements, 'SECTIONS':''.join(sections), 'NAV':''.join(nav), 'TOTAL':str(total), 'REPO':REPO}.items():
         template = template.replace('{{'+key+'}}', value)
     assert not re.search(r'\{\{[A-Z]+\}\}', template)
     OUT.mkdir(exist_ok=True)

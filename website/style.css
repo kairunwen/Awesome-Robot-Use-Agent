@@ -43,9 +43,8 @@ button, summary { cursor: pointer; }
 .hero { padding-top: 29px; padding-bottom: 38px; }
 .eyebrow { margin: 0 0 18px; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
 .hero .eyebrow { color: #d6bda3; font-size: 14px; letter-spacing: .01em; }
-.hero h1 { margin: 21px 0 24px; font: 600 clamp(64px, 8.9vw, 132px)/.93 var(--display); letter-spacing: -.045em; color: var(--cream); }
+.hero h1 { margin: 21px 0 24px; font: 600 clamp(44.8px, 6.23vw, 92.4px)/.93 var(--display); letter-spacing: -.045em; color: var(--cream); }
 .hero h1 br { display: none; }
-.title-abbr { display: block; margin-top: 15px; font: 600 13px/1.5 var(--body); letter-spacing: .12em; color: #cbb59f; }
 .hero-description { margin: 22px 0 7px; font-size: 18px; color: #e1d2c0; font-weight: 400; }
 .hero-meta { margin: 0; font-size: 12px; color: #bda68e; }
 .hero-meta span { padding-inline: 7px; color: #9f856e; }
@@ -149,7 +148,7 @@ footer a { text-decoration: none; }
 .skip-link:focus { top: 8px; }
 @media (max-width: 1000px) {
   .shell, .topbar { padding-inline: 28px; }
-  .hero h1 { font-size: 10vw; }
+  .hero h1 { font-size: 7vw; }
   .hero h1 br { display: block; }
   .brand-note { display: none; }
   .sidebar details { grid-template-columns: 165px 1fr; }
@@ -166,9 +165,8 @@ footer a { text-decoration: none; }
   .brand img { width: 28px; height: 28px; }
   .hero { padding-top: 22px; padding-bottom: 28px; }
   .hero .eyebrow { font-size: 11px; line-height: 1.8; max-width: 310px; }
-  .hero h1 { margin-top: 18px; font-size: clamp(48px, 11.5vw, 80px); line-height: .98; letter-spacing: -.045em; }
+  .hero h1 { margin-top: 18px; font-size: clamp(33.6px, 8.05vw, 56px); line-height: .98; letter-spacing: -.045em; }
   .hero h1 br { display: block; }
-  .title-abbr { font-size: 10px; margin-top: 13px; }
   .hero-description { margin-top: 22px; font-size: 13px; line-height: 1.8; }
   .hero-meta { font-size: 10px; line-height: 2; }
   .hero-meta span { padding-inline: 3px; }

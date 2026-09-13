@@ -12,7 +12,7 @@
 
 </div>
 
-> A **robot-use agent** is an AI system that can **reason** about tasks, **plan** sequences of actions, and **act** in the physical world through robot skills, generated code, and perception/control APIs. It combines observations with execution feedback to track progress, revise plans, and recover from failures while pursuing a user-specified goal.
+> A **robot-use agent** is an AI system that **reasons** about user-specified goals, **plans** actions, and **acts** in the physical world by using robots as tools through available skills and perception/control interfaces. It uses observations and execution feedback to assess progress, adjust plans, and attempt recovery from failures.
 
 A curated collection of articles, papers, open-source projects, community demos, and benchmarks for **robot-use agents**. Explore how AI agents connect to robots, use perception and control tools, generate executable code, and learn from execution feedback to carry out tasks in simulation and the **physical world.**
 
@@ -460,5 +460,5 @@ This collection takes inspiration from [Awesome Computer Use Agent](https://gith
 
 <div id="star-callout" align="center">
 <hr>
-<p><strong>If you find this collection help your work, please consider giving it a ⭐ Star.</strong></p>
+<p><strong>If you find this collection helpful for your work, please consider giving it a ⭐ Star.</strong></p>
 </div>

@@ -31,7 +31,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Models & Frameworks', 'Datasets', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 6), ('papers', 23), ('benchmarks-1', 7)]:
+        for ident, count in [('articles', 6), ('papers', 38), ('benchmarks-1', 7)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')

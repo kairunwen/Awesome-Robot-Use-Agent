@@ -31,7 +31,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Models & Frameworks', 'Datasets', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 6), ('papers', 23), ('benchmarks-1', 4)]:
+        for ident, count in [('articles', 6), ('papers', 23), ('benchmarks-1', 7)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -41,7 +41,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tool Box'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .preview-entry img')), 32)
-        self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 4)
+        self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 7)
         self.assertFalse(page.select('#papers .preview-table, #papers img'))
         for row in page.select('.preview-entry'):
             self.assertEqual(len(row.find_all('td', recursive=False)), 5)

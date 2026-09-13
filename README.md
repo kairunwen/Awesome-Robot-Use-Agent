@@ -25,7 +25,7 @@ A curated collection of articles, papers, open-source projects, community demos,
 - [Papers](#papers)
   - [Surveys](#surveys)
   - [Methods & Frameworks](#methods--frameworks)
-  - [Datasets](#datasets)
+  - [Dataset Papers](#dataset-papers)
   - [Benchmarks](#benchmark-papers)
 - [Projects](#projects)
   - [Open Source](#open-source)
@@ -33,6 +33,7 @@ A curated collection of articles, papers, open-source projects, community demos,
     - [Environment & Sandbox](#environment--sandbox)
     - [Tools & Utilities](#tools--utilities)
   - [Social Demos](#social-demos)
+- [Datasets](#datasets)
 - [Benchmarks](#benchmarks-1)
 
 [🤝 Contributing](#-contributing) · [📖 Citation](#citation)
@@ -144,7 +145,7 @@ Paper references are grouped by contribution. Dates refer to first arXiv release
 </tbody>
 </table>
 
-### Datasets
+### Dataset Papers
 
 Data for agent action selection, tool use, planning, and execution feedback, with broader robot demonstrations included as supporting resources. Dates follow the associated paper or linked announcement; public downloads, paper-described training data, data directories, and surveys are distinguished below.
 
@@ -152,9 +153,6 @@ Data for agent action selection, tool use, planning, and execution feedback, wit
 <thead><tr><th width="42%">Work</th><th width="15%">Links</th><th width="43%">Summary</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Show-Harness Data</strong><br/><sub class="layout-meta">2026-09-09 · ArXiv 2026</sub></td><td><div class="layout-links"><a href="https://arxiv.org/abs/2609.10522" title="Paper"><img alt="Paper" height="20" src="https://img.shields.io/badge/Paper-b64b45?style=flat-square"/></a> <a href="https://showlab.github.io/Show-Harness/" title="Project"><img alt="Project" height="20" src="https://img.shields.io/badge/Project-3975aa?style=flat-square"/></a> <a href="https://huggingface.co/datasets/showlab/Show-Harness-Data" title="Dataset"><img alt="Dataset" height="20" src="https://img.shields.io/badge/Dataset-268675?style=flat-square"/></a> </div></td><td><p class="layout-description">Observation–action-unit demonstrations across Franka, AgileX, RoboLab, and ManiSkill for training visual robot agents.</p><details class="entry-notes"><summary>Details &amp; sources</summary><div>Primarily action-selection data, not a complete reasoning and failure-recovery log.</div></details></td></tr>
-<tr><td><strong>Data Pyramid for Embodied Manipulation: A Survey</strong><br/><sub class="layout-meta">2026-07-27 · ArXiv 2026</sub></td><td><div class="layout-links"><a href="https://arxiv.org/abs/2607.24744" title="Paper"><img alt="Paper" height="20" src="https://img.shields.io/badge/Paper-b64b45?style=flat-square"/></a> <a href="https://jasper-aaa.github.io/embodied-data-pyramid/" title="Project"><img alt="Project" height="20" src="https://img.shields.io/badge/Project-3975aa?style=flat-square"/></a> <a href="https://github.com/worldbench/awesome-embodied-data-pyramid" title="Resource list"><img alt="Resource list" height="20" src="https://img.shields.io/badge/Resource%20list-666666?style=flat-square"/></a> </div></td><td><p class="layout-description">Surveys real-robot, UMI-style, egocentric/exocentric, simulation, and general vision-language data; examines data mixtures, robot alignment, and gaps in failure and recovery data.</p></td></tr>
-<tr><td><strong>datasets.bot</strong><br/><sub class="layout-meta">2026-07 · Dataset directory 2026</sub></td><td><div class="layout-links"><a href="https://datasets.bot/" title="Browse datasets"><img alt="Browse datasets" height="20" src="https://img.shields.io/badge/Browse%20datasets-268675?style=flat-square"/></a> <a href="https://x.com/vai_viswanathan/status/2081515935215587491" title="Announcement"><img alt="Announcement" height="20" src="https://img.shields.io/badge/Announcement-666666?style=flat-square"/></a> </div></td><td><p class="layout-description">Curated, visual directory of open robotics datasets for discovering data for robot-policy and world-model training.</p><details class="entry-notes"><summary>Details &amp; sources</summary><div>The July 2026 announcement reports nearly 40,000 hours in total across the datasets indexed by the directory.</div></details></td></tr>
 <tr><td><strong>Guava-Agent-4B training data</strong><br/><sub class="layout-meta">2026-06-16 · ArXiv 2026</sub></td><td><div class="layout-links"><a href="https://arxiv.org/abs/2606.18363" title="Paper"><img alt="Paper" height="20" src="https://img.shields.io/badge/Paper-b64b45?style=flat-square"/></a> <a href="https://guava-harness.github.io/" title="Project"><img alt="Project" height="20" src="https://img.shields.io/badge/Project-3975aa?style=flat-square"/></a> <a href="https://arxiv.org/html/2606.18363v1#A1" title="Construction and filtering"><img alt="Construction and filtering" height="20" src="https://img.shields.io/badge/Construction%20and%20filtering-666666?style=flat-square"/></a> </div></td><td><p class="layout-description">Simulated trajectories with observations, tool calls, execution feedback, and recovery from injected errors.</p><details class="entry-notes"><summary>Details &amp; sources</summary><div>The paper reports 1,934 trajectories, including 743 recovery trajectories.</div></details></td></tr>
 <tr><td><strong>RoboCerebra: A Large-scale Benchmark for Long-horizon Robotic Manipulation Evaluation</strong><br/><sub class="layout-meta">2025-06-07 · NeurIPS 2025</sub></td><td><div class="layout-links"><a href="https://arxiv.org/abs/2506.06677" title="Paper"><img alt="Paper" height="20" src="https://img.shields.io/badge/Paper-b64b45?style=flat-square"/></a> <a href="https://robocerebra.github.io/" title="Project"><img alt="Project" height="20" src="https://img.shields.io/badge/Project-3975aa?style=flat-square"/></a> <a href="https://github.com/qiuboxiang/RoboCerebra" title="Code"><img alt="Code · GitHub stars" height="20" src="https://img.shields.io/github/stars/qiuboxiang/RoboCerebra?style=flat-square&amp;label=Code+%E2%98%85&amp;logo=github&amp;color=555&amp;labelColor=333"/></a> <a href="https://huggingface.co/datasets/qiukingballball/RoboCerebra" title="Dataset"><img alt="Dataset" height="20" src="https://img.shields.io/badge/Dataset-268675?style=flat-square"/></a> </div></td><td><p class="layout-description">Long-horizon simulation demonstrations with subtask annotations, disturbances, and memory-dependent tasks.</p><details class="entry-notes"><summary>Details &amp; sources</summary><div>Supports hierarchical planning and execution evaluation; not a dedicated tool-call trace dataset.</div></details></td></tr>
 </tbody>
@@ -456,6 +454,20 @@ These are supporting capabilities for robot-use workflows, rather than direct ev
 [Back to top](#awesome-robot-use-agent-rua)
 
 </details>
+
+---
+
+## Datasets
+
+<a id="dataset-resources"></a>
+
+Datasets and resource directories for robot-use agents.
+
+| Date | Resource | Description | Links |
+| --- | --- | --- | --- |
+| 2026-09-09 | **Show-Harness Data** | Observation–action-unit demonstrations across Franka, AgileX, RoboLab, and ManiSkill for training visual robot agents. <details class="entry-notes"><summary>Dataset details</summary>Primarily action-selection data, not a complete reasoning and failure-recovery log.</details> | [Dataset](https://huggingface.co/datasets/showlab/Show-Harness-Data) · [Project](https://showlab.github.io/Show-Harness/) · [Associated paper](https://arxiv.org/abs/2609.10522) |
+| 2026-07-27 | **Awesome Embodied Data Pyramid** | Companion resource list for the Data Pyramid survey, organizing real-robot, UMI-style, egocentric/exocentric, simulation, and general vision-language data. | [Resource list](https://github.com/worldbench/awesome-embodied-data-pyramid) · [Project](https://jasper-aaa.github.io/embodied-data-pyramid/) · [Associated survey](https://arxiv.org/abs/2607.24744) · [PDF](https://arxiv.org/pdf/2607.24744) |
+| 2026-07 | **datasets.bot** | Curated, visual directory of open robotics datasets for discovering data for robot-policy and world-model training. <details class="entry-notes"><summary>Directory details</summary>The July 2026 announcement reports nearly 40,000 hours in total across the datasets indexed by the directory.</details> | [Browse datasets](https://datasets.bot/) · [Announcement](https://x.com/vai_viswanathan/status/2081515935215587491) |
 
 ---
 

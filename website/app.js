@@ -109,3 +109,19 @@ function revealAnchor() {
 window.addEventListener('hashchange', revealAnchor);
 update();
 if (location.hash) revealAnchor();
+
+async function loadViews() {
+  const counter = document.querySelector('#view-count');
+  try {
+    const response = await fetch('views.json', {cache: 'no-cache', signal: AbortSignal.timeout(10000)});
+    if (!response.ok) throw new Error('Views unavailable');
+    const data = await response.json();
+    if (data.source !== 'ga4' || !Number.isSafeInteger(data.total) || data.total < 0
+        || data.start_date !== '2026-09-13' || !Number.isFinite(Date.parse(data.updated_at))) throw new Error('Invalid views');
+    counter.textContent = data.total.toLocaleString('en-US');
+    counter.title = `Google Analytics page views since ${data.start_date}. Updated ${new Date(data.updated_at).toLocaleString()}. Refreshed hourly; GA processing may be delayed.`;
+  } catch {
+    counter.title = 'Google Analytics view count temporarily unavailable';
+  }
+}
+loadViews();

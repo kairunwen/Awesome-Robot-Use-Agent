@@ -22,10 +22,10 @@ def build():
     for divider in soup.find_all("hr", recursive=False):
         divider.decompose()
     for summary in soup.select('summary'):
-        if not set(summary.parent.get('class', [])) & {'project-group', 'entry-notes'}:
+        if not set(summary.parent.get('class', [])) & {'project-group', 'entry-notes', 'system-comparison'}:
             summary.decompose()
     for details in soup.select('details'):
-        if not set(details.get('class', [])) & {'project-group', 'entry-notes'}:
+        if not set(details.get('class', [])) & {'project-group', 'entry-notes', 'system-comparison'}:
             details.unwrap()
     for img in soup.select('img'):
         cell = img.find_parent('td')
@@ -86,6 +86,8 @@ def build():
                 for node in list(glance.next_siblings):
                     node.extract()
                 glance.extract()
+            for table in content.select('.system-comparison table'):
+                table.wrap(content.new_tag('div', attrs={'class': 'comparison-scroll', 'tabindex': '0', 'role': 'region', 'aria-label': 'System comparison'}))
             guide = str(content)
             continue
         count = 0

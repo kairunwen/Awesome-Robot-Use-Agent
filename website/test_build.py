@@ -13,6 +13,12 @@ class WebsiteTest(unittest.TestCase):
         # Video CDN rejects a localhost Referer; media requests must omit it.
         self.assertIsNotNone(page.select_one('meta[name="referrer"][content="no-referrer"]'))
         self.assertEqual(len(page.select('.entry')), total)
+        comparison = page.select_one('#getting-started .system-comparison')
+        self.assertEqual(len(comparison.select('tbody tr')), 10)
+        self.assertFalse(comparison.select('.entry'))
+        self.assertIsNotNone(comparison.select_one('summary'))
+        self.assertIsNotNone(comparison.select_one('.comparison-scroll[tabindex="0"]'))
+        self.assertIsNotNone(page.find(id='models--frameworks'))
         bibtex = re.search(r'```bibtex\n(.*?)```', (ROOT / 'README.md').read_text(), re.S).group(1)
         code = page.select_one('#citation code.language-bibtex')
         self.assertEqual(code.get_text(), bibtex)
@@ -30,10 +36,10 @@ class WebsiteTest(unittest.TestCase):
             ('h3', 'Social Demos'),
         ])
         self.assertEqual([h.get_text() for h in page.select('.group-heading h2')], ['Articles', 'Papers', 'Projects', 'Benchmarks'])
-        self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Models & Frameworks', 'Datasets', 'Benchmarks', 'Related Agent Self-Improvement'])
+        self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Methods & Frameworks', 'Datasets', 'Benchmarks', 'Related Agent Self-Improvement'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 6), ('papers', 56), ('benchmarks-1', 7)]:
+        for ident, count in [('articles', 6), ('papers', 56), ('benchmarks-1', 18)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -43,7 +49,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tool Box'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .demo-card')), 32)
-        self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 7)
+        self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 18)
         self.assertFalse(page.select('#papers .preview-table, #papers img'))
         for row in page.select('.preview-entry'):
             self.assertEqual(len(row.find_all('td', recursive=False)), 5)

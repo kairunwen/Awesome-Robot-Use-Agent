@@ -25,6 +25,8 @@ website/.venv/bin/python -m unittest discover -s website -p 'test_*.py'
 
 For external links and preview images, run `python website/check_links.py` (or use repeated `--url URL` arguments for changed destinations). HTTP errors are reported separately from access restrictions and network failures. This network check is manual; temporary third-party failures do not block site deployment.
 
+The Getting started guide contains a horizontally scrollable comparison of existing systems; its rows are not counted as resources.
+
 An optional browser smoke check is available as `node website/check_browser.cjs` when Playwright and Chrome are already installed. Set `PLAYWRIGHT_PATH` if the package is outside the normal Node search path, and `PREVIEW_URL` to your running preview URL. It checks demo/code filters, date ordering, reset, anchor navigation, mobile overflow, and the no-JavaScript fallback.
 
 ## Publishing

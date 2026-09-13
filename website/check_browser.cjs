@@ -10,6 +10,16 @@ const assert = require('node:assert/strict');
     await page.goto(url, {waitUntil: 'domcontentloaded'});
     const total = await page.locator('.entry').count();
     const count = () => page.locator('.entry:not([hidden])').count();
+    await page.goto(url + '#system-comparison', {waitUntil: 'domcontentloaded'});
+    assert.equal(await page.locator('.system-comparison table').isVisible(), true);
+    assert.equal(await page.locator('.system-comparison tbody tr').count(), 10);
+    for (const width of [390, 320]) {
+      await page.setViewportSize({width, height: 844});
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `Comparison overflow at ${width}`);
+      assert.ok(await page.locator('.comparison-scroll').evaluate(el => el.scrollWidth > el.clientWidth));
+    }
+    await page.setViewportSize({width: 1280, height: 900});
+    if (await page.locator('#clear').isVisible()) await page.locator('#clear').click();
     await page.locator('#search').fill('AgenticROS');
     const tool = page.locator('details.entry').filter({has: page.locator('.entry-title', {hasText: /^AgenticROS$/})});
     await tool.locator(':scope > summary').click();
@@ -62,6 +72,6 @@ const assert = require('node:assert/strict');
     assert.equal(await nojs.locator('#discovery-tools').isVisible(), false);
     assert.equal(await nojs.locator('.entry').count(), total);
     assert.deepEqual(errors, []);
-    console.log('Passed demo/code filters, search, empty state, sorting/reset, category combinations, anchor reset, mobile widths, and no-JS fallback.');
+    console.log('Passed demo/code filters, comparison navigation and mobile scrolling, search, empty state, sorting/reset, category combinations, anchor reset, and no-JS fallback.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exit(1); });

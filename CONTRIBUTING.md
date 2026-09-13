@@ -28,7 +28,7 @@ Keep supporting resources selective. Robot-specific tools such as cuRobo and Pin
 | Section | What to add |
 | --- | --- |
 | **Articles** | Introductions, technical blogs, and perspectives on robot-use agents. |
-| **Papers** | Research references under Surveys, Models & Frameworks, Datasets, Benchmarks, or Related Agent Self-Improvement. Clearly label non-robot methodological references in the latter. Keep a paper and its code links together. |
+| **Papers** | Research references under Surveys, Methods & Frameworks, Datasets, Benchmarks, or Related Agent Self-Improvement. Clearly label non-robot methodological references in the latter. Keep a paper and its code links together. |
 | **Projects → Systems & Frameworks** | Agent runtimes and systems that connect reasoning to robot execution and feedback. |
 | **Projects → Environment & Sandbox** | Simulators, task environments, and scene-reconstruction workflows that supply a setting for robot interaction. |
 | **Projects → Tool Box** | Reusable perception, grasping, planning, control, execution, and learning tools. Use **Other Tools** for interfaces, evaluation utilities, and data workflows that do not fit the more specific subsections. |
@@ -48,6 +48,8 @@ Use English, the official resource name, and a concise description of what it do
 - **Dates:** Use `YYYY-MM` for papers, based on the first arXiv release unless another basis is stated. Keep papers newest-first within each subsection. Use `YYYY-MM-DD` for demos, following the README's UTC+8 convention.
 
 Copy a row from the target subsection so its columns remain compatible with the website. Keep the main description short; use the existing `<details class="entry-notes">` pattern for setup, release status, and limitations. Systems & Frameworks and Other Tools use **Feedback / workflow**, **Setup**, and **Limits** inside these notes.
+
+The Getting started comparison summarizes existing entries and is not counted as additional resources; update its claims when the linked evidence changes.
 
 For Social Demos, merge posts about the same demonstration unless they add distinct evidence. Link the underlying project where available. Use an original or official HTTPS preview with meaningful alt text and a source link; keep a text link if no suitable preview exists. Do not substitute an unrelated image.
 

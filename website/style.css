@@ -112,6 +112,8 @@ kbd { padding: 0 8px; border: 1px solid var(--line); border-radius: 5px; color: 
 .entry:hover { background: #ecdfca80; }
 .entry[open] { background: linear-gradient(100deg, #f1e2cb, #ede0cb); box-shadow: inset 3px 0 #b57840; }
 .entry-title { grid-column: 1; grid-row: 1; font-size: 14px; font-weight: 800; line-height: 1.65; }
+.comparison-scroll { overflow-x: auto; margin-top: 12px; }
+.comparison-scroll table { min-width: 1000px; }
 .entry-description { grid-column: 1; grid-row: 2; margin-top: 4px; color: var(--muted); font-size: 12px; line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .entry-date { grid-column: 2; grid-row: 1; padding-top: 4px; text-align: right; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .entry-toggle { grid-column: 3; grid-row: 1; font-size: 21px; line-height: 1.2; color: var(--accent); }

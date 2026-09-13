@@ -26,11 +26,11 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Models & Frameworks', 'Datasets', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 4), ('papers', 20), ('benchmarks-1', 5)]:
+        for ident, count in [('articles', 4), ('papers', 23), ('benchmarks-1', 5)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
-        self.assertEqual([len(d.select('.entry')) for d in disclosures], [5, 4, 3, 10, 31])
+        self.assertEqual([len(d.select('.entry')) for d in disclosures], [5, 4, 3, 11, 31])
         self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, False, True])
         self.assertTrue(all(d.find('summary', recursive=False) for d in disclosures))
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:4]], ['Systems & Frameworks', 'Environment & Sandbox', 'Other Tools', 'Components'])

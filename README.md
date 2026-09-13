@@ -4,7 +4,7 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-82-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-86-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
 <br>
 [![Tools](https://img.shields.io/badge/Tools-Explore-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
@@ -96,9 +96,14 @@ Paper references are grouped by contribution. Dates refer to first arXiv release
 
 ### Datasets
 
+Data for agent action selection, tool use, planning, and execution feedback, with broader robot demonstrations included as supporting resources. Dates follow the associated paper; public downloads, paper-described training data, and data surveys are distinguished below.
+
 | Date | Work | Focus | Sources |
 | --- | --- | --- | --- |
-| 2023-10 | **Open X-Embodiment: Robotic Learning Datasets and RT-X Models** | Robot demonstration data across embodiments, supporting policy learning. It is not a dataset of agent tool-call traces; constituent dataset terms must be checked individually. | [Paper](https://arxiv.org/abs/2310.08864) · [Project](https://robotics-transformer-x.github.io/) · [Data and documentation](https://github.com/google-deepmind/open_x_embodiment) |
+| 2026-09 | **Show-Harness Data** | Observation–action-unit demonstrations across Franka, AgileX, RoboLab, and ManiSkill for training visual robot agents. Primarily action-selection data, not a complete reasoning and failure-recovery log. | **Public data:** [Dataset](https://huggingface.co/datasets/showlab/Show-Harness-Data) · [Paper](https://arxiv.org/abs/2609.10522) |
+| 2026-07 | **Data Pyramid for Embodied Manipulation: A Survey** | Surveys real-robot, UMI-style, egocentric/exocentric, simulation, and general vision-language data; examines data mixtures, robot alignment, and gaps in failure and recovery data. | **Data survey:** [Paper](https://arxiv.org/abs/2607.24744) · [Resource list](https://github.com/worldbench/awesome-embodied-data-pyramid) |
+| 2026-06 | **Guava-Agent-4B training data** | Simulated trajectories with observations, tool calls, execution feedback, and recovery from injected errors. The paper reports 1,934 trajectories, including 743 recovery trajectories. | **Paper-described; data download unverified:** [Construction and filtering](https://arxiv.org/html/2606.18363v1#A1) |
+| 2025-06 | **RoboCerebra: A Large-scale Benchmark for Long-horizon Robotic Manipulation Evaluation** | Long-horizon simulation demonstrations with subtask annotations, disturbances, and memory-dependent tasks. Supports hierarchical planning and execution evaluation; not a dedicated tool-call trace dataset. | **Public data:** [Dataset](https://huggingface.co/datasets/qiukingballball/RoboCerebra) · [Paper](https://arxiv.org/abs/2506.06677) · [Project](https://robocerebra.github.io/) |
 
 <a id="benchmark-papers"></a>
 
@@ -206,6 +211,7 @@ Selected building blocks for constructing robot-use tools and agents. These gene
 
 | Resource | Capability | Integration boundary | Official source |
 | --- | --- | --- | --- |
+| **mjbatch** | Batched MuJoCo simulation on CPU through Python, with shared array access to states and controls and per-simulation model parameters; includes MPC, RL, system identification, and hardware co-design examples | A simulation backend for candidate-action rollouts and controller experiments; agent orchestration, tasks, and outcome evaluation must be supplied by the application. | [Code and documentation](https://github.com/kevinzakka/mjbatch) <br> [![GitHub stars](https://img.shields.io/github/stars/kevinzakka/mjbatch?style=flat-square&label=stars)](https://github.com/kevinzakka/mjbatch) |
 | **BehaviorTree.CPP** | Behavior-tree execution and composition in C++ | An execution backend for application-defined actions and conditions; robot bindings, agent integration, and outcome checks must be supplied separately. | [Code and documentation](https://github.com/BehaviorTree/BehaviorTree.CPP) |
 
 <a id="supporting-policies-and-learning-infrastructure"></a>

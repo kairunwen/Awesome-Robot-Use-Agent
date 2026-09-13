@@ -10,8 +10,6 @@
 
 [Articles](#articles) · [Papers](#papers) · [Projects](#projects) · [Benchmarks](#benchmarks-1) · [Social Demos](#social-demos)
 
-<img src="assets/teaser-spacing-v1.png" alt="Robot-use agents: from computer use, through connected robot interfaces, to interaction with the physical world" width="100%" />
-
 </div>
 
 > A **robot-use agent** is an AI system that can **reason** about tasks, **plan** sequences of actions, and **act** in the physical world through robot skills, generated code, and perception/control APIs. It combines observations with execution feedback to track progress, revise plans, and recover from failures while pursuing a user-specified goal.

@@ -4,9 +4,9 @@
 
 # Awesome Robot Use Agent (RUA)
 
-[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-91-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
+[![Awesome](https://img.shields.io/badge/Awesome-List-111111.svg?style=for-the-badge&labelColor=000000&logo=awesomelists&logoColor=white)](https://awesome.re) [![Website](https://img.shields.io/badge/Website-Visit-111111.svg?style=for-the-badge&labelColor=000000&logo=githubpages&logoColor=white)](https://kairunwen.github.io/Awesome-Robot-Use-Agent/) [![Resources](https://img.shields.io/badge/Resources-96-111111.svg?style=for-the-badge&labelColor=000000&logo=readthedocs&logoColor=white)](#contents) [![Demo](https://img.shields.io/badge/Demo-31-111111.svg?style=for-the-badge&labelColor=000000&logo=x&logoColor=white)](#social-demos)
 <br>
-[![Tools](https://img.shields.io/badge/Tools-16-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#robot-interfaces-and-tools) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
+[![Tools](https://img.shields.io/badge/Tools-21-111111.svg?style=for-the-badge&labelColor=000000&logo=ros&logoColor=white)](#tool-box) [![PRs welcome](https://img.shields.io/badge/PRs-Welcome-111111.svg?style=for-the-badge&labelColor=000000&logo=git&logoColor=white)](#contributing) [![GitHub Stars](https://img.shields.io/github/stars/kairunwen/Awesome-Robot-Use-Agent?style=for-the-badge&label=Stars&labelColor=000000&color=111111&logo=github&logoColor=white)](https://github.com/kairunwen/Awesome-Robot-Use-Agent) [![License: MIT](https://img.shields.io/badge/License-MIT-111111.svg?style=for-the-badge&labelColor=000000)](LICENSE)
 
 [Articles](#articles) · [Papers](#papers) · [Projects](#projects) · [Benchmarks](#benchmarks-1) · [Social Demos](#social-demos)
 
@@ -31,8 +31,7 @@ A curated collection of articles, papers, open-source projects, community demos,
   - [Open Source](#open-source)
     - [Systems & Frameworks](#systems--frameworks)
     - [Environment & Sandbox](#environment--sandbox)
-    - [Components](#components)
-    - [Other Tools](#other-tools)
+    - [Tool Box](#tool-box)
   - [Social Demos](#social-demos)
 - [Benchmarks](#benchmarks-1)
 
@@ -166,11 +165,12 @@ These provide tasks, execution environments, and scene reconstruction workflows 
 </details>
 
 <details class="project-group">
-<summary><h4>Components</h4></summary>
+<summary><h4>Tool Box</h4></summary>
 
+<a id="components"></a>
 <a id="supporting-components"></a>
 
-Selected building blocks for constructing robot-use tools and agents. These general-purpose components do not, by themselves, provide an agent-facing robot-use interface or a complete observation–action–feedback loop. Their possible roles below are integration suggestions, not claims of a validated robot-use system. We keep this selection focused rather than cataloguing all robotics and vision libraries.
+Reusable tools and libraries for perception, grasp generation, motion planning, execution, and robot learning. Connect them through robot APIs to build an observation–action–feedback loop; each entry describes its capabilities and integration requirements.
 
 <a id="perception-and-spatial-understanding"></a>
 
@@ -179,8 +179,19 @@ Selected building blocks for constructing robot-use tools and agents. These gene
 | Resource | Capability | Integration boundary | Official source |
 | --- | --- | --- | --- |
 | **Grounded SAM 2** | Text-guided object detection, segmentation, and video tracking | A perception pipeline, not a robot-use interface. Converting masks into robot-frame targets requires depth, calibration, and a control adapter; local-model and cloud-API paths have different dependencies. | [Code and documentation](https://github.com/IDEA-Research/Grounded-SAM-2) |
+| **SAM 3** | Text- and visual-prompted segmentation for images and video | Integrated in ASPIRE and ENPIRE for object localization; robot-frame targets require depth and calibration. Model checkpoints require access approval. | [Code and models](https://github.com/facebookresearch/sam3) · [ASPIRE integration](https://github.com/NVlabs/ASPIRE/blob/main/aspire/sim/docs/configuration.md) |
 | **FoundationPose** | 6D object pose estimation and tracking from CAD models or reference images | Requires the corresponding object inputs and inference setup. Its source license limits use to non-commercial research or evaluation. | [Code](https://github.com/NVlabs/FoundationPose) · [License](https://github.com/NVlabs/FoundationPose/blob/main/LICENSE) |
+| **BundleSDF** | 6-DoF tracking and 3D reconstruction of unknown objects from RGB-D video | Requires RGB-D observations and an initial object mask. ASPIRE and ENPIRE include tracking-service integrations; deployment still requires camera calibration and runtime dependencies. | [Code](https://github.com/NVlabs/BundleSDF) · [ENPIRE integration](https://github.com/NVlabs/ENPIRE/blob/main/enpire/env/forge/tools/vision/serve_bundlesdf.py) |
 | **ConceptGraphs** | Open-vocabulary 3D scene graphs from posed RGB-D observations | Can support object and spatial-relation queries; requires upstream perception and camera poses. Inclusion does not establish dynamic-world consistency or a complete agent memory system. | [Code and documentation](https://github.com/concept-graphs/concept-graphs) |
+
+<a id="grasp-generation"></a>
+
+**Grasp generation**
+
+| Resource | Capability | Integration boundary | Official source |
+| --- | --- | --- | --- |
+| **Contact-GraspNet** | Generates 6-DoF grasp candidates from scene point clouds | ASPIRE uses a PyTorch port as a default simulation service. Grasp candidates still require robot-specific feasibility checks, motion planning, and execution. | [Official code](https://github.com/NVlabs/contact_graspnet) · [PyTorch port used by ASPIRE](https://github.com/elchun/contact_graspnet_pytorch) · [ASPIRE setup](https://github.com/NVlabs/ASPIRE/blob/main/aspire/sim/README.md) |
+| **AnyGrasp** | 6-DoF grasp-pose detection and tracking from RGB-D observations | Default grasp backend in ENPIRE’s public pickup example; optional in ASPIRE’s real-robot stack. The SDK, checkpoint, and license must be obtained separately. | [SDK and documentation](https://github.com/graspnet/anygrasp_sdk) · [ENPIRE example](https://github.com/NVlabs/ENPIRE/blob/main/enpire/env/examples/10_real_object_pick/README.md) |
 
 <a id="motion-planning-and-control"></a>
 
@@ -189,6 +200,7 @@ Selected building blocks for constructing robot-use tools and agents. These gene
 | Resource | Capability | Integration boundary | Official source |
 | --- | --- | --- | --- |
 | **cuRobo** | GPU-accelerated kinematics, collision checking, and motion generation | Requires CUDA, robot and collision-world configuration, and an execution adapter. Planning a trajectory does not verify task success. | [Code and documentation](https://github.com/NVlabs/curobo) |
+| **PyRoki** | JAX-based robot kinematic optimization, inverse kinematics, and configurable collision costs | A default ASPIRE simulation service and an ENPIRE planning backend. Collision handling depends on the integration; ENPIRE’s documented RoboCasa IK path has no scene collision checking. | [Code and documentation](https://github.com/chungmin99/pyroki) · [ASPIRE integration](https://github.com/NVlabs/ASPIRE/blob/main/aspire/sim/docs/configuration.md) |
 | **MPlib** | Lightweight Python motion planning decoupled from ROS | A planning backend for a custom tool; robot models, collision geometry, and execution must be supplied by the application. | [Code and documentation](https://github.com/haosulab/MPlib) |
 | **Mink** | MuJoCo-based differential inverse kinematics with joint limits and collision avoidance | A local kinematic solver, not a global task planner or a locomotion policy. The application supplies targets and the control loop. | [Code and documentation](https://github.com/kevinzakka/mink) |
 
@@ -211,19 +223,17 @@ These resources can supply action models, data workflows, or deployment componen
 | --- | --- | --- |
 | **OpenVLA** | Vision-language-action model and tools for adaptation to robot manipulation | [Code and model links](https://github.com/openvla/openvla) |
 | **openpi** | Physical Intelligence's robot-policy implementations, training utilities, and inference interfaces | [Code and model links](https://github.com/Physical-Intelligence/openpi) |
-| **Video to Data (V2D)** | Composable pipeline for agent-assisted video segmentation and retrieval, 3D reconstruction, human-to-robot motion retargeting, and Isaac Lab policy training. <details class="entry-notes"><summary>Deployment & limits</summary>Requires GPU-enabled Docker, model weights, robot assets, and source datasets for the selected workflow. Hardware compatibility varies by module. Its ingestion agent organizes demonstration data; it is not itself an online robot-control agent.</details> | [Code and documentation](https://github.com/nvidia-isaac/video_to_data) <br> [![GitHub stars](https://img.shields.io/github/stars/nvidia-isaac/video_to_data?style=flat-square&label=stars)](https://github.com/nvidia-isaac/video_to_data) |
 | **LeRobot** | Robot learning library with policies, datasets, hardware integrations, and training workflows | [Code and documentation](https://github.com/huggingface/lerobot) |
 
-</details>
+<a id="other-tools"></a>
 
-<details class="project-group">
-<summary><h4>Other Tools</h4></summary>
+**Other Tools**
 
 <a id="robot-interfaces-and-tools"></a>
 
 <a id="projects-and-tools"></a>
 
-Agent-facing interfaces to robot observations, actions, and execution feedback belong here. General-purpose models and libraries belong under [Components](#components); a separate project that wraps one as a robot-use tool is classified by the interface it actually provides.
+Interfaces and utilities for robot observations, actions, evaluation, execution feedback, and data workflows.
 
 | Resource | Role | Interface | Deployment & evidence | Official source |
 | --- | --- | --- | --- | --- |
@@ -231,6 +241,7 @@ Agent-facing interfaces to robot observations, actions, and execution feedback b
 | **ROS MCP Server** | MCP interface to ROS | MCP through ROS/rosbridge | <details class="entry-notes"><summary>Feedback, setup & limits</summary><p><strong>Feedback / workflow:</strong> Robot communication and introspection.</p><p><strong>Setup:</strong> A connected agent and robot stack.</p><p><strong>Limits:</strong> Planning and outcome evaluation depend on the connected agent and robot stack.</p></details> | [Code and documentation](https://github.com/robotmcp/ros-mcp-server) |
 | **Inspect Robots (RoboCurve)** | Evaluation framework connecting LLM-agent/VLA policies, robot embodiments, and benchmark tasks | Policy and embodiment adapters; task execution and audit logs | <details class="entry-notes"><summary>Feedback, setup & limits</summary><p><strong>Feedback / workflow:</strong> Runs evaluations and records auditable trial logs; powers [StationeryBench](https://github.com/robocurve/stationerybench).</p><p><strong>Setup:</strong> Matching policy, task, and robot adapters. The linked GPT-6 Astra report uses version 0.58.0 on YAM arms.</p><p><strong>Limits:</strong> Alpha software; framework capabilities and results from a specific evaluation are distinct. See the [trial results and limitations](#real-robot-demonstrations).</p></details> | [Code](https://github.com/robocurve/inspect-robots) · [Docs](https://docs.inspectrobots.org/) · [GPT-6 Astra report](https://openai.robocurve.org/gpt-6-astra/) <br> [![GitHub stars](https://img.shields.io/github/stars/robocurve/inspect-robots?style=flat-square&label=stars)](https://github.com/robocurve/inspect-robots) |
 | **ros-skill** | Agent Skill for ROS/ROS 2 | Python CLI over rosbridge WebSocket | <details class="entry-notes"><summary>Feedback, setup & limits</summary><p><strong>Feedback / workflow:</strong> JSON responses for topic, service, node, parameter, and action commands.</p><p><strong>Setup:</strong> A configured robot and rosbridge.</p><p><strong>Limits:</strong> Planning and outcome interpretation remain with the calling agent.</p></details> | [Code and command reference](https://github.com/lpigeon/ros-skill) <br> [![GitHub stars](https://img.shields.io/github/stars/lpigeon/ros-skill?style=flat-square&label=stars)](https://github.com/lpigeon/ros-skill) |
+| **Video to Data (V2D)** | Agent-assisted video segmentation and retrieval, 3D reconstruction, human-to-robot motion retargeting, and Isaac Lab policy training | Composable data-processing and training pipeline | <details class="entry-notes"><summary>Feedback, setup & limits</summary><p><strong>Feedback / workflow:</strong> Organizes demonstration data and connects reconstruction, retargeting, and policy-training stages.</p><p><strong>Setup:</strong> GPU-enabled Docker, model weights, robot assets, and source datasets for the selected workflow.</p><p><strong>Limits:</strong> Hardware compatibility varies by module. Its ingestion agent organizes demonstration data; it is not itself an online robot-control agent.</p></details> | [Code and documentation](https://github.com/nvidia-isaac/video_to_data) <br> [![GitHub stars](https://img.shields.io/github/stars/nvidia-isaac/video_to_data?style=flat-square&label=stars)](https://github.com/nvidia-isaac/video_to_data) |
 
 
 </details>

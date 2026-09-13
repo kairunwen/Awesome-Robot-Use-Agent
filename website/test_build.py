@@ -19,7 +19,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual(len(page.select('#projects .entry')), len(project_source.select('tbody tr')))
         self.assertEqual([(h.name, h.get_text()) for h in page.select('#projects h3, #projects h4, #projects h5')], [
             ('h3', 'Open Source'), ('h4', 'Systems & Frameworks'),
-            ('h4', 'Environment & Sandbox'), ('h4', 'Components'), ('h4', 'Other Tools'),
+            ('h4', 'Environment & Sandbox'), ('h4', 'Tool Box'),
             ('h3', 'Social Demos'),
         ])
         self.assertEqual([h.get_text() for h in page.select('.group-heading h2')], ['Articles', 'Papers', 'Projects', 'Benchmarks'])
@@ -30,10 +30,10 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
-        self.assertEqual([len(d.select('.entry')) for d in disclosures], [5, 8, 12, 4, 31])
-        self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, False, True])
+        self.assertEqual([len(d.select('.entry')) for d in disclosures], [5, 8, 21, 31])
+        self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, True])
         self.assertTrue(all(d.find('summary', recursive=False) for d in disclosures))
-        self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:4]], ['Systems & Frameworks', 'Environment & Sandbox', 'Components', 'Other Tools'])
+        self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tool Box'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .preview-entry img')), 31)
         self.assertEqual(len(page.select('#benchmarks-1 .preview-entry img')), 4)
@@ -43,9 +43,11 @@ class WebsiteTest(unittest.TestCase):
             self.assertTrue(row.select_one('td:first-child a img')['alt'])
             self.assertIsNotNone(row.select_one('details.entry-notes summary'))
         tool_tables = [t for t in project_source.select('table') if 'Deployment & evidence' in [h.get_text() for h in t.select('th')]]
-        self.assertEqual(sum(len(t.select('tbody tr')) for t in tool_tables), 9)
+        self.assertEqual(sum(len(t.select('tbody tr')) for t in tool_tables), 10)
         for table in tool_tables:
             self.assertEqual([h.get_text() for h in table.select('th')], ['Resource', 'Role', 'Interface', 'Deployment & evidence', 'Official source'])
+            for row in table.select('tbody tr'):
+                self.assertIsNotNone(row.find_all('td')[-1].select_one('a[href]'), 'Official source link missing')
         # Folded notes must remain searchable but never leak into card summaries.
         for item in page.select('details.entry'):
             for note in item.select('.entry-notes'):

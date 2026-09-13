@@ -5,7 +5,7 @@ Suggestions and corrections are welcome through an issue or pull request.
 - Add a primary source: the authors' paper, project page, repository, or official documentation.
 - Explain the resource's connection to robot-use agents in one sentence and place it in the closest existing category.
 - Use the current sections: Articles for perspectives; Papers for research references (Surveys, Models & Frameworks, Datasets, Benchmarks); Projects for implementations and Social Demos; Benchmarks for evaluation protocols and projects.
-- In Projects, distinguish Systems & Frameworks, Environment & Sandbox, Other Tools (agent-facing interfaces), and Components (supporting libraries). Keep papers and their code links together in Papers; do not add a duplicate implementation-only row under Projects. Cross-link benchmark descriptions where useful. Repeated views are not additional distinct works.
+- In Projects, distinguish Systems & Frameworks, Environment & Sandbox, and Tool Box (reusable libraries and agent-facing robot interfaces). Keep papers and their code links together in Papers; do not add a duplicate implementation-only row under Projects. Cross-link benchmark descriptions where useful. Repeated views are not additional distinct works.
 - Keep a separate social post only when it adds a distinct demonstration, evaluation, or discussion. Link the underlying work and merge posts about the same demonstration.
 - For papers, include the full title, first-release month (`YYYY-MM`), and verified official links. Describe the mechanism rather than repeating promotional claims.
 - Check what is actually released. Label website-only repositories, partial releases, and unverified code availability explicitly.
@@ -19,7 +19,7 @@ Suggested paper row:
 | YYYY-MM | **Full paper title** <br> [Project](URL) | [Paper](URL) | [Code](URL) or Unverified | One-sentence mechanism. <details class="entry-notes"><summary>Release & evidence</summary>Release or deployment limits, if applicable.</details> |
 ```
 
-For Systems & Frameworks and Other Tools, use the same fields: Resource, Role, Interface, Deployment & evidence, and Official source. Keep the role to one sentence; in Deployment & evidence, use `<details class="entry-notes">` with Feedback / workflow, Setup, and Limits. Record only documented capabilities. For other projects or model families, include their interface, intended role, official repository/docs, and current availability. For benchmarks, distinguish the released protocol from any particular evaluation report, including scoring and time budgets. Website entry counts include category views; do not describe them as counts of unique works.
+For Systems & Frameworks and the Other Tools subsection of Tool Box, use the same fields: Resource, Role, Interface, Deployment & evidence, and Official source. Keep the role to one sentence; in Deployment & evidence, use `<details class="entry-notes">` with Feedback / workflow, Setup, and Limits. Record only documented capabilities. For other projects or model families, include their interface, intended role, official repository/docs, and current availability. For benchmarks, distinguish the released protocol from any particular evaluation report, including scoring and time budgets. Website entry counts include category views; do not describe them as counts of unique works.
 
 Keep paper rows newest-first within a category. Use a focused commit message such as `docs: add <work>` or `docs: update <section>`, following `type: description`.
 

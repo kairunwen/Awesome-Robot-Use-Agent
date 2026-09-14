@@ -31,21 +31,23 @@
 <div class="masthead">
 <header class="topbar"><a class="brand" href="#top"><img src="logo.png" width="36" height="36" alt=""><span>RUA<span class="brand-note"> / Awesome Robot Use Agent</span></span></a><nav aria-label="Main"><a href="#getting-started">About</a><a href="{{REPO}}/blob/main/CONTRIBUTING.md">Contribute <span aria-hidden="true">↗</span></a><a href="{{REPO}}">GitHub <span aria-hidden="true">↗</span></a></nav></header>
 <section class="hero shell" aria-labelledby="page-title">
-  <div class="hero-copy"><h1 id="page-title">Awesome <br>Robot Use Agent</h1><p class="hero-description">Research blogs, papers, benchmarks, open-source tools, and social demos for robot-use agents.</p><p class="hero-meta">{{TOTAL}} curated entries <span>/</span> Maintained by <a href="https://x.com/KairunWen">@KairunWen</a> <span>/</span> Open to contributions</p><div class="hero-links"><a class="primary-link" href="#catalogue">Browse the list <span aria-hidden="true">↓</span></a><a href="{{REPO}}">View on GitHub ↗</a></div></div>
+  <div class="hero-copy"><h1 id="page-title">Awesome Robot Use Agent</h1><p class="hero-description">Research blogs, papers, benchmarks, open-source tools, and social demos for robot-use agents.</p><p class="hero-meta">{{TOTAL}} curated entries <span>/</span> Maintained by <a href="https://x.com/KairunWen">@KairunWen</a> <span>/</span> Open to contributions</p></div>
 </section>
-<aside class="sidebar shell" aria-label="Resource categories"><details open><summary>Browse by category</summary><div class="filters"><button type="button" data-filter="all" aria-pressed="true"><span>All resources</span><span>{{TOTAL}}</span></button>{{NAV}}</div></details><a class="sidebar-link" href="#getting-started">Getting started ↗</a><p class="sidebar-note">Curated for researchers<br>and builders of embodied agents.</p></aside>
+
 </div>
 <main>
 <div class="shell catalogue-layout" id="catalogue">
-  <div class="catalogue-main"><div class="catalogue-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Find your next reference.</h2></div><a class="top-link" href="#top">Top ↑</a></div>
+  <div class="catalogue-main">
+  <nav class="catalogue-heading filters" aria-label="Resource categories"><button type="button" data-filter="all" aria-pressed="true"><span>All</span><span>{{TOTAL}}</span></button>{{NAV}}</nav>
+  <div class="catalogue-controls">
   <div class="search-tools"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search resources</span><input id="search" type="search" placeholder="Search papers, tools, authors, or tasks…" autocomplete="off"><kbd>/</kbd></label><button id="clear" type="button" hidden>Clear filters</button></div>
   <div class="discovery-tools" id="discovery-tools" hidden>
     <label>Show <select id="demo-filter"><option value="all">All resources</option><option value="demos">All demos</option><option value="real">Real robot demos</option><option value="simulation">Simulation demos</option><option value="perception">Perception &amp; reconstruction</option></select></label>
     <label><input id="code-filter" type="checkbox"> Code linked</label>
-    <label>Demo order <select id="demo-order"><option value="curated">Curated</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label>
-    <span>Dates sort within demo groups. Code links do not imply verified reproduction.</span>
+    <label title="Sort dates within each demo group">Demo order <select id="demo-order"><option value="curated">Curated</option><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label>
   </div>
-  <div class="result-line"><p id="result-count" role="status" aria-live="polite">{{TOTAL}} entries · all categories</p><span>Expand a row for sources and details</span></div>
+  </div>
+  <div class="result-line"><p id="result-count" role="status" aria-live="polite">{{TOTAL}} entries · all categories</p></div>
   <noscript><p class="notice">All resources are listed below. Enable JavaScript to search and filter.</p></noscript>
   <p class="empty-state" id="empty" hidden>No matching resources. Try a different keyword or clear the filters.</p>
   <section class="guide" id="getting-started"><details><summary>Getting started <span>Read, build, watch, evaluate</span></summary><div class="guide-content">{{GUIDE}}</div></details></section>

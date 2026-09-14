@@ -327,6 +327,7 @@ def build():
     if (HERE / 'citations.json').exists():
         shutil.copyfile(HERE / 'citations.json', OUT / 'citations.json')
     shutil.copytree(ROOT / 'assets' / 'demos', OUT / 'assets' / 'demos', dirs_exist_ok=True)
+    shutil.copytree(ROOT / 'assets' / 'previews', OUT / 'assets' / 'previews', dirs_exist_ok=True)
     shutil.copyfile(HERE / 'logo-warm.png', OUT / 'logo.png')
     if (HERE / 'previews').exists():
         shutil.copytree(HERE / 'previews', OUT / 'previews', dirs_exist_ok=True)

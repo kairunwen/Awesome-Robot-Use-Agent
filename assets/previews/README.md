@@ -1,6 +1,6 @@
 # Preview assets
 
-Resized copies of official previews. Animated WebP files retain the original sequence and duration. Original sources:
+Copies of official previews, resized where needed. Animated WebP files retain the original sequence and duration. Original sources:
 
 - [auto-engineering.jpg](https://cdn.prod.website-files.com/6aa0328c48614f5ed0e1f12d/6aa10723d83167e10f50c8d2_Video%20Thumbnail.jpg)
 - [lota-bench.jpg](https://choi-jaewoo.github.io/LoTa-Bench/static/images/overview.png)
@@ -9,3 +9,5 @@ Resized copies of official previews. Animated WebP files retain the original seq
 - [robowits.webp](https://umass-embodied-agi.github.io/RoboWits/static/images/card.gif)
 - [vlabench.webp](https://vlabench.github.io/media/task_static/main_page.gif)
 - [rocobench.jpg](https://project-roco.github.io/images/teaser.jpg)
+
+- [robodojo.png](https://media.luminis-sim.com/media/home/teaser.png) — original RoboDojo overview.

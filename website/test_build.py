@@ -14,6 +14,9 @@ class WebsiteTest(unittest.TestCase):
         # Video CDN rejects a localhost Referer; media requests must omit it.
         self.assertIsNotNone(page.select_one('meta[name="referrer"][content="no-referrer"]'))
         self.assertEqual(len(page.select('.entry')), total)
+        guide_image = page.select_one("#getting-started .guide-visual img")
+        self.assertEqual(guide_image["src"], "assets/previews/robot-use-overview.png")
+        self.assertEqual((OUT / guide_image["src"]).read_bytes(), (ROOT / guide_image["src"]).read_bytes())
         cucumber = page.select_one('.demo-card img[src="assets/demos/box2ai-cucumber-peeling.jpg"]')
         self.assertIsNotNone(cucumber)
         self.assertTrue((OUT / cucumber['src']).is_file())
@@ -62,18 +65,21 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Methods & Frameworks', 'Dataset Papers', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 6), ('papers', 50), ('datasets', 4), ('benchmarks-1', 18)]:
+        for ident, count in [('articles', 6), ('papers', 50), ('datasets', 4), ('benchmarks-1', 19)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
-        self.assertEqual([len(d.select('.entry')) for d in disclosures], [5, 9, 25, 43])
+        self.assertEqual([len(d.select('.entry')) for d in disclosures], [6, 9, 27, 43])
         self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, True])
+        policy_eval = disclosures[2].find("a", href="https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy").find_parent(class_="entry")
+        self.assertIn("10 RoboDojo tasks", policy_eval.get_text())
+        self.assertIsNotNone(policy_eval.find("a", href="https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy/tree/main/public_results"))
         self.assertTrue(all(d.find('summary', recursive=False) for d in disclosures))
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tools & Utilities'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .demo-card')), 43)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 18)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 18)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 19)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 19)
         self.assertFalse(page.select('#benchmarks-1 .preview-table'))
         benchmark_source = read_readme(source.rsplit('## Benchmarks\n', 1)[1].split('\n## ', 1)[0])
         for index, row in enumerate(benchmark_source.select('tbody tr')):
@@ -175,7 +181,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertTrue(row.select_one('td:first-child a img')['alt'])
             self.assertIsNotNone(row.select_one('details.entry-notes summary'))
         tool_tables = [t for t in project_source.select('table') if 'Deployment & evidence' in [h.get_text() for h in t.select('th')]]
-        self.assertEqual(sum(len(t.select('tbody tr')) for t in tool_tables), 10)
+        self.assertEqual(sum(len(t.select('tbody tr')) for t in tool_tables), 13)
         for table in tool_tables:
             self.assertEqual([h.get_text() for h in table.select('th')], ['Resource', 'Role', 'Interface', 'Deployment & evidence', 'Official source'])
             for row in table.select('tbody tr'):

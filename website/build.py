@@ -118,8 +118,8 @@ def build():
         cell = img.find_parent('td')
         table = img.find_parent('table')
         is_preview = cell and not cell.find_previous_sibling('td') and table.find('th').get_text(strip=True) == 'Preview'
-        if not is_preview:
-            img.decompose()  # Keep resource previews; remove badges and star charts.
+        if not is_preview and not img.find_parent(class_="guide-visual"):
+            img.decompose()  # Keep resource previews and the guide illustration; remove badges.
     for link in list(soup.select('a[href]')):
         if not link.get_text(strip=True) and not link.find(['picture', 'img']):
             link.decompose()

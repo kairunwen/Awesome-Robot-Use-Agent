@@ -47,6 +47,9 @@ button, summary { cursor: pointer; }
 .hero-meta { margin: 0; font-size: 12px; color: #bda68e; }
 .hero-meta span { padding-inline: 7px; color: #9f856e; }
 .hero-meta a { color: #e1d2c0; }
+.hero-links { margin-top: 18px; }
+.hero-links .primary-link { display: inline-flex; align-items: center; gap: 25px; padding: 13px 23px; border: 1px solid transparent; border-radius: 99px; color: #231207; background: linear-gradient(110deg, #eebc80, #e79549); text-decoration: none; font-size: 13px; font-weight: 800; }
+.hero-links .primary-link:hover { box-shadow: 0 0 0 3px #dbae7730; }
 .catalogue-layout { padding-top: 22px; }
 .catalogue-main { min-width: 0; }
 .filters { display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
@@ -188,8 +191,19 @@ footer a { text-decoration: none; }
 .resource-group { padding-top: 24px; }
 #getting-started { margin: 10px 0 20px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; }
 #getting-started > details > summary { padding: 10px 0; font-size: 12px; }
-#getting-started .guide-content { padding: 0 0 16px; }
+#getting-started .guide-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 640px); align-items: stretch; gap: 40px; padding: 4px 0 20px; }
+#getting-started .guide-content > ul { display: grid; margin: 0; padding: 0 0 0 24px; list-style: none; font-size: 14px; }
+#getting-started .guide-content > ul > li { align-content: center; margin: 0; padding: 12px 0; border-bottom: 1px solid var(--line); }
+#getting-started .guide-content > ul > li:last-child { border-bottom: 0; }
 #getting-started summary span { display: inline; margin-left: 10px; }
+.guide-visual { width: 100%; max-width: 640px; min-width: 0; margin: 0; justify-self: end; align-self: center; }
+.guide-visual a { display: block; padding: 6px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.guide-visual img { display: block; width: 100%; height: auto; border-radius: 5px; }
+@media (max-width: 800px) {
+  #getting-started .guide-content { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  #getting-started .guide-content > ul { padding-left: 12px; }
+  .guide-visual { justify-self: center; }
+}
 #resource-list > .resource-group:first-child { border-top: 0; padding-top: 0; }
 #resource-list > .resource-group:first-child > .group-heading { border-top: 0; padding-top: 4px; }
 

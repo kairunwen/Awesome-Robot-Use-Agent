@@ -62,7 +62,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Methods & Frameworks', 'Dataset Papers', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 6), ('papers', 51), ('datasets', 3), ('benchmarks-1', 18)]:
+        for ident, count in [('articles', 6), ('papers', 50), ('datasets', 4), ('benchmarks-1', 18)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -95,7 +95,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual(dates, sorted(dates, reverse=True))
             self.assertEqual([b.get_text() for b in page.select(f'#{section} [data-reading-sort]')], ['Newest', 'Most stars', 'Most cited'])
         self.assertFalse(page.select('#papers .preview-table'))
-        self.assertEqual(len(page.select('#papers .reading-entry')), 51)
+        self.assertEqual(len(page.select('#papers .reading-entry')), 50)
         self.assertEqual(len(page.select('#articles .reading-entry')), 6)
         for card in page.select('.reading-entry'):
             link_labels = [a.get_text(strip=True) for a in card.select('.reading-links a')]
@@ -144,6 +144,10 @@ class WebsiteTest(unittest.TestCase):
         self.assertNotIn('Show-Harness Data', page.select_one('#papers').get_text())
         dataset = page.select_one('#datasets .entry')
         self.assertEqual(dataset.select_one('.entry-title').get_text(), 'Show-Harness Data')
+        self.assertNotIn('Guava-Agent-4B training data', page.select_one('#papers').get_text())
+        guava_data = next(e for e in page.select('#datasets .entry') if e.select_one('.entry-title').get_text() == 'Guava-Agent-4B training data')
+        self.assertEqual(guava_data['data-date'], '2026-06-16')
+        self.assertEqual({a['href'] for a in guava_data.select('a[href]')}, {'https://arxiv.org/abs/2606.18363', 'https://guava-harness.github.io/', 'https://arxiv.org/html/2606.18363v1#A1'})
         self.assertIsNotNone(dataset.select_one('a[href="https://huggingface.co/datasets/showlab/Show-Harness-Data"]'))
         survey_pdf = page.select_one('.reading-links a[href="https://github.com/showlab/Awesome-Multimodal-Embodied-Agent/blob/main/assets/Awesome_Multimodal_Embodied_Agent.pdf"]')
         self.assertEqual(survey_pdf.get_text(), 'PDF')

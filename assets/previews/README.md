@@ -11,3 +11,4 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 - [rocobench.jpg](https://project-roco.github.io/images/teaser.jpg)
 
 - [robodojo.png](https://media.luminis-sim.com/media/home/teaser.png) — original RoboDojo overview.
+- [rle-bench.webp](https://rle-bench.github.io/assets/blog/robocasa.webp) — original research-blog preview.

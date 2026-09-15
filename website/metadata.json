@@ -3234,5 +3234,29 @@
       "source": "https://arxiv.org/abs/2607.04434",
       "checked_at": "2026-09-14"
     }
+  },
+  "https://rle-bench.github.io/": {
+    "authors": [
+      "RLE-Bench team"
+    ],
+    "date": "2026-09-14",
+    "date_source": "https://github.com/RLE-Bench/RLE-Bench#-news",
+    "source": "https://rle-bench.github.io/blog/",
+    "institutions": [
+      {
+        "name": "Harvard University",
+        "url": "https://www.harvard.edu/"
+      },
+      {
+        "name": "Georgia Tech",
+        "url": "https://www.gatech.edu/"
+      }
+    ],
+    "publication": {
+      "venue": "Research Blog",
+      "year": 2026,
+      "source": "https://rle-bench.github.io/blog/",
+      "checked_at": "2026-09-15"
+    }
   }
 }

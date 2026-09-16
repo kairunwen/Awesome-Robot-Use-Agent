@@ -65,7 +65,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Methods & Frameworks', 'Dataset Papers', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 6), ('papers', 50), ('datasets', 4), ('benchmarks-1', 20)]:
+        for ident, count in [('articles', 7), ('papers', 50), ('datasets', 4), ('benchmarks-1', 20)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -102,7 +102,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual([b.get_text() for b in page.select(f'#{section} [data-reading-sort]')], ['Newest', 'Most stars', 'Most cited'])
         self.assertFalse(page.select('#papers .preview-table'))
         self.assertEqual(len(page.select('#papers .reading-entry')), 50)
-        self.assertEqual(len(page.select('#articles .reading-entry')), 6)
+        self.assertEqual(len(page.select('#articles .reading-entry')), 7)
         for card in page.select('.reading-entry'):
             link_labels = [a.get_text(strip=True) for a in card.select('.reading-links a')]
             priorities = [{'Paper': 0, 'Report': 1, 'Project': 2, 'PDF': 3}.get(label, 4) for label in link_labels]
@@ -200,7 +200,7 @@ class WebsiteTest(unittest.TestCase):
             'https://arxiv.org/abs/2609.10522',
         ])
         self.assertFalse(page.select('.reading-resource.is-unlisted[href]'))
-        self.assertEqual(len(page.select('#articles .reading-resources')), 6)
+        self.assertEqual(len(page.select('#articles .reading-resources')), 7)
         self.assertNotIn('not independently deployed here', show.select_one('.entry-body').get_text())
         self.assertNotIn('not independently deployed here', show.select_one('.reading-description').get_text())
         source_demos = project_source.select('table:has(th:first-child)')

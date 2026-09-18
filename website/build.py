@@ -493,6 +493,11 @@ def reading_entry(name, description, metadata, fields, category, index, links, p
 
 def demo_card(cells, kind, category, index, pinned=False):
     preview, name_cell, date_cell, environment, description = cells
+    outcome = environment.select_one('.layout-outcome')
+    outcome_label = outcome.get_text(strip=True) if outcome else ''
+    if outcome:
+        outcome.extract()
+    outcome_badge = f'<span class="demo-outcome demo-outcome-{outcome_label.lower()}">{escape(outcome_label)}</span>' if outcome_label else ''
     annotation = environment.select_one('.layout-tasks')
     tasks = annotation.get_text(strip=True).removeprefix('Task: ').split(' · ') if annotation else []
     if annotation:
@@ -524,7 +529,7 @@ def demo_card(cells, kind, category, index, pinned=False):
 <div class="demo-content"><div class="demo-meta"><span class="demo-environment">{escape(environment.get_text(' ', strip=True))}</span><time datetime="{escape(date)}">{escape(date)}</time></div>
 <p class="demo-author">{escape(author) if separator else 'Community demo'}</p>
 <h4 class="demo-title">{escape(task if separator else name)}</h4>
-<div class="demo-tasks" aria-label="Task categories">{task_labels}</div>
+<div class="demo-tasks" aria-label="Demo labels">{outcome_badge}{task_labels}</div>
 <div class="demo-description">{description.decode_contents()}</div>
 <p class="demo-media-error" hidden>Video unavailable here. Use the original post below.</p>
 <div class="demo-links"><a href="{escape(post, quote=True)}">Open original post ↗</a>{f'<a href="{escape(video, quote=True)}">Video ↗</a>' if video else ''}{''.join(extra_links)}</div>

@@ -226,6 +226,10 @@ footer a { text-decoration: none; }
 .demo-media > a { display: block; height: 100%; }
 .demo-media video, .demo-media img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .demo-content { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+.demo-outcome { padding: 3px 8px; border: 1px solid transparent; border-radius: 5px; font-size: 11px; font-weight: 700; }
+.demo-outcome-failure { background: #f5dedb; color: #8c302a; }
+.demo-outcome-recovery { background: #e0ecdf; color: #315c36; }
+.demo-outcome-evaluation { background: #dfe8f3; color: #36567e; }
 .demo-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 17px; }
 .demo-meta time { color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .demo-environment { padding: 4px 8px; border-radius: 4px; background: #e5ede7; color: #365b46; font-size: 10px; font-weight: 700; }

@@ -209,6 +209,19 @@ class WebsiteTest(unittest.TestCase):
         source_rows = [r for t in source_demos for r in t.select('tbody tr')]
         self.assertEqual(len(cards), len(source_rows))
         self.assertEqual(len(page.select('.demo-grid')), 3)
+        outcomes = {
+            '2098427488787730636': 'Evaluation', '2096064315115839904': 'Evaluation',
+            '2098103320208712049': 'Evaluation', '2098038921301311753': 'Evaluation',
+            '2097999274025927156': 'Evaluation', '2097119396032569555': 'Evaluation',
+            '2098118000499171340': 'Failure', '2097106221513720170': 'Recovery',
+        }
+        self.assertEqual(len(page.select('.demo-outcome')), len(outcomes))
+        for card in cards:
+            post = card.select_one('.demo-links a')['href'].split('/')[-1]
+            badge = card.select_one('.demo-outcome')
+            self.assertEqual(badge.get_text() if badge else None, outcomes.get(post))
+            self.assertNotIn('Not specified', card.get_text())
+            self.assertIsNone(card.select_one('.layout-outcome'))
         for post_id in ('2099191606280863951', '2098813770730471827'):
             card = next(c for c in cards if post_id in str(c))
             self.assertIsNotNone(card.select_one('video source[src]'))

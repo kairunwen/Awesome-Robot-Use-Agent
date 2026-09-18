@@ -3258,5 +3258,65 @@
       "source": "https://rle-bench.github.io/blog/",
       "checked_at": "2026-09-15"
     }
+  },
+  "https://arxiv.org/abs/2607.13653": {
+    "source": "https://internrobotics.github.io/REAL/",
+    "date": "2026-07-15",
+    "date_source": "https://arxiv.org/abs/2607.13653",
+    "authors": [
+      "Boyu Mi",
+      "Mengchen Ma",
+      "Yifei Yao",
+      "Xing Gao",
+      "Junting Chen",
+      "Yangzi Li",
+      "Zihou Zhu",
+      "Guohao Li",
+      "Zhenfei Yin",
+      "Tai Wang",
+      "Yao Mu",
+      "Jiangmiao Pang",
+      "Hanqing Wang"
+    ],
+    "institutions": [
+      {
+        "name": "Shanghai Jiao Tong University",
+        "url": "https://www.sjtu.edu.cn/"
+      },
+      {
+        "name": "Shanghai AI Laboratory",
+        "url": "https://www.shlab.org.cn/",
+        "logo": "institutions/304ced2da780.ico",
+        "logo_source": "https://www.shlab.org.cn/static/asset/img/favicon.ico"
+      },
+      {
+        "name": "Southeast University",
+        "url": "https://www.seu.edu.cn/"
+      },
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      },
+      {
+        "name": "Zhejiang University",
+        "url": "https://www.zju.edu.cn/"
+      },
+      {
+        "name": "CAMEL-AI",
+        "url": "https://www.camel-ai.org/"
+      },
+      {
+        "name": "University of Oxford",
+        "url": "https://www.ox.ac.uk/"
+      }
+    ],
+    "publication": {
+      "venue": "ECCV",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2607.13653",
+      "checked_at": "2026-09-18"
+    }
   }
 }

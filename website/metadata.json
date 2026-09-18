@@ -3318,5 +3318,27 @@
       "source": "https://arxiv.org/abs/2607.13653",
       "checked_at": "2026-09-18"
     }
+  },
+  "https://computationalrobotics.seas.harvard.edu/SceneAgent/": {
+    "source": "https://computationalrobotics.seas.harvard.edu/SceneAgent/",
+    "date": "2026",
+    "date_source": "https://computationalrobotics.seas.harvard.edu/SceneAgent/",
+    "authors": [
+      "Luke Hollis",
+      "Tianxing Fan",
+      "Heng Yang"
+    ],
+    "institutions": [
+      {
+        "name": "Harvard University",
+        "url": "https://www.harvard.edu/"
+      }
+    ],
+    "publication": {
+      "venue": "Preprint",
+      "year": 2026,
+      "source": "https://computationalrobotics.seas.harvard.edu/SceneAgent/",
+      "checked_at": "2026-09-19"
+    }
   }
 }

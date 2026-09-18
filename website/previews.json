@@ -242,5 +242,9 @@
   "https://arxiv.org/abs/2607.13653": {
     "image": "previews/b09e3047134b5526.jpg",
     "source": "https://arxiv.org/pdf/2607.13653"
+  },
+  "https://computationalrobotics.seas.harvard.edu/SceneAgent/": {
+    "image": "previews/sceneagent.jpg",
+    "source": "https://computationalrobotics.seas.harvard.edu/SceneAgent/branding/sceneagent-social-share.jpg"
   }
 }

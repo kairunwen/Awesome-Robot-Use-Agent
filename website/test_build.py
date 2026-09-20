@@ -69,7 +69,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
-        self.assertEqual([len(d.select('.entry')) for d in disclosures], [6, 10, 28, 48])
+        self.assertEqual([len(d.select('.entry')) for d in disclosures], [6, 11, 28, 48])
         self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, True])
         policy_eval = disclosures[2].find("a", href="https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy").find_parent(class_="entry")
         self.assertIn("10 RoboDojo tasks", policy_eval.get_text())

@@ -23,7 +23,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertIsNone(page.select_one('.system-comparison'))
         self.assertFalse(any('⭐' in title.get_text() for title in page.select('#papers .reading-title')))
         starred = [entry.select_one('.reading-title').get_text() for entry in page.select('#papers .entry') if '⭐' in entry.select_one('.reading-publication').get_text()]
-        self.assertEqual({title.split(':')[0] for title in starred}, {'ASPIRE', 'ENPIRE', 'CaP-X'})
+        self.assertEqual({title.split(':')[0] for title in starred}, {'ASPIRE', 'ENPIRE', 'CaP-X', 'Code as Policies'})
         self.assertIsNotNone(page.find(id='models--frameworks'))
         bibtex = re.search(r'```bibtex\n(.*?)```', (ROOT / 'README.md').read_text(), re.S).group(1)
         code = page.select_one('#citation code.language-bibtex')
@@ -69,7 +69,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
-        self.assertEqual([len(d.select('.entry')) for d in disclosures], [6, 9, 28, 48])
+        self.assertEqual([len(d.select('.entry')) for d in disclosures], [6, 10, 28, 48])
         self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, True])
         policy_eval = disclosures[2].find("a", href="https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy").find_parent(class_="entry")
         self.assertIn("10 RoboDojo tasks", policy_eval.get_text())
@@ -127,7 +127,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertIn('Jacky Liang, Wenlong Huang, Fei Xia, +5 authors', cap.select_one('.reading-meta').get_text())
         self.assertIn('Robotics at Google', cap.select_one('.reading-meta').get_text())
         self.assertIn('Andy Zeng', cap.select_one('.reading-details').get_text())
-        self.assertEqual(cap.select_one('.reading-publication dd').get_text(), 'ICRA 2023')
+        self.assertEqual(cap.select_one('.reading-publication dd').get_text(), 'ICRA 2023 · ⭐')
         for card in page.select('#papers .reading-entry, #benchmarks-1 .reading-entry'):
             publication = card.select_one('.reading-details .reading-publication dd')
             self.assertIsNotNone(publication)

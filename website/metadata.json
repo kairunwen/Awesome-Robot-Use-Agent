@@ -3340,5 +3340,43 @@
       "source": "https://computationalrobotics.seas.harvard.edu/SceneAgent/",
       "checked_at": "2026-09-19"
     }
+  },
+  "https://arxiv.org/abs/2606.13673": {
+    "date": "2026-06-11",
+    "authors": [
+      "Seokju Cho",
+      "Ryo Hachiuma",
+      "Abhishek Badki",
+      "Hang Su",
+      "Byung-Kwan Lee",
+      "Chan Hee Song",
+      "Sifei Liu",
+      "Subhashree Radhakrishnan",
+      "Seungryong Kim",
+      "Yu-Chiang Frank Wang",
+      "Min-Hung Chen"
+    ],
+    "source": "https://spatialclaw.github.io/",
+    "date_source": "https://arxiv.org/abs/2606.13673",
+    "institutions": [
+      {
+        "name": "NVIDIA",
+        "url": "https://www.nvidia.com/",
+        "logo": "institutions/479f42ca565a.ico",
+        "logo_source": "https://www.nvidia.com/favicon.ico"
+      },
+      {
+        "name": "KAIST",
+        "url": "https://www.kaist.ac.kr/",
+        "logo": "institutions/79caea73f5dc.ico",
+        "logo_source": "https://www.kaist.ac.kr/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "NeurIPS",
+      "year": 2026,
+      "source": "https://spatialclaw.github.io/",
+      "checked_at": "2026-09-29"
+    }
   }
 }

@@ -246,5 +246,9 @@
   "https://computationalrobotics.seas.harvard.edu/SceneAgent/": {
     "image": "previews/sceneagent.jpg",
     "source": "https://computationalrobotics.seas.harvard.edu/SceneAgent/branding/sceneagent-social-share.jpg"
+  },
+  "https://arxiv.org/abs/2606.13673": {
+    "image": "previews/spatialclaw.jpg",
+    "source": "https://arxiv.org/pdf/2606.13673"
   }
 }

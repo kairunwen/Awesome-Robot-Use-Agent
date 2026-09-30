@@ -250,5 +250,21 @@
   "https://arxiv.org/abs/2606.13673": {
     "image": "previews/spatialclaw.jpg",
     "source": "https://arxiv.org/pdf/2606.13673"
+  },
+  "https://arxiv.org/abs/2609.35318": {
+    "image": "previews/dexagent.jpg",
+    "source": "https://arxiv.org/pdf/2609.35318"
+  },
+  "https://arxiv.org/abs/2609.32862": {
+    "image": "previews/robofoundry.jpg",
+    "source": "https://arxiv.org/pdf/2609.32862"
+  },
+  "https://arxiv.org/abs/2609.30249": {
+    "image": "previews/rapid.jpg",
+    "source": "https://arxiv.org/pdf/2609.30249"
+  },
+  "https://arxiv.org/abs/2609.29166": {
+    "image": "previews/harnesspai.jpg",
+    "source": "https://arxiv.org/pdf/2609.29166"
   }
 }

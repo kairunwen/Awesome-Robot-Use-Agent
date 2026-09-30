@@ -3378,5 +3378,199 @@
       "source": "https://spatialclaw.github.io/",
       "checked_at": "2026-09-29"
     }
+  },
+  "https://arxiv.org/abs/2609.35318": {
+    "date": "2026-09-28",
+    "authors": [
+      "Youhui Wang",
+      "Yunzhu Li",
+      "Li Fei-Fei",
+      "Jiajun Wu",
+      "Huang Huang"
+    ],
+    "source": "https://dexagent123.github.io/",
+    "date_source": "https://arxiv.org/abs/2609.35318",
+    "institutions": [
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      },
+      {
+        "name": "Columbia University",
+        "url": "https://www.columbia.edu/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.35318",
+      "checked_at": "2026-09-30"
+    }
+  },
+  "https://arxiv.org/abs/2609.32862": {
+    "date": "2026-09-26",
+    "authors": [
+      "Jingsong Liang",
+      "Shuhao Liao",
+      "Shizhe Zhang",
+      "Diyuan Hou",
+      "Yuxin Cai",
+      "Xinjian Deng",
+      "Chengyang He",
+      "Wenhui Huang",
+      "Runjia Tan",
+      "Zhidong Wang",
+      "Lan Yu",
+      "Xuesong Tian",
+      "Guillaume Sartoretti",
+      "Jie Luo",
+      "Yao Mu",
+      "Wenjun Wu",
+      "Wanhua Li",
+      "Chen Lv"
+    ],
+    "source": "https://jingsongliang.com/robofoundry/",
+    "date_source": "https://arxiv.org/abs/2609.32862",
+    "institutions": [
+      {
+        "name": "Nanyang Technological University",
+        "url": "https://www.ntu.edu.sg/",
+        "logo": "institutions/e6e97fc8806a.png",
+        "logo_source": "https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png"
+      },
+      {
+        "name": "Beihang University",
+        "url": "https://www.buaa.edu.cn/"
+      },
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      },
+      {
+        "name": "Cloud Butterfly Technology"
+      },
+      {
+        "name": "Shanghai Jiao Tong University",
+        "url": "https://www.sjtu.edu.cn/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.32862",
+      "checked_at": "2026-09-30"
+    }
+  },
+  "https://arxiv.org/abs/2609.30249": {
+    "date": "2026-09-24",
+    "authors": [
+      "Yuyao Liu",
+      "Jiayuan Mao",
+      "David Hsu",
+      "Leslie Pack Kaelbling",
+      "Tomás Lozano-Pérez"
+    ],
+    "source": "https://yuyaoliu.me/projects/rapid/",
+    "date_source": "https://arxiv.org/abs/2609.30249",
+    "institutions": [
+      {
+        "name": "MIT",
+        "url": "https://www.mit.edu/",
+        "logo": "institutions/48b327b71a4b.ico",
+        "logo_source": "https://www.mit.edu/themes/mit/assets/favicon/favicon.ico"
+      },
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      },
+      {
+        "name": "University of Pennsylvania",
+        "url": "https://www.upenn.edu/"
+      },
+      {
+        "name": "NVIDIA",
+        "url": "https://www.nvidia.com/",
+        "logo": "institutions/479f42ca565a.ico",
+        "logo_source": "https://www.nvidia.com/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.30249",
+      "checked_at": "2026-09-30"
+    }
+  },
+  "https://arxiv.org/abs/2609.29166": {
+    "date": "2026-09-24",
+    "authors": [
+      "Xin Wang",
+      "Wenhao Wu",
+      "Menghao Zhang",
+      "Zhi Wang",
+      "Kun Shao",
+      "Jian Luan",
+      "Yang Li",
+      "Qing Li",
+      "Shangding Gu",
+      "Huichi Zhou",
+      "Shuqing Shi",
+      "Fei Ni",
+      "Shuo Lu",
+      "Weicheng Meng",
+      "Kang Li",
+      "Jin Wu",
+      "Kang Zhao",
+      "Shangmin Guo",
+      "Gen Li",
+      "Yongqiang Tang",
+      "Zhizhong Zhang",
+      "Yuan Xie",
+      "Heng Qu"
+    ],
+    "source": "https://darwin-agent.github.io/HarnessPAI/",
+    "date_source": "https://arxiv.org/abs/2609.29166",
+    "institutions": [
+      {
+        "name": "Darwin Agent Team",
+        "url": "https://github.com/Darwin-Agent"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.29166",
+      "checked_at": "2026-09-30"
+    }
+  },
+  "https://mmlab.hk/research/PhysicalRSI": {
+    "date": "2026-09",
+    "date_source": "https://mmlab.hk/research/PhysicalRSI",
+    "authors": [],
+    "source": "https://mmlab.hk/research/PhysicalRSI",
+    "institutions": [
+      {
+        "name": "HKU MMLab",
+        "url": "https://www.hku.hk/",
+        "logo": "institutions/d8645ef2ec72.png",
+        "logo_source": "https://www.hku.hk/etc.clientlibs/hkucms/clientlibs/clientlib-site/resources/icon-192x192.png"
+      },
+      {
+        "name": "Kinetix AI",
+        "url": "https://www.kinetixai.tech/"
+      }
+    ],
+    "publication": {
+      "venue": "Research Blog",
+      "year": 2026,
+      "source": "https://mmlab.hk/research/PhysicalRSI",
+      "checked_at": "2026-09-30"
+    }
   }
 }

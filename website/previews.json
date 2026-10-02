@@ -266,5 +266,13 @@
   "https://arxiv.org/abs/2609.29166": {
     "image": "previews/harnesspai.jpg",
     "source": "https://arxiv.org/pdf/2609.29166"
+  },
+  "https://arxiv.org/abs/2609.40306": {
+    "image": "previews/dynaharness.jpg",
+    "source": "https://arxiv.org/pdf/2609.40306"
+  },
+  "https://arxiv.org/abs/2609.39915": {
+    "image": "previews/navharness.jpg",
+    "source": "https://arxiv.org/pdf/2609.39915"
   }
 }

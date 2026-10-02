@@ -3572,5 +3572,65 @@
       "source": "https://mmlab.hk/research/PhysicalRSI",
       "checked_at": "2026-09-30"
     }
+  },
+  "https://arxiv.org/abs/2609.40306": {
+    "date": "2026-09-30",
+    "authors": [
+      "Haoyuan Deng",
+      "Jiebin Liu",
+      "Tengxiao Zhang",
+      "Langning Yan",
+      "Hongye Cao",
+      "Ziwei Wang"
+    ],
+    "source": "https://denghaoyuan123.github.io/Dynaharness_page/",
+    "date_source": "https://arxiv.org/abs/2609.40306",
+    "institutions": [
+      {
+        "name": "Nanyang Technological University",
+        "url": "https://www.ntu.edu.sg/",
+        "logo": "institutions/e6e97fc8806a.png",
+        "logo_source": "https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png"
+      },
+      {
+        "name": "Nanjing University",
+        "url": "https://www.nju.edu.cn/",
+        "logo": "institutions/3e8ca55becad.png",
+        "logo_source": "https://www.nju.edu.cn/images/favicon.png"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.40306",
+      "checked_at": "2026-10-02"
+    }
+  },
+  "https://arxiv.org/abs/2609.39915": {
+    "date": "2026-09-30",
+    "authors": [
+      "Haoxiang Shi",
+      "Zaijing Li",
+      "Muhe Ding",
+      "Xiang Deng",
+      "Yaowei Wang",
+      "Liqiang Nie"
+    ],
+    "source": "https://navharness.github.io/",
+    "date_source": "https://arxiv.org/abs/2609.39915",
+    "institutions": [
+      {
+        "name": "Harbin Institute of Technology (Shenzhen)"
+      },
+      {
+        "name": "Pengcheng Laboratory"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.39915",
+      "checked_at": "2026-10-02"
+    }
   }
 }

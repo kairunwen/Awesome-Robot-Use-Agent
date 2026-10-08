@@ -648,6 +648,12 @@ Datasets and resource directories for robot-use agents.
 
 Let’s build this collection together to help the robot-use agent community learn, share, and grow. Resources, suggestions, and corrections are all welcome! Share an [issue](https://github.com/kairunwen/Awesome-Robot-Use-Agent/issues) or see [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
+Thanks to all our [contributors](https://github.com/kairunwen/Awesome-Robot-Use-Agent/graphs/contributors) for helping this collection grow!
+
+<a href="https://github.com/kairunwen/Awesome-Robot-Use-Agent/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kairunwen/Awesome-Robot-Use-Agent" alt="Avatars of all repository contributors"/>
+</a>
+
 ---
 
 ## 🙏 Acknowledgements

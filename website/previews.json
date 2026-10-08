@@ -274,5 +274,13 @@
   "https://arxiv.org/abs/2609.39915": {
     "image": "previews/navharness.jpg",
     "source": "https://arxiv.org/pdf/2609.39915"
+  },
+  "https://arxiv.org/abs/2610.10409": {
+    "image": "previews/robotworld.jpg",
+    "source": "https://arxiv.org/pdf/2610.10409"
+  },
+  "https://robotworldai.github.io/": {
+    "image": "assets/previews/robotworld.png",
+    "source": "https://arxiv.org/html/2610.10409v1/overview.png"
   }
 }

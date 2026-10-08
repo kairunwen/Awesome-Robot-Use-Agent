@@ -3632,5 +3632,221 @@
       "source": "https://arxiv.org/abs/2609.39915",
       "checked_at": "2026-10-02"
     }
+  },
+  "https://arxiv.org/abs/2610.10409": {
+    "date": "2026-10-07",
+    "authors": [
+      "Zhiqin Yang",
+      "Chenxin Li",
+      "Xiaomeng Hu",
+      "Yibin Liu",
+      "Weidong Huang",
+      "Jiankai Sun",
+      "Haitao Li",
+      "Zijian Wu",
+      "Yuzhi Huang",
+      "Fanding Huang",
+      "Hanwen Sun",
+      "Jiashun Liu",
+      "Jingqi Tong",
+      "Mingxin Huang",
+      "Shaoli Hu",
+      "Shijue Huang",
+      "Tianyi Bai",
+      "Xinyuan Wang",
+      "Yunlong Lin",
+      "Zhengyang Tang",
+      "Zhexin Zhang",
+      "Zhuo Chen",
+      "Xierui Song",
+      "Juntao Dai",
+      "Boyuan Chen",
+      "Jiaming Ji",
+      "Fangneng Zhan",
+      "Mengkang Hu",
+      "Wei Xue",
+      "Yonggang Zhang",
+      "Han Hu",
+      "Tsung-Yi Ho",
+      "Yike Guo"
+    ],
+    "source": "https://arxiv.org/pdf/2610.10409",
+    "date_source": "https://arxiv.org/abs/2610.10409",
+    "institutions": [
+      {
+        "name": "Hong Kong University of Science and Technology",
+        "url": "https://hkust.edu.hk/"
+      },
+      {
+        "name": "Chinese University of Hong Kong",
+        "url": "https://www.cuhk.edu.hk/"
+      },
+      {
+        "name": "Nanjing University",
+        "url": "https://www.nju.edu.cn/",
+        "logo": "institutions/3e8ca55becad.png",
+        "logo_source": "https://www.nju.edu.cn/images/favicon.png"
+      },
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      },
+      {
+        "name": "University of California, Berkeley",
+        "url": "https://www.berkeley.edu/"
+      },
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      },
+      {
+        "name": "MIT",
+        "url": "https://www.mit.edu/",
+        "logo": "institutions/48b327b71a4b.ico",
+        "logo_source": "https://www.mit.edu/themes/mit/assets/favicon/favicon.ico"
+      },
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "Fudan University",
+        "url": "https://www.fudan.edu.cn/",
+        "logo": "institutions/9e6d695284ef.ico",
+        "logo_source": "https://www.fudan.edu.cn/_upload/tpl/00/0e/14/template14/images/favicon.ico"
+      },
+      {
+        "name": "University of Hong Kong",
+        "url": "https://www.hku.hk/",
+        "logo": "institutions/d8645ef2ec72.png",
+        "logo_source": "https://www.hku.hk/etc.clientlibs/hkucms/clientlibs/clientlib-site/resources/icon-192x192.png"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.10409",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://robotworldai.github.io/": {
+    "date": "2026-10-07",
+    "authors": [
+      "Zhiqin Yang",
+      "Chenxin Li",
+      "Xiaomeng Hu",
+      "Yibin Liu",
+      "Weidong Huang",
+      "Jiankai Sun",
+      "Haitao Li",
+      "Zijian Wu",
+      "Yuzhi Huang",
+      "Fanding Huang",
+      "Hanwen Sun",
+      "Jiashun Liu",
+      "Jingqi Tong",
+      "Mingxin Huang",
+      "Shaoli Hu",
+      "Shijue Huang",
+      "Tianyi Bai",
+      "Xinyuan Wang",
+      "Yunlong Lin",
+      "Zhengyang Tang",
+      "Zhexin Zhang",
+      "Zhuo Chen",
+      "Xierui Song",
+      "Juntao Dai",
+      "Boyuan Chen",
+      "Jiaming Ji",
+      "Fangneng Zhan",
+      "Mengkang Hu",
+      "Wei Xue",
+      "Yonggang Zhang",
+      "Han Hu",
+      "Tsung-Yi Ho",
+      "Yike Guo"
+    ],
+    "source": "https://arxiv.org/pdf/2610.10409",
+    "date_source": "https://arxiv.org/abs/2610.10409",
+    "institutions": [
+      {
+        "name": "Hong Kong University of Science and Technology",
+        "url": "https://hkust.edu.hk/"
+      },
+      {
+        "name": "Chinese University of Hong Kong",
+        "url": "https://www.cuhk.edu.hk/"
+      },
+      {
+        "name": "Nanjing University",
+        "url": "https://www.nju.edu.cn/",
+        "logo": "institutions/3e8ca55becad.png",
+        "logo_source": "https://www.nju.edu.cn/images/favicon.png"
+      },
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      },
+      {
+        "name": "University of California, Berkeley",
+        "url": "https://www.berkeley.edu/"
+      },
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      },
+      {
+        "name": "MIT",
+        "url": "https://www.mit.edu/",
+        "logo": "institutions/48b327b71a4b.ico",
+        "logo_source": "https://www.mit.edu/themes/mit/assets/favicon/favicon.ico"
+      },
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "Fudan University",
+        "url": "https://www.fudan.edu.cn/",
+        "logo": "institutions/9e6d695284ef.ico",
+        "logo_source": "https://www.fudan.edu.cn/_upload/tpl/00/0e/14/template14/images/favicon.ico"
+      },
+      {
+        "name": "University of Hong Kong",
+        "url": "https://www.hku.hk/",
+        "logo": "institutions/d8645ef2ec72.png",
+        "logo_source": "https://www.hku.hk/etc.clientlibs/hkucms/clientlibs/clientlib-site/resources/icon-192x192.png"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.10409",
+      "checked_at": "2026-10-09"
+    }
   }
 }

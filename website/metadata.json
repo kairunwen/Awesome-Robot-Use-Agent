@@ -3991,5 +3991,116 @@
       "source": "https://arxiv.org/abs/2609.12541",
       "checked_at": "2026-10-09"
     }
+  },
+  "https://seohong.me/projects/ocbench/": {
+    "date": "2026-10-05",
+    "authors": [
+      "Seohong Park",
+      "Sergey Levine"
+    ],
+    "source": "https://seohong.me/projects/ocbench/",
+    "date_source": "https://arxiv.org/abs/2610.07056",
+    "institutions": [
+      {
+        "name": "University of California, Berkeley",
+        "url": "https://www.berkeley.edu/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.07056",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.07056": {
+    "date": "2026-10-05",
+    "authors": [
+      "Seohong Park",
+      "Sergey Levine"
+    ],
+    "source": "https://seohong.me/projects/ocbench/",
+    "date_source": "https://arxiv.org/abs/2610.07056",
+    "institutions": [
+      {
+        "name": "University of California, Berkeley",
+        "url": "https://www.berkeley.edu/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.07056",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.07969": {
+    "date": "2026-10-06",
+    "authors": [
+      "Yikai Qin",
+      "Yifei Deng",
+      "Mingjian Liang",
+      "Wenxuan Song",
+      "Zepeng Lin",
+      "Zhiyi Jiang",
+      "Jiajun Fu",
+      "Qiao Sun",
+      "Huashuo Lei",
+      "Xicheng Gong",
+      "Jiayi Chen",
+      "Han Zhao",
+      "Shuanghao Bai",
+      "Pengxiang Ding",
+      "Pengwei Wang",
+      "Haoang Li"
+    ],
+    "source": "https://arxiv.org/abs/2610.07969",
+    "date_source": "https://arxiv.org/abs/2610.07969",
+    "institutions": [
+      {
+        "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+      },
+      {
+        "name": "Xiaomi Robotics"
+      },
+      {
+        "name": "Southeastern University"
+      },
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Zhejiang University",
+        "url": "https://www.zju.edu.cn/"
+      },
+      {
+        "name": "Westlake University"
+      },
+      {
+        "name": "Symbiosis Robotics"
+      },
+      {
+        "name": "Peking University",
+        "url": "https://www.pku.edu.cn/",
+        "logo": "institutions/b26f74c5b62b.ico",
+        "logo_source": "https://www.pku.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Xi’an Jiaotong University"
+      },
+      {
+        "name": "Beijing Academy of Artificial Intelligence",
+        "url": "https://www.baai.ac.cn/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.07969",
+      "checked_at": "2026-10-09"
+    }
   }
 }

@@ -298,5 +298,13 @@
   "https://arxiv.org/abs/2609.12541": {
     "image": "previews/agent-as-policy.jpg",
     "source": "https://arxiv.org/pdf/2609.12541"
+  },
+  "https://seohong.me/projects/ocbench/": {
+    "image": "assets/previews/ocbench.png",
+    "source": "https://raw.githubusercontent.com/seohongpark/ocbench/master/assets/env_teaser.png"
+  },
+  "https://arxiv.org/abs/2610.07969": {
+    "image": "previews/embodiedsmith.jpg",
+    "source": "https://arxiv.org/pdf/2610.07969"
   }
 }

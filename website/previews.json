@@ -294,5 +294,9 @@
   "https://aetherlabsai.github.io/Video2World/": {
     "image": "assets/previews/video2world.webp",
     "source": "https://aetherlabsai.github.io/Video2World/figures/video2world-teaser-v4.webp"
+  },
+  "https://arxiv.org/abs/2609.12541": {
+    "image": "previews/agent-as-policy.jpg",
+    "source": "https://arxiv.org/pdf/2609.12541"
   }
 }

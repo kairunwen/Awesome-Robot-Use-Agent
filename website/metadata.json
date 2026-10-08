@@ -3958,5 +3958,38 @@
       "source": "https://arxiv.org/abs/2610.04432",
       "checked_at": "2026-10-09"
     }
+  },
+  "https://arxiv.org/abs/2609.12541": {
+    "date": "2026-09-11",
+    "authors": [
+      "Mengzhao Jia",
+      "Yang Lin",
+      "Xixin Zhang",
+      "Zhihan Zhang",
+      "Xiaobai Liu",
+      "Meng Jiang"
+    ],
+    "source": "https://agent-as-policy-2026.github.io/",
+    "institutions": [
+      {
+        "name": "University of Notre Dame",
+        "url": "https://www.nd.edu/"
+      },
+      {
+        "name": "University of California San Diego",
+        "url": "https://ucsd.edu/"
+      },
+      {
+        "name": "San Diego State University",
+        "url": "https://www.sdsu.edu/"
+      }
+    ],
+    "date_source": "https://arxiv.org/abs/2609.12541",
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.12541",
+      "checked_at": "2026-10-09"
+    }
   }
 }

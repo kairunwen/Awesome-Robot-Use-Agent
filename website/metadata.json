@@ -3848,5 +3848,115 @@
       "source": "https://arxiv.org/abs/2610.10409",
       "checked_at": "2026-10-09"
     }
+  },
+  "https://github.com/Self-Evolving-Agentic-Robotics/SEAR": {
+    "date": "2026-10-03",
+    "authors": [
+      "Xinyi Wang",
+      "Bangzheng Li",
+      "Hanyu Wang",
+      "Lin Zhang",
+      "Andrea Yaoyun Cui",
+      "Zhenggang Tang",
+      "Shyamal Buch",
+      "Dejia Xu"
+    ],
+    "source": "https://github.com/Self-Evolving-Agentic-Robotics/SEAR",
+    "date_source": "https://github.com/Self-Evolving-Agentic-Robotics/SEAR/commit/819fb851",
+    "publication": {
+      "venue": "Project Announcement",
+      "year": 2026,
+      "source": "https://sear.bot/",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://sear.bot/": {
+    "date": "2026-10-03",
+    "authors": [
+      "Xinyi Wang",
+      "Bangzheng Li",
+      "Hanyu Wang",
+      "Lin Zhang",
+      "Andrea Yaoyun Cui",
+      "Zhenggang Tang",
+      "Shyamal Buch",
+      "Dejia Xu"
+    ],
+    "source": "https://github.com/Self-Evolving-Agentic-Robotics/SEAR",
+    "date_source": "https://github.com/Self-Evolving-Agentic-Robotics/SEAR/commit/819fb851",
+    "publication": {
+      "venue": "Project Announcement",
+      "year": 2026,
+      "source": "https://sear.bot/",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.04432": {
+    "date": "2026-10-03",
+    "authors": [
+      "Jinzhou Tang",
+      "Zijun Zhang",
+      "Jing Yang",
+      "Yuchen Yan",
+      "Kun Zhou",
+      "Lingjun Mao",
+      "Ruobing Han",
+      "Jinglin Cao",
+      "Wenpeng Xu",
+      "Lukun He",
+      "Minghao Fu",
+      "Fan Feng",
+      "Biwei Huang"
+    ],
+    "institutions": [
+      {
+        "name": "Aether AI"
+      },
+      {
+        "name": "University of California, San Diego"
+      }
+    ],
+    "source": "https://github.com/AetherLabsAI/Video2World",
+    "date_source": "https://arxiv.org/abs/2610.04432",
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.04432",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://aetherlabsai.github.io/Video2World/": {
+    "date": "2026-10-03",
+    "authors": [
+      "Jinzhou Tang",
+      "Zijun Zhang",
+      "Jing Yang",
+      "Yuchen Yan",
+      "Kun Zhou",
+      "Lingjun Mao",
+      "Ruobing Han",
+      "Jinglin Cao",
+      "Wenpeng Xu",
+      "Lukun He",
+      "Minghao Fu",
+      "Fan Feng",
+      "Biwei Huang"
+    ],
+    "institutions": [
+      {
+        "name": "Aether AI"
+      },
+      {
+        "name": "University of California, San Diego"
+      }
+    ],
+    "source": "https://github.com/AetherLabsAI/Video2World",
+    "date_source": "https://arxiv.org/abs/2610.04432",
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.04432",
+      "checked_at": "2026-10-09"
+    }
   }
 }

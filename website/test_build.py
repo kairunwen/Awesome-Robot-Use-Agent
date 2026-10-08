@@ -69,7 +69,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
-        self.assertEqual([len(d.select('.entry')) for d in disclosures], [7, 12, 28, 61])
+        self.assertEqual([len(d.select('.entry')) for d in disclosures], [8, 12, 28, 61])
         self.assertEqual([d.has_attr('open') for d in disclosures], [False, False, False, True])
         policy_eval = disclosures[2].find("a", href="https://github.com/anonymous-report-421/eval-of-gpt-6-astra-as-policy").find_parent(class_="entry")
         self.assertIn("10 RoboDojo tasks", policy_eval.get_text())
@@ -181,7 +181,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertTrue(row.select_one('td:first-child a img')['alt'])
             self.assertIsNotNone(row.select_one('details.entry-notes summary'))
         tool_tables = [t for t in project_source.select('table') if 'Deployment & evidence' in [h.get_text() for h in t.select('th')]]
-        self.assertEqual(sum(len(t.select('tbody tr')) for t in tool_tables), 15)
+        self.assertEqual(sum(len(t.select('tbody tr')) for t in tool_tables), 16)
         for table in tool_tables:
             self.assertEqual([h.get_text() for h in table.select('th')], ['Resource', 'Role', 'Interface', 'Deployment & evidence', 'Official source'])
             for row in table.select('tbody tr'):

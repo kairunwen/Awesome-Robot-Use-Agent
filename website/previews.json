@@ -306,5 +306,9 @@
   "https://arxiv.org/abs/2610.07969": {
     "image": "previews/embodiedsmith.jpg",
     "source": "https://arxiv.org/pdf/2610.07969"
+  },
+  "https://bigym2.github.io/": {
+    "image": "assets/previews/bigym2.jpg",
+    "source": "https://bigym2.github.io/readme/teaser.jpg"
   }
 }

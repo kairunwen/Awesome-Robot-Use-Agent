@@ -65,7 +65,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([h.get_text() for h in page.select('#papers h3')], ['Surveys', 'Methods & Frameworks', 'Dataset Papers', 'Benchmarks'])
         self.assertIsNotNone(page.select_one('#papers h3#benchmarks'))
         self.assertIsNotNone(page.select_one('section#benchmarks-1'))
-        for ident, count in [('articles', 7), ('papers', 64), ('datasets', 4), ('benchmarks-1', 24)]:
+        for ident, count in [('articles', 7), ('papers', 64), ('datasets', 4), ('benchmarks-1', 25)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -78,8 +78,8 @@ class WebsiteTest(unittest.TestCase):
         self.assertEqual([d.select_one('summary > h4').get_text() for d in disclosures[:3]], ['Systems & Frameworks', 'Environment & Sandbox', 'Tools & Utilities'])
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .demo-card')), 61)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 24)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 24)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 25)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 25)
         self.assertFalse(page.select('#benchmarks-1 .preview-table'))
         benchmark_source = read_readme(source.rsplit('## Benchmarks\n', 1)[1].split('\n## ', 1)[0])
         for index, row in enumerate(benchmark_source.select('tbody tr')):

@@ -4102,5 +4102,53 @@
       "source": "https://arxiv.org/abs/2610.07969",
       "checked_at": "2026-10-09"
     }
+  },
+  "https://bigym2.github.io/": {
+    "date": "2026-10-06",
+    "authors": [
+      "Zexi Zhang",
+      "Zecheng Zhu",
+      "Zidong Chen",
+      "Zulkhuu Tuya",
+      "Stephen James"
+    ],
+    "source": "https://bigym2.github.io/",
+    "date_source": "https://arxiv.org/abs/2610.07594",
+    "institutions": [
+      {
+        "name": "Imperial College London",
+        "url": "https://www.imperial.ac.uk/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.07594",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.07594": {
+    "date": "2026-10-06",
+    "authors": [
+      "Zexi Zhang",
+      "Zecheng Zhu",
+      "Zidong Chen",
+      "Zulkhuu Tuya",
+      "Stephen James"
+    ],
+    "source": "https://bigym2.github.io/",
+    "date_source": "https://arxiv.org/abs/2610.07594",
+    "institutions": [
+      {
+        "name": "Imperial College London",
+        "url": "https://www.imperial.ac.uk/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.07594",
+      "checked_at": "2026-10-09"
+    }
   }
 }

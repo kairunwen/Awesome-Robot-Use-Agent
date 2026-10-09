@@ -4150,5 +4150,405 @@
       "source": "https://arxiv.org/abs/2610.07594",
       "checked_at": "2026-10-09"
     }
+  },
+  "https://arxiv.org/abs/2610.12457": {
+    "date": "2026-10-08",
+    "authors": [
+      "Jiayu Wang",
+      "Yue Yu",
+      "Bin Zhu",
+      "Zhiyao Yang",
+      "Jingjing Chen"
+    ],
+    "source": "https://arxiv.org/pdf/2610.12457",
+    "date_source": "https://arxiv.org/abs/2610.12457",
+    "institutions": [
+      {
+        "name": "Fudan University",
+        "url": "https://www.fudan.edu.cn/",
+        "logo": "institutions/9e6d695284ef.ico",
+        "logo_source": "https://www.fudan.edu.cn/_upload/tpl/00/0e/14/template14/images/favicon.ico"
+      },
+      {
+        "name": "Singapore Management University",
+        "url": "https://www.smu.edu.sg/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.12457",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.10498": {
+    "date": "2026-10-07",
+    "authors": [
+      "Python Song",
+      "Zhixuan Liang",
+      "Kelsey Fu",
+      "Mengdi Wang",
+      "Junfeng Yang",
+      "Shilong Liu"
+    ],
+    "source": "https://arxiv.org/pdf/2610.10498",
+    "date_source": "https://arxiv.org/abs/2610.10498",
+    "institutions": [
+      {
+        "name": "Columbia University",
+        "url": "https://www.columbia.edu/"
+      },
+      {
+        "name": "Princeton University",
+        "url": "https://www.princeton.edu/",
+        "logo": "institutions/a0494f75d64f.png",
+        "logo_source": "https://www.princeton.edu/themes/custom/hobbes/icons/favicon-16x16.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.10498",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.04929": {
+    "date": "2026-10-04",
+    "authors": [
+      "Junhoo Lee",
+      "Injun Baek",
+      "Seungyeon Kim",
+      "Suhyun Jeon",
+      "Minkyu Kim",
+      "Baekseung Kim",
+      "Nojun Kwak"
+    ],
+    "source": "https://arxiv.org/pdf/2610.04929",
+    "date_source": "https://arxiv.org/abs/2610.04929",
+    "institutions": [
+      {
+        "name": "KAIST",
+        "url": "https://www.kaist.ac.kr/",
+        "logo": "institutions/79caea73f5dc.ico",
+        "logo_source": "https://www.kaist.ac.kr/favicon.ico"
+      },
+      {
+        "name": "Seoul National University",
+        "url": "https://en.snu.ac.kr/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.04929",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2610.02459": {
+    "date": "2026-10-01",
+    "authors": [
+      "Zhaoyang Chu",
+      "Earl T. Barr",
+      "Claire Le Goues",
+      "Peter O'Hearn",
+      "Mark Harman",
+      "Federica Sarro",
+      "He Ye"
+    ],
+    "source": "https://arxiv.org/pdf/2610.02459",
+    "date_source": "https://arxiv.org/abs/2610.02459",
+    "institutions": [
+      {
+        "name": "University College London",
+        "url": "https://www.ucl.ac.uk/"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.02459",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2609.38078": {
+    "date": "2026-09-29",
+    "authors": [
+      "Bingxuan Li",
+      "Siqi Song",
+      "Yizhuo Wu",
+      "Jiarui Yao",
+      "Tong Zhang",
+      "Huan Zhang"
+    ],
+    "source": "https://arxiv.org/pdf/2609.38078",
+    "date_source": "https://arxiv.org/abs/2609.38078",
+    "institutions": [
+      {
+        "name": "University of Illinois Urbana-Champaign",
+        "url": "https://illinois.edu/",
+        "logo": "institutions/e3872bf6ec49.ico",
+        "logo_source": "https://cdn.brand.illinois.edu/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.38078",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2609.33378": {
+    "date": "2026-09-27",
+    "authors": [
+      "Seungyeon Kim",
+      "Junhoo Lee",
+      "Minkyu Kim",
+      "Baekseung Kim",
+      "Nojun Kwak"
+    ],
+    "source": "https://arxiv.org/pdf/2609.33378",
+    "date_source": "https://arxiv.org/abs/2609.33378",
+    "institutions": [
+      {
+        "name": "Seoul National University",
+        "url": "https://en.snu.ac.kr/"
+      },
+      {
+        "name": "KAIST",
+        "url": "https://www.kaist.ac.kr/",
+        "logo": "institutions/79caea73f5dc.ico",
+        "logo_source": "https://www.kaist.ac.kr/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.33378",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2609.29389": {
+    "date": "2026-09-24",
+    "authors": [
+      "Zexi Li",
+      "Yehang Zhang",
+      "Wenqian Li",
+      "Haojian Huang",
+      "Chenxu Wang",
+      "Shiyuan Deng",
+      "Yangkai Wei",
+      "Tianyi Zhang",
+      "Binghui Xie",
+      "Bohan Zhou",
+      "Yifan Chang",
+      "Kaiwen Zhou",
+      "Ying-Cong Chen",
+      "James Cheng",
+      "Yinchuan Li"
+    ],
+    "source": "https://arxiv.org/pdf/2609.29389",
+    "date_source": "https://arxiv.org/abs/2609.29389",
+    "institutions": [
+      {
+        "name": "The Chinese University of Hong Kong",
+        "url": "https://www.cuhk.edu.hk/"
+      },
+      {
+        "name": "The Hong Kong University of Science and Technology (Guangzhou)"
+      },
+      {
+        "name": "Knowin AI",
+        "url": "https://knowin.ai/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.29389",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2609.27308": {
+    "date": "2026-09-23",
+    "authors": [
+      "Zeyu Shen",
+      "Haoxiang You",
+      "Yilang Liu",
+      "Zhicheng Zheng",
+      "Lihan Zha",
+      "Kashu Yamazaki",
+      "Mingtong Zhang",
+      "Suning Huang",
+      "Jiankai Sun",
+      "Qianzhong Chen",
+      "Lucy He",
+      "Kaiyuan Liu",
+      "Haoran Chang",
+      "Katerina Fragkiadaki",
+      "Dhruv Shah",
+      "Mac Schwager",
+      "Peter Henderson",
+      "Ian Abraham",
+      "Canwen Xu"
+    ],
+    "source": "https://arxiv.org/pdf/2609.27308",
+    "date_source": "https://arxiv.org/abs/2609.27308",
+    "institutions": [
+      {
+        "name": "ByteDance Seed",
+        "url": "https://seed.bytedance.com/",
+        "logo": "institutions/dbe84727a8a3.ico",
+        "logo_source": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/favicon_1/favicon.ico"
+      },
+      {
+        "name": "Yale University",
+        "url": "https://www.yale.edu/"
+      },
+      {
+        "name": "Princeton University",
+        "url": "https://www.princeton.edu/",
+        "logo": "institutions/a0494f75d64f.png",
+        "logo_source": "https://www.princeton.edu/themes/custom/hobbes/icons/favicon-16x16.png"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      },
+      {
+        "name": "University of California, Los Angeles",
+        "url": "https://www.ucla.edu/"
+      },
+      {
+        "name": "University of Washington",
+        "url": "https://www.washington.edu/",
+        "logo": "institutions/8a98feb6a408.ico",
+        "logo_source": "https://www.washington.edu/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.27308",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://embodiedswe.github.io/": {
+    "date": "2026-09-23",
+    "authors": [
+      "Zeyu Shen",
+      "Haoxiang You",
+      "Yilang Liu",
+      "Zhicheng Zheng",
+      "Lihan Zha",
+      "Kashu Yamazaki",
+      "Mingtong Zhang",
+      "Suning Huang",
+      "Jiankai Sun",
+      "Qianzhong Chen",
+      "Lucy He",
+      "Kaiyuan Liu",
+      "Haoran Chang",
+      "Katerina Fragkiadaki",
+      "Dhruv Shah",
+      "Mac Schwager",
+      "Peter Henderson",
+      "Ian Abraham",
+      "Canwen Xu"
+    ],
+    "source": "https://arxiv.org/pdf/2609.27308",
+    "date_source": "https://arxiv.org/abs/2609.27308",
+    "institutions": [
+      {
+        "name": "ByteDance Seed",
+        "url": "https://seed.bytedance.com/",
+        "logo": "institutions/dbe84727a8a3.ico",
+        "logo_source": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/favicon_1/favicon.ico"
+      },
+      {
+        "name": "Yale University",
+        "url": "https://www.yale.edu/"
+      },
+      {
+        "name": "Princeton University",
+        "url": "https://www.princeton.edu/",
+        "logo": "institutions/a0494f75d64f.png",
+        "logo_source": "https://www.princeton.edu/themes/custom/hobbes/icons/favicon-16x16.png"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      },
+      {
+        "name": "University of California, Los Angeles",
+        "url": "https://www.ucla.edu/"
+      },
+      {
+        "name": "University of Washington",
+        "url": "https://www.washington.edu/",
+        "logo": "institutions/8a98feb6a408.ico",
+        "logo_source": "https://www.washington.edu/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.27308",
+      "checked_at": "2026-10-09"
+    }
+  },
+  "https://arxiv.org/abs/2609.20822": {
+    "date": "2026-09-17",
+    "authors": [
+      "Bingxin Xu",
+      "Yuzhang Shang",
+      "Zhen Dong",
+      "Emilio Ferrara"
+    ],
+    "source": "https://arxiv.org/pdf/2609.20822",
+    "date_source": "https://arxiv.org/abs/2609.20822",
+    "institutions": [
+      {
+        "name": "University of Southern California",
+        "url": "https://www.usc.edu/",
+        "logo": "institutions/53cf0e0d6efd.png",
+        "logo_source": "https://www.usc.edu/wp-content/themes/usc-communications-2023/favicon/favicon-32x32.png"
+      },
+      {
+        "name": "University of Central Florida",
+        "url": "https://www.ucf.edu/"
+      },
+      {
+        "name": "University of California, Santa Barbara",
+        "url": "https://www.ucsb.edu/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.20822",
+      "checked_at": "2026-10-09"
+    }
   }
 }

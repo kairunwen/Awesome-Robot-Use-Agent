@@ -310,5 +310,45 @@
   "https://bigym2.github.io/": {
     "image": "assets/previews/bigym2.jpg",
     "source": "https://bigym2.github.io/readme/teaser.jpg"
+  },
+  "https://arxiv.org/abs/2610.12457": {
+    "image": "previews/spatialharness.jpg",
+    "source": "https://arxiv.org/pdf/2610.12457"
+  },
+  "https://arxiv.org/abs/2610.10498": {
+    "image": "previews/embodiedrsi.jpg",
+    "source": "https://arxiv.org/pdf/2610.10498"
+  },
+  "https://arxiv.org/abs/2610.04929": {
+    "image": "previews/robotuse.jpg",
+    "source": "https://arxiv.org/pdf/2610.04929"
+  },
+  "https://arxiv.org/abs/2610.02459": {
+    "image": "previews/openrua.jpg",
+    "source": "https://arxiv.org/pdf/2610.02459"
+  },
+  "https://arxiv.org/abs/2609.38078": {
+    "image": "previews/motormind.jpg",
+    "source": "https://arxiv.org/pdf/2609.38078"
+  },
+  "https://arxiv.org/abs/2609.33378": {
+    "image": "previews/recursive-harness-distillation.jpg",
+    "source": "https://arxiv.org/pdf/2609.33378"
+  },
+  "https://arxiv.org/abs/2609.29389": {
+    "image": "previews/robo-harness-k1.jpg",
+    "source": "https://arxiv.org/pdf/2609.29389"
+  },
+  "https://arxiv.org/abs/2609.27308": {
+    "image": "previews/embodiedswe.jpg",
+    "source": "https://arxiv.org/pdf/2609.27308"
+  },
+  "https://arxiv.org/abs/2609.20822": {
+    "image": "previews/safeharness.jpg",
+    "source": "https://arxiv.org/pdf/2609.20822"
+  },
+  "https://embodiedswe.github.io/": {
+    "image": "assets/previews/embodiedswe.jpg",
+    "source": "https://raw.githubusercontent.com/EmbodiedSWE/EmbodiedSWE/main/docs/media/overview.jpg"
   }
 }

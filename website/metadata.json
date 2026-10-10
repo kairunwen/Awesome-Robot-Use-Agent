@@ -4584,5 +4584,19 @@
       "source": "https://arxiv.org/abs/2610.12126",
       "checked_at": "2026-10-10"
     }
+  },
+  "https://x.com/Ken_Goldberg/status/2100986412762087909": {
+    "source": "https://x.com/Ken_Goldberg/status/2100986412762087909",
+    "date": "2026-09-18",
+    "date_source": "https://x.com/Ken_Goldberg/status/2100986412762087909",
+    "authors": [
+      "Ken Goldberg"
+    ],
+    "institutions": [
+      {
+        "name": "UC Berkeley",
+        "url": "https://www.berkeley.edu/"
+      }
+    ]
   }
 }

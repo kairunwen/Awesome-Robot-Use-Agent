@@ -350,5 +350,9 @@
   "https://embodiedswe.github.io/": {
     "image": "assets/previews/embodiedswe.jpg",
     "source": "https://raw.githubusercontent.com/EmbodiedSWE/EmbodiedSWE/main/docs/media/overview.jpg"
+  },
+  "https://arxiv.org/abs/2610.12126": {
+    "image": "previews/supernav.jpg",
+    "source": "https://arxiv.org/pdf/2610.12126"
   }
 }

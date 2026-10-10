@@ -4550,5 +4550,39 @@
       "source": "https://arxiv.org/abs/2609.20822",
       "checked_at": "2026-10-09"
     }
+  },
+  "https://arxiv.org/abs/2610.12126": {
+    "date": "2026-10-08",
+    "authors": [
+      "Jinkai Zhang",
+      "Jingyi Xu",
+      "Yuanhong Yu",
+      "Jiarui Guo",
+      "Ruizhen Hu",
+      "Hujun Bao",
+      "Xiaowei Zhou",
+      "Sida Peng"
+    ],
+    "source": "https://arxiv.org/pdf/2610.12126",
+    "date_source": "https://arxiv.org/abs/2610.12126",
+    "institutions": [
+      {
+        "name": "Zhejiang University",
+        "url": "https://www.zju.edu.cn/"
+      },
+      {
+        "name": "Shenzhen University",
+        "url": "https://www.szu.edu.cn/"
+      },
+      {
+        "name": "Causa Robotics"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.12126",
+      "checked_at": "2026-10-10"
+    }
   }
 }

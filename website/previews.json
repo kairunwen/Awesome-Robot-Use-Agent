@@ -354,5 +354,29 @@
   "https://arxiv.org/abs/2610.12126": {
     "image": "previews/supernav.jpg",
     "source": "https://arxiv.org/pdf/2610.12126"
+  },
+  "https://arxiv.org/abs/2610.02204": {
+    "image": "previews/00188c6decced49f.jpg",
+    "source": "https://arxiv.org/pdf/2610.02204v1"
+  },
+  "https://arxiv.org/abs/2610.01939": {
+    "image": "previews/a17f64ad10cefa58.jpg",
+    "source": "https://arxiv.org/pdf/2610.01939v1"
+  },
+  "https://arxiv.org/abs/2610.01178": {
+    "image": "previews/61cedf9f32c8d022.jpg",
+    "source": "https://arxiv.org/pdf/2610.01178v1"
+  },
+  "https://arxiv.org/abs/2609.39018": {
+    "image": "previews/c0ee7d1110470b1e.jpg",
+    "source": "https://arxiv.org/pdf/2609.39018v1"
+  },
+  "https://arxiv.org/abs/2609.29394": {
+    "image": "previews/eed1ec9626eb4b07.jpg",
+    "source": "https://arxiv.org/pdf/2609.29394v1"
+  },
+  "https://arxiv.org/abs/2609.39507": {
+    "image": "assets/previews/libero-agent.jpg",
+    "source": "https://arxiv.org/pdf/2609.39507v1"
   }
 }

@@ -4845,5 +4845,232 @@
       "source": "https://arxiv.org/abs/2609.39507",
       "checked_at": "2026-10-11"
     }
+  },
+  "https://arxiv.org/abs/2609.19315": {
+    "date": "2026-09-16",
+    "authors": [
+      "Ruiyang Wang",
+      "Hao-Lun Hsu",
+      "Swarajh Mehta",
+      "Jiwoo Kim",
+      "Zhihao Dou",
+      "Miroslav Pajic"
+    ],
+    "source": "https://arxiv.org/pdf/2609.19315v1",
+    "date_source": "https://arxiv.org/abs/2609.19315",
+    "institutions": [],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.19315",
+      "checked_at": "2026-10-11"
+    }
+  },
+  "https://arxiv.org/abs/2609.11308": {
+    "date": "2026-09-10",
+    "authors": [
+      "Yutong Hu",
+      "Fengjiao Chen",
+      "Xuezhi Cao",
+      "Renaud Detry"
+    ],
+    "source": "https://arxiv.org/pdf/2609.11308v1",
+    "date_source": "https://arxiv.org/abs/2609.11308",
+    "institutions": [
+      {
+        "name": "KU Leuven"
+      },
+      {
+        "name": "Meituan Inc."
+      },
+      {
+        "name": "Flanders Make@KU Leuven"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.11308",
+      "checked_at": "2026-10-11"
+    }
+  },
+  "https://arxiv.org/abs/2607.06990": {
+    "date": "2026-07-08",
+    "authors": [
+      "Yi-Xiang He",
+      "Lan Wei",
+      "Haoming Cen",
+      "Jian-Jian Jiang",
+      "Zhuohao Li",
+      "Guanxing Lu",
+      "Yihan Yang",
+      "Dandan Zhang",
+      "Wei-Shi Zheng"
+    ],
+    "source": "https://arxiv.org/pdf/2607.06990v1",
+    "date_source": "https://arxiv.org/abs/2607.06990",
+    "institutions": [
+      {
+        "name": "Sun Yat-sen University",
+        "url": "https://www.sysu.edu.cn/",
+        "logo": "institutions/b51657fb0009.ico",
+        "logo_source": "https://www.sysu.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Key Laboratory of Machine Intelligence and Advanced Computing, Ministry of Education, China"
+      },
+      {
+        "name": "Imperial College London",
+        "url": "https://www.imperial.ac.uk/"
+      },
+      {
+        "name": "Tsinghua Shenzhen International Graduate School"
+      },
+      {
+        "name": "Shenzhen Loop Area Institute"
+      }
+    ],
+    "publication": {
+      "venue": "RSS",
+      "year": 2026,
+      "source": "https://roboticsproceedings.org/rss22/p036.html",
+      "checked_at": "2026-10-11"
+    }
+  },
+  "https://arxiv.org/abs/2606.04226": {
+    "date": "2026-06-02",
+    "authors": [
+      "Charlie Gauthier",
+      "Sacha Morin",
+      "Liam Paull"
+    ],
+    "source": "https://arxiv.org/pdf/2606.04226v1",
+    "date_source": "https://arxiv.org/abs/2606.04226",
+    "institutions": [
+      {
+        "name": "Université de Montréal"
+      },
+      {
+        "name": "Mila - Quebec AI Institute"
+      }
+    ],
+    "publication": {
+      "venue": "ICRA",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2606.04226",
+      "checked_at": "2026-10-11"
+    }
+  },
+  "https://arxiv.org/abs/2603.03148": {
+    "date": "2026-03-03",
+    "authors": [
+      "Shinas Shaji",
+      "Fabian Huppertz",
+      "Alex Mitrevski",
+      "Sebastian Houben"
+    ],
+    "source": "https://arxiv.org/pdf/2603.03148v1",
+    "date_source": "https://arxiv.org/abs/2603.03148",
+    "institutions": [
+      {
+        "name": "Hochschule Bonn-Rhein-Sieg"
+      },
+      {
+        "name": "Chalmers University of Technology"
+      },
+      {
+        "name": "Fraunhofer Institute for Intelligent Analysis and Information Systems"
+      }
+    ],
+    "publication": {
+      "venue": "ICRA",
+      "year": 2026,
+      "source": "https://pub.h-brs.de/frontdoor/index/index/docId/9477",
+      "checked_at": "2026-10-11"
+    }
+  },
+  "https://arxiv.org/abs/2601.19510": {
+    "date": "2026-01-27",
+    "authors": [
+      "Vitor Gaboardi dos Santos",
+      "Ibrahim Khadraoui",
+      "Ibrahim Farhat",
+      "Hamza Yous",
+      "Samy Teffahi",
+      "Hakim Hacid"
+    ],
+    "source": "https://arxiv.org/pdf/2601.19510v2",
+    "date_source": "https://arxiv.org/abs/2601.19510",
+    "institutions": [
+      {
+        "name": "Technology Innovation Institute"
+      },
+      {
+        "name": "Dublin City University"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2601.19510",
+      "checked_at": "2026-10-11"
+    }
+  },
+  "https://arxiv.org/abs/2505.23450": {
+    "date": "2025-05-29",
+    "authors": [
+      "Zhejian Yang",
+      "Yongchao Chen",
+      "Xueyang Zhou",
+      "Jiangyue Yan",
+      "Dingjie Song",
+      "Yinuo Liu",
+      "Yuting Li",
+      "Yu Zhang",
+      "Pan Zhou",
+      "Hechang Chen",
+      "Lichao Sun"
+    ],
+    "source": "https://arxiv.org/pdf/2505.23450v2",
+    "date_source": "https://arxiv.org/abs/2505.23450",
+    "institutions": [
+      {
+        "name": "Jilin University",
+        "url": "https://www.jlu.edu.cn/"
+      },
+      {
+        "name": "Harvard University",
+        "url": "https://www.harvard.edu/"
+      },
+      {
+        "name": "MIT",
+        "url": "https://www.mit.edu/",
+        "logo": "institutions/48b327b71a4b.ico",
+        "logo_source": "https://www.mit.edu/themes/mit/assets/favicon/favicon.ico"
+      },
+      {
+        "name": "Huazhong University of Science and Technology",
+        "url": "https://www.hust.edu.cn/",
+        "logo": "institutions/7940b8a35d1b.ico",
+        "logo_source": "https://www.hust.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Southern University of Science and Technology",
+        "url": "https://www.sustech.edu.cn/"
+      },
+      {
+        "name": "Lehigh University"
+      },
+      {
+        "name": "Shanghai Jiao Tong University",
+        "url": "https://www.sjtu.edu.cn/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2025,
+      "source": "https://arxiv.org/abs/2505.23450",
+      "checked_at": "2026-10-11"
+    }
   }
 }

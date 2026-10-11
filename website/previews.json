@@ -378,5 +378,33 @@
   "https://arxiv.org/abs/2609.39507": {
     "image": "assets/previews/libero-agent.jpg",
     "source": "https://arxiv.org/pdf/2609.39507v1"
+  },
+  "https://arxiv.org/abs/2609.19315": {
+    "image": "previews/3b5c524d29c3fe09.jpg",
+    "source": "https://arxiv.org/pdf/2609.19315v1"
+  },
+  "https://arxiv.org/abs/2609.11308": {
+    "image": "previews/502b9b8a433f8571.jpg",
+    "source": "https://arxiv.org/pdf/2609.11308v1"
+  },
+  "https://arxiv.org/abs/2607.06990": {
+    "image": "previews/27b72f64467b165a.jpg",
+    "source": "https://arxiv.org/pdf/2607.06990v1"
+  },
+  "https://arxiv.org/abs/2606.04226": {
+    "image": "previews/80a8e5db3eb332ef.jpg",
+    "source": "https://arxiv.org/pdf/2606.04226v1"
+  },
+  "https://arxiv.org/abs/2603.03148": {
+    "image": "previews/13928ce335a4ba87.jpg",
+    "source": "https://arxiv.org/pdf/2603.03148v1"
+  },
+  "https://arxiv.org/abs/2601.19510": {
+    "image": "previews/d28c7bfb7d98291d.jpg",
+    "source": "https://arxiv.org/pdf/2601.19510v2"
+  },
+  "https://arxiv.org/abs/2505.23450": {
+    "image": "previews/6f54fcbb6a9a7b5a.jpg",
+    "source": "https://arxiv.org/pdf/2505.23450v2"
   }
 }

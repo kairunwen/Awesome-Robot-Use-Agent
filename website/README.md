@@ -8,7 +8,9 @@ To add a resource, edit the root [README.md](../README.md); this website is gene
 
 ## Build and preview
 
-From the repository root:
+Run from the repository root. Create the virtual environment once; skip the first command when reusing an existing environment.
+
+**Linux / macOS**
 
 ```sh
 python3 -m venv website/.venv
@@ -17,17 +19,44 @@ website/.venv/bin/python website/build.py
 python3 -m http.server 8000 --directory website/dist
 ```
 
+**Windows (CMD or PowerShell)**
+
+```powershell
+python -m venv website\.venv
+.\website\.venv\Scripts\python.exe -m pip install -r website\requirements.txt
+.\website\.venv\Scripts\python.exe -X utf8 website\build.py
+.\website\.venv\Scripts\python.exe -X utf8 -m http.server 8000 --directory website\dist
+```
+
+Windows virtual environments use `Scripts` instead of `bin`. The commands above use the environment's Python directly, so activation is optional. `-X utf8` enables UTF-8 when reading catalogue files. If `python` is unavailable when creating the environment, use `py -3 -m venv website\.venv` instead. For other Python examples below, Windows users can replace `website/.venv/bin/python` with `.\website\.venv\Scripts\python.exe -X utf8`.
+
 The README uses HTML tables for the compact Papers, Benchmarks, and Social Demos layouts. Keep the `layout-paper`, `layout-benchmark`, `demo-gallery`, `demo-gallery-card`, `layout-meta`, and `layout-links` classes when editing these tables: the website reader uses them to recover dates, source labels, and video links. Badge image alt text supplies the link label; retain labels such as `Paper`, `Code · GitHub stars`, and `Models`.
 
 Open http://localhost:8000. Edit the root README to update resources, then rebuild. Search, category and demo filters, Code linked filtering, demo date sorting within groups (RoboCurve / StationeryBench stays first when it matches the active filters), keyboard shortcuts, and expandable source details run entirely in the browser. No API key, database, or external JavaScript is required. With JavaScript disabled, the complete catalogue remains readable.
+
+Keep the preview server running while viewing the site; press **Ctrl+C** to stop it. After rebuilding, refresh the browser to see your changes.
 
 `website/dist` is generated and ignored by Git. Its files can be published to GitHub Pages or any static host, including under a repository subpath. Building does not publish the site.
 
 ## Check
 
+Run from the repository root after installing the dependencies above.
+
+**Linux / macOS**
+
 ```sh
 website/.venv/bin/python -m unittest discover -s website -p 'test_*.py'
+git diff --check
 ```
+
+**Windows (CMD or PowerShell)**
+
+```powershell
+.\website\.venv\Scripts\python.exe -X utf8 -m unittest discover -s website -p "test_*.py"
+git diff --check
+```
+
+Tests also build the website and finish with `OK` when successful. Keep double quotes around `"test_*.py"` in CMD. `git diff --check` produces no output on success.
 
 For external links and preview images, run `python website/check_links.py` (or use repeated `--url URL` arguments for changed destinations). HTTP errors are reported separately from access restrictions and network failures. This network check is manual; temporary third-party failures do not block site deployment.
 

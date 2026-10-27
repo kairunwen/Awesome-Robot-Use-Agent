@@ -49,7 +49,9 @@ Copy nearby metadata records. Edit source files, **not `website/dist/`**. Stars 
 
 ## 4. Check and open a PR
 
-For new entries or website changes, run from the repository root:
+For new entries or website changes, run from the repository root. Choose the commands for your platform. Create the virtual environment once; skip the first command when reusing an existing environment.
+
+**Linux / macOS**
 
 ```sh
 python3 -m venv website/.venv
@@ -59,7 +61,19 @@ git diff --check
 python3 -m http.server 8000 --directory website/dist
 ```
 
-Tests build the website. Open [localhost:8000](http://localhost:8000) and check the rendered README on GitHub. Local builds do not publish anything.
+**Windows (CMD or PowerShell)**
+
+```powershell
+python -m venv website\.venv
+.\website\.venv\Scripts\python.exe -m pip install -r website\requirements.txt
+.\website\.venv\Scripts\python.exe -X utf8 -m unittest discover -s website -p "test_*.py"
+git diff --check
+.\website\.venv\Scripts\python.exe -X utf8 -m http.server 8000 --directory website\dist
+```
+
+Windows virtual environments use `Scripts` instead of `bin`. These commands use the environment's Python directly, so activation is optional. `-X utf8` enables UTF-8 when reading catalogue files; double quotes around `"test_*.py"` work in both CMD and PowerShell. If `python` is unavailable when creating the environment, use `py -3 -m venv website\.venv` instead.
+
+Tests build the website and finish with `OK` when successful. `git diff --check` produces no output on success. Open [localhost:8000](http://localhost:8000) and check the rendered README on GitHub. Keep the preview server running while viewing the site; press **Ctrl+C** to stop it. After further edits, rerun the tests and refresh the browser. Local builds do not publish anything.
 
 - Check changed images, badges, links, and notes. For website behavior changes, check mobile layout and affected filters/sorting too.
 - When adding/removing entries, update the README's **Resources**, **Demo**, and **Tools** badges as applicable, plus expected counts in `website/test_build.py`. Resources counts catalogue rows; Tools counts all Tools & Utilities entries. Investigate unexpected failures.

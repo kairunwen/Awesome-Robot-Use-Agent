@@ -7397,5 +7397,322 @@
     "model_source": "https://huggingface.co/sensenova/sensenova-roborsi-27b-preview",
     "model_release_date": "2026-10-22",
     "model_release_source": "https://github.com/OpenSenseNova/SenseNova-RoboRSI#news"
+  },
+  "https://arxiv.org/abs/2610.16238": {
+    "date": "2026-10-12",
+    "authors": [
+      "Zhi Han",
+      "Zihan Guo",
+      "Chenxi Zeng",
+      "Zicai Cui",
+      "Yue Xin",
+      "Ming Zhou",
+      "Dongzhan Zhou",
+      "Weinan Zhang",
+      "Yang Li"
+    ],
+    "source": "https://arxiv.org/pdf/2610.16238",
+    "date_source": "https://arxiv.org/abs/2610.16238",
+    "institutions": [
+      {
+        "name": "Shanghai Jiao Tong University",
+        "url": "https://www.sjtu.edu.cn/",
+        "logo": "institutions/18ff21907047.png",
+        "logo_source": "https://www.sjtu.edu.cn/resource/assets/img/ico/favicon.png"
+      },
+      {
+        "name": "Shanghai Artificial Intelligence Laboratory",
+        "url": "https://www.shlab.org.cn/",
+        "logo": "institutions/304ced2da780.ico",
+        "logo_source": "https://www.shlab.org.cn/static/asset/img/favicon.ico"
+      },
+      {
+        "name": "Sun Yat-sen University",
+        "url": "https://www.sysu.edu.cn/",
+        "logo": "institutions/b51657fb0009.ico",
+        "logo_source": "https://www.sysu.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Jilin University",
+        "url": "https://www.jlu.edu.cn/",
+        "logo": "institutions/fbef33bd5b08.ico",
+        "logo_source": "https://www.jlu.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Beihang University",
+        "url": "https://www.buaa.edu.cn/"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.16238",
+      "checked_at": "2026-10-27"
+    }
+  },
+  "https://arxiv.org/abs/2610.31651": {
+    "date": "2026-10-22",
+    "authors": [
+      "Ava Pun",
+      "Kevin Dai",
+      "Sally Chen",
+      "Maxwell Jones",
+      "Ruixuan Liu",
+      "Kangle Deng",
+      "Changliu Liu",
+      "Maneesh Agrawala",
+      "Deva Ramanan",
+      "Jun-Yan Zhu"
+    ],
+    "source": "https://arxiv.org/pdf/2610.31651",
+    "date_source": "https://arxiv.org/abs/2610.31651",
+    "institutions": [
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.31651",
+      "checked_at": "2026-10-27"
+    }
+  },
+  "https://arxiv.org/abs/2610.31834": {
+    "date": "2026-10-22",
+    "authors": [
+      "Tianling Xu",
+      "Weijie Wan",
+      "Honghao Su",
+      "Kailun Su",
+      "Junyuan Tang",
+      "Huichi Zhou",
+      "Haozheng Zhang",
+      "Qi Xiong",
+      "Ping Luo",
+      "Wenbo Ding",
+      "Tianxing Chen",
+      "Yue Chen"
+    ],
+    "source": "https://arxiv.org/pdf/2610.31834",
+    "date_source": "https://arxiv.org/abs/2610.31834",
+    "institutions": [
+      {
+        "name": "Xspark AI",
+        "url": "https://xsparkai.com/en",
+        "logo": "institutions/xspark-ai.png",
+        "logo_source": "https://xsparkai.com/icon.png?icon.06604919.png"
+      },
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "The University of Hong Kong",
+        "url": "https://www.hku.hk/",
+        "logo": "institutions/d8645ef2ec72.png",
+        "logo_source": "https://www.hku.hk/etc.clientlibs/hkucms/clientlibs/clientlib-site/resources/icon-192x192.png"
+      },
+      {
+        "name": "University College London",
+        "url": "https://www.ucl.ac.uk/",
+        "logo": "institutions/bb6b4e753049.ico",
+        "logo_source": "https://cdn.ucl.ac.uk/favicons/favicon.ico"
+      },
+      {
+        "name": "Peking University",
+        "url": "https://www.pku.edu.cn/",
+        "logo": "institutions/b26f74c5b62b.ico",
+        "logo_source": "https://www.pku.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.31834",
+      "checked_at": "2026-10-27"
+    }
+  },
+  "https://arxiv.org/abs/2610.11322": {
+    "date": "2026-10-08",
+    "authors": [
+      "Chuanrui Zhang",
+      "Zaijia Yang",
+      "Duomin Wang",
+      "Lu Shi",
+      "Daquan Zhou",
+      "Ruihua Zhang",
+      "Ziwei Wang"
+    ],
+    "source": "https://arxiv.org/pdf/2610.11322",
+    "date_source": "https://arxiv.org/abs/2610.11322",
+    "institutions": [
+      {
+        "name": "NVIDIA",
+        "url": "https://www.nvidia.com/",
+        "logo": "institutions/479f42ca565a.ico",
+        "logo_source": "https://www.nvidia.com/favicon.ico"
+      },
+      {
+        "name": "Nanyang Technological University",
+        "url": "https://www.ntu.edu.sg/",
+        "logo": "institutions/e6e97fc8806a.png",
+        "logo_source": "https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png"
+      },
+      {
+        "name": "Peking University",
+        "url": "https://www.pku.edu.cn/",
+        "logo": "institutions/b26f74c5b62b.ico",
+        "logo_source": "https://www.pku.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.11322",
+      "checked_at": "2026-10-27"
+    }
+  },
+  "https://arxiv.org/abs/2610.12549": {
+    "date": "2026-10-08",
+    "authors": [
+      "Jaewoo Lee",
+      "Jeongyeon Seo",
+      "Sihyun Cho",
+      "Gyeongrak Choe",
+      "Yutong Wang",
+      "Bavin Saravanan",
+      "Jia-Bin Huang",
+      "Furong Huang",
+      "Sebastian Scherer",
+      "Guanya Shi",
+      "H. Jin Kim",
+      "Seungjae Lee",
+      "Dongjae Lee"
+    ],
+    "source": "https://arxiv.org/pdf/2610.12549",
+    "date_source": "https://arxiv.org/abs/2610.12549",
+    "institutions": [
+      {
+        "name": "Seoul National University",
+        "url": "https://en.snu.ac.kr/",
+        "logo": "institutions/seoul-national-university.ico",
+        "logo_source": "https://en.snu.ac.kr/_skin/eng/layout/ico/favicon.ico"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "University of Maryland, College Park",
+        "url": "https://www.umd.edu/",
+        "logo": "institutions/ec639c4d8203.ico",
+        "logo_source": "https://umd.edu/default/static/favicon.ico"
+      },
+      {
+        "name": "All Purpose AI"
+      },
+      {
+        "name": "Kyung Hee University"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.12549",
+      "checked_at": "2026-10-27"
+    }
+  },
+  "https://arxiv.org/abs/2609.37583": {
+    "date": "2026-09-29",
+    "authors": [
+      "Shifeng Bao",
+      "Fanding Huang",
+      "Yihan Lin",
+      "Youhe Feng",
+      "Guanlin Li",
+      "Chen Zhao",
+      "Yang Li",
+      "Jiawei He",
+      "Cheng Chi",
+      "Jing Zhang"
+    ],
+    "source": "https://arxiv.org/pdf/2609.37583",
+    "date_source": "https://arxiv.org/abs/2609.37583",
+    "institutions": [
+      {
+        "name": "Renmin University of China",
+        "url": "https://www.ruc.edu.cn/",
+        "logo": "institutions/renmin-university.ico",
+        "logo_source": "https://www.ruc.edu.cn/template/1/out/imgs/favicon.ico"
+      },
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Key Laboratory of Data Engineering and Knowledge Engineering, Beijing, China"
+      },
+      {
+        "name": "Engineering Research Center of Database and Business Intelligence, Beijing, China"
+      },
+      {
+        "name": "XYZ Embodied AI, Beijing, China"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.37583",
+      "checked_at": "2026-10-27"
+    }
+  },
+  "https://arxiv.org/abs/2610.17521": {
+    "date": "2026-10-13",
+    "authors": [
+      "Hiroki Nishizawa",
+      "Takehiko Ohkawa",
+      "Nicola Scianca",
+      "Tatsuya Matsushima",
+      "Shigeo Morishima",
+      "Kei Ota"
+    ],
+    "source": "https://arxiv.org/pdf/2610.17521",
+    "date_source": "https://arxiv.org/abs/2610.17521",
+    "institutions": [
+      {
+        "name": "AI Robot Association (AIRoA)",
+        "url": "https://airoa.org/",
+        "logo": "institutions/airoa.ico",
+        "logo_source": "https://airoa.org/wp-content/themes/airoa/assets/img/common/favicon.ico"
+      },
+      {
+        "name": "Waseda University",
+        "url": "https://www.waseda.jp/top/en/",
+        "logo": "institutions/waseda-university.ico",
+        "logo_source": "https://www.waseda.jp/top/en/assets/themes/waseda-template-engine-main-en/img/icons/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.17521",
+      "checked_at": "2026-10-27"
+    }
   }
 }

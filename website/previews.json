@@ -614,5 +614,33 @@
   "https://github.com/Winniechen2002/Embodied-Playground#choose-a-benchmark": {
     "image": "assets/previews/embodied-playground.jpg",
     "source": "https://arxiv.org/pdf/2610.27039"
+  },
+  "https://arxiv.org/abs/2610.16238": {
+    "image": "previews/embodied-skill-bench.jpg",
+    "source": "https://arxiv.org/pdf/2610.16238"
+  },
+  "https://arxiv.org/abs/2610.31651": {
+    "image": "previews/brickwright.jpg",
+    "source": "https://arxiv.org/pdf/2610.31651"
+  },
+  "https://arxiv.org/abs/2610.31834": {
+    "image": "previews/worldmirror.jpg",
+    "source": "https://arxiv.org/pdf/2610.31834"
+  },
+  "https://arxiv.org/abs/2610.11322": {
+    "image": "previews/usdcraft.jpg",
+    "source": "https://arxiv.org/pdf/2610.11322"
+  },
+  "https://arxiv.org/abs/2610.12549": {
+    "image": "previews/fly-by-code.jpg",
+    "source": "https://arxiv.org/pdf/2610.12549"
+  },
+  "https://arxiv.org/abs/2609.37583": {
+    "image": "previews/roboharn-evo.jpg",
+    "source": "https://arxiv.org/pdf/2609.37583"
+  },
+  "https://arxiv.org/abs/2610.17521": {
+    "image": "previews/yubi-real2sim.jpg",
+    "source": "https://arxiv.org/pdf/2610.17521"
   }
 }

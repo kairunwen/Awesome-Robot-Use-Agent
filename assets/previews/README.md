@@ -12,3 +12,5 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 
 - [robodojo.png](https://media.luminis-sim.com/media/home/teaser.png) — original RoboDojo overview.
 - [rle-bench.webp](https://rle-bench.github.io/assets/blog/robocasa.webp) — original research-blog preview.
+- [embodied-skill-bench.png](https://arxiv.org/html/2610.16238v1/figure1.png) — original EmbodiedSkillBench overview (Figure 1).
+- [yubi-real2sim.png](https://arxiv.org/html/2610.17521v1/teaser.png) — original YUBI-Real2Sim overview (Figure 1).

@@ -74,7 +74,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertTrue(all(img.get('align') == 'texttop' for img in page.select('#learning-resources img[alt="YouTube"]')))
         self.assertLess(source.index('\n## Benchmarks\n'), source.index('\n## Learning Resources\n'))
         self.assertLess(source.index('\n## Learning Resources\n'), source.index('\n## 🤝 Contributing\n'))
-        for ident, count in [('articles', 8), ('papers', 137), ('datasets', 5), ('benchmarks-1', 39)]:
+        for ident, count in [('articles', 8), ('papers', 144), ('datasets', 5), ('benchmarks-1', 41)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -94,8 +94,8 @@ class WebsiteTest(unittest.TestCase):
         self.assertIsNotNone(rax.find('a', href='https://robot-agent-exploration.com/rax.pdf'))
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .demo-card')), 61)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 38)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 39)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 40)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 41)
         self.assertIsNotNone(page.select_one('#papers .reading-entry a[href="https://arxiv.org/abs/2609.39207"]'))
         self.assertIsNotNone(page.select_one('#benchmarks-1 .reading-entry a[href="https://robouse.ai/hub/leaderboard/"]'))
         self.assertFalse(page.select('#benchmarks-1 .preview-table'))
@@ -125,7 +125,7 @@ class WebsiteTest(unittest.TestCase):
             self.assertEqual(dates, sorted(dates, reverse=True))
             self.assertEqual([b.get_text() for b in page.select(f'#{section} [data-reading-sort]')], ['Newest', 'Most stars', 'Most cited'])
         self.assertFalse(page.select('#papers .preview-table'))
-        self.assertEqual(len(page.select('#papers .reading-entry')), 137)
+        self.assertEqual(len(page.select('#papers .reading-entry')), 144)
         embodied_evo = page.select_one('#papers .reading-entry a[href="https://arxiv.org/abs/2610.18867"]').find_parent(class_='reading-entry')
         self.assertIn('EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence', embodied_evo.get_text())
         self.assertIsNotNone(embodied_evo.select_one('.reading-cover img[src="https://raw.githubusercontent.com/Einsia/EmbodiedEvo/main/docs/images/embodiedevo-hero.png"]'))

@@ -642,5 +642,13 @@
   "https://arxiv.org/abs/2610.17521": {
     "image": "previews/yubi-real2sim.jpg",
     "source": "https://arxiv.org/pdf/2610.17521"
+  },
+  "https://arxiv.org/abs/2610.40565": {
+    "image": "previews/gym-anything-robotics.jpg",
+    "source": "https://arxiv.org/pdf/2610.40565"
+  },
+  "https://arxiv.org/abs/2610.34649": {
+    "image": "previews/robotagentbench.jpg",
+    "source": "https://arxiv.org/pdf/2610.34649"
   }
 }

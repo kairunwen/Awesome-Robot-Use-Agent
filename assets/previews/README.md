@@ -14,3 +14,5 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 - [rle-bench.webp](https://rle-bench.github.io/assets/blog/robocasa.webp) — original research-blog preview.
 - [embodied-skill-bench.png](https://arxiv.org/html/2610.16238v1/figure1.png) — original EmbodiedSkillBench overview (Figure 1).
 - [yubi-real2sim.png](https://arxiv.org/html/2610.17521v1/teaser.png) — original YUBI-Real2Sim overview (Figure 1).
+- [roboworld-gym-anything.jpg](https://arxiv.org/html/2610.40565v1/figures/teaser_sewing.jpg) — RoboWorld simulations in Figure 1 of Gym-Anything for Robotics.
+- [robotagentbench.webp](https://aetherlabsai.github.io/RobotAgentBench/assets/fig/fig1_overview_1600.webp?v=2) — RobotAgentBench overview from the project page.

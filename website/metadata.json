@@ -7714,5 +7714,83 @@
       "source": "https://arxiv.org/abs/2610.17521",
       "checked_at": "2026-10-27"
     }
+  },
+  "https://arxiv.org/abs/2610.40565": {
+    "date": "2026-10-29",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Sean Welleck"
+    ],
+    "source": "https://arxiv.org/pdf/2610.40565",
+    "date_source": "https://arxiv.org/abs/2610.40565",
+    "institutions": [
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.40565",
+      "checked_at": "2026-10-31"
+    }
+  },
+  "https://arxiv.org/abs/2610.34649": {
+    "date": "2026-10-26",
+    "authors": [
+      "Lingjun Mao",
+      "Jinglin Cao",
+      "Lukun He",
+      "Wenpeng Xu",
+      "Yuchen Yan",
+      "Hengyu Jin",
+      "Zijun Zhang",
+      "Jinzhou Tang",
+      "Songyao Jin",
+      "Ziche Liu",
+      "Yifei Shao",
+      "Junbo Huang",
+      "Fang Nan",
+      "Ruobing Han",
+      "Ziqiao Xi",
+      "Ziming Xu",
+      "Shuang Liang",
+      "Sibo Zhu",
+      "Wenyi Wu",
+      "Xinyue Wang",
+      "Yiming Huang",
+      "Xinkai Zou",
+      "Gao Zhu",
+      "Kun Zhou",
+      "Biwei Huang"
+    ],
+    "source": "https://arxiv.org/pdf/2610.34649",
+    "date_source": "https://arxiv.org/abs/2610.34649",
+    "institutions": [
+      {
+        "name": "Aether AI",
+        "url": "https://github.com/AetherLabsAI",
+        "logo": "institutions/9dcedfaa3467.png",
+        "logo_source": "https://github.com/AetherLabsAI.png?size=64"
+      },
+      {
+        "name": "University of California, San Diego",
+        "url": "https://ucsd.edu/",
+        "logo": "institutions/0bf8c6d8f262.ico",
+        "logo_source": "https://ucsd.edu/favicon.ico"
+      },
+      {
+        "name": "University of California, Davis"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2610.34649",
+      "checked_at": "2026-10-31"
+    }
   }
 }

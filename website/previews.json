@@ -650,5 +650,49 @@
   "https://arxiv.org/abs/2610.34649": {
     "image": "previews/robotagentbench.jpg",
     "source": "https://arxiv.org/pdf/2610.34649"
+  },
+  "https://arxiv.org/abs/2610.39446": {
+    "image": "previews/evolife.jpg",
+    "source": "https://arxiv.org/pdf/2610.39446"
+  },
+  "https://arxiv.org/abs/2610.40799": {
+    "image": "previews/captain.jpg",
+    "source": "https://arxiv.org/pdf/2610.40799"
+  },
+  "https://arxiv.org/abs/2610.41216": {
+    "image": "previews/tinyastral.jpg",
+    "source": "https://arxiv.org/pdf/2610.41216"
+  },
+  "https://arxiv.org/abs/2610.41383": {
+    "image": "previews/bioagent.jpg",
+    "source": "https://arxiv.org/pdf/2610.41383"
+  },
+  "https://arxiv.org/abs/2610.42053": {
+    "image": "previews/rea-runtime.jpg",
+    "source": "https://arxiv.org/pdf/2610.42053"
+  },
+  "https://arxiv.org/abs/2610.42141": {
+    "image": "previews/roboarchitect.jpg",
+    "source": "https://arxiv.org/pdf/2610.42141"
+  },
+  "https://arxiv.org/abs/2611.01112": {
+    "image": "previews/auriga.jpg",
+    "source": "https://arxiv.org/pdf/2611.01112"
+  },
+  "https://arxiv.org/abs/2611.01560": {
+    "image": "previews/uni-robot-agent.jpg",
+    "source": "https://arxiv.org/pdf/2611.01560"
+  },
+  "https://arxiv.org/abs/2611.02497": {
+    "image": "previews/robocolosseum.jpg",
+    "source": "https://arxiv.org/pdf/2611.02497"
+  },
+  "https://arxiv.org/abs/2611.02691": {
+    "image": "previews/cue-dynamics.jpg",
+    "source": "https://arxiv.org/pdf/2611.02691"
+  },
+  "https://arxiv.org/abs/2611.03584": {
+    "image": "previews/tampagent.jpg",
+    "source": "https://arxiv.org/pdf/2611.03584"
   }
 }

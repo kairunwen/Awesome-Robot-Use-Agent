@@ -3621,6 +3621,56 @@
       "checked_at": "2026-10-02"
     }
   },
+  "https://arxiv.org/abs/2609.36808": {
+    "date": "2026-09-29",
+    "authors": [
+      "Long Li",
+      "Qichao Zhao",
+      "Yue Yang",
+      "Fan Xu",
+      "Zhe Wang",
+      "Alan Wee-Chung Liew",
+      "Chao Qu",
+      "Heng Tao Shen",
+      "Shirui Pan"
+    ],
+    "source": "https://zqc3117.github.io/Spotter/",
+    "date_source": "https://arxiv.org/abs/2609.36808",
+    "institutions": [
+      {
+        "name": "Griffith University",
+        "url": "https://www.griffith.edu.au/"
+      },
+      {
+        "name": "IIIS, Tsinghua University",
+        "url": "https://iiis.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "MainCode"
+      },
+      {
+        "name": "Tencent",
+        "url": "https://www.tencent.com/"
+      },
+      {
+        "name": "Fudan University",
+        "url": "https://www.fudan.edu.cn/",
+        "logo": "institutions/9e6d695284ef.ico",
+        "logo_source": "https://www.fudan.edu.cn/_upload/tpl/00/0e/14/template14/images/favicon.ico"
+      },
+      {
+        "name": "Tongji University"
+      }
+    ],
+    "publication": {
+      "venue": "arXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2609.36808",
+      "checked_at": "2026-11-05"
+    }
+  },
   "https://arxiv.org/abs/2609.39915": {
     "date": "2026-09-30",
     "authors": [

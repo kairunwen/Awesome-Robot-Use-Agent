@@ -3639,7 +3639,9 @@
     "institutions": [
       {
         "name": "Griffith University",
-        "url": "https://www.griffith.edu.au/"
+        "url": "https://www.griffith.edu.au/",
+        "logo": "institutions/griffith.ico",
+        "logo_source": "https://research-repository.griffith.edu.au/assets/client/images/favicons/favicon.ico"
       },
       {
         "name": "IIIS, Tsinghua University",

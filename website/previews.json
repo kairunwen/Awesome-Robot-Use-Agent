@@ -694,5 +694,9 @@
   "https://arxiv.org/abs/2611.03584": {
     "image": "previews/tampagent.jpg",
     "source": "https://arxiv.org/pdf/2611.03584"
+  },
+  "https://arxiv.org/abs/2609.36808": {
+    "image": "previews/spotter.jpg",
+    "source": "https://arxiv.org/pdf/2609.36808v2"
   }
 }

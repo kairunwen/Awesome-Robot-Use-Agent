@@ -74,7 +74,7 @@ class WebsiteTest(unittest.TestCase):
         self.assertTrue(all(img.get('align') == 'texttop' for img in page.select('#learning-resources img[alt="YouTube"]')))
         self.assertLess(source.index('\n## Benchmarks\n'), source.index('\n## Learning Resources\n'))
         self.assertLess(source.index('\n## Learning Resources\n'), source.index('\n## 🤝 Contributing\n'))
-        for ident, count in [('articles', 8), ('papers', 158), ('datasets', 5), ('benchmarks-1', 44)]:
+        for ident, count in [('articles', 8), ('papers', 158), ('datasets', 5), ('benchmarks-1', 45)]:
             self.assertEqual(len(page.select(f'#{ident} .entry')), count)
         self.assertNotIn('Closed-source multimodal model families', page.select_one('#projects').get_text())
         disclosures = page.select('#projects details.project-group')
@@ -94,8 +94,8 @@ class WebsiteTest(unittest.TestCase):
         self.assertIsNotNone(rax.find('a', href='https://robot-agent-exploration.com/rax.pdf'))
         self.assertNotRegex(page.select_one('#projects').get_text(), r'Browse \d+ resources')
         self.assertEqual(len(page.select('#projects .demo-card')), 61)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 43)
-        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 44)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-cover img')), 44)
+        self.assertEqual(len(page.select('#benchmarks-1 .reading-entry')), 45)
         self.assertIsNotNone(page.select_one('#papers .reading-entry a[href="https://arxiv.org/abs/2609.39207"]'))
         self.assertIsNotNone(page.select_one('#benchmarks-1 .reading-entry a[href="https://robouse.ai/hub/leaderboard/"]'))
         self.assertFalse(page.select('#benchmarks-1 .preview-table'))

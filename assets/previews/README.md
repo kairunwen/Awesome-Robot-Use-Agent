@@ -17,3 +17,5 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 - [roboworld-gym-anything.jpg](https://arxiv.org/html/2610.40565v1/figures/teaser_sewing.jpg) — RoboWorld simulations in Figure 1 of Gym-Anything for Robotics.
 - [robotagentbench.webp](https://aetherlabsai.github.io/RobotAgentBench/assets/fig/fig1_overview_1600.webp?v=2) — RobotAgentBench overview from the project page.
 - [robocolosseum-overview.jpg](https://arxiv.org/html/2611.02497v1/images/main_fig/robocolosseum-figure-1-v10.png) — RoboColosseum evaluation tracks and physical robot platforms (Figure 1).
+
+- `mind2act-world.jpg`: official Mind2Act World CP05 simulation demo poster, https://mind2act-world.com/media/posters/CP05_hero_hard_1080p.jpg (accessed 2026-11-13).

@@ -8311,5 +8311,17 @@
       "source": "https://arxiv.org/abs/2611.03584",
       "checked_at": "2026-11-03"
     }
+  },
+  "https://mind2act-world.com/": {
+    "source": "https://mind2act-world.com/",
+    "date": "2026-11",
+    "authors": [
+      "Mind2Act Team"
+    ],
+    "publication": {
+      "venue": "Project website",
+      "year": 2026,
+      "source": "https://mind2act-world.com/"
+    }
   }
 }

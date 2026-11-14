@@ -698,5 +698,9 @@
   "https://arxiv.org/abs/2609.36808": {
     "image": "previews/spotter.jpg",
     "source": "https://arxiv.org/pdf/2609.36808v2"
+  },
+  "https://mit-han-lab.github.io/pear-blog/paper.pdf": {
+    "image": "previews/pear.png",
+    "source": "https://github.com/mit-han-lab/pear"
   }
 }

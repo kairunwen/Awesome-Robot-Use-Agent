@@ -8323,5 +8323,35 @@
       "year": 2026,
       "source": "https://mind2act-world.com/"
     }
+  },
+  "https://mit-han-lab.github.io/pear-blog/paper.pdf": {
+    "source": "https://mit-han-lab.github.io/pear-blog/",
+    "date": "2026",
+    "authors": [
+      "Jiaming Tang",
+      "Zhuoyang Zhang",
+      "Junxian Guo",
+      "Fangzhou Zhao",
+      "Yilong Zhao",
+      "Zekai Li",
+      "Xingyang Li",
+      "Yuyang Zhao",
+      "Song Bian",
+      "Zhijian Liu",
+      "Song Han"
+    ],
+    "institutions": [
+      {
+        "name": "MIT",
+        "url": "https://www.mit.edu/",
+        "logo": "institutions/48b327b71a4b.ico",
+        "logo_source": "https://www.mit.edu/themes/mit/assets/favicon/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "Technical report",
+      "year": 2026,
+      "source": "https://mit-han-lab.github.io/pear-blog/paper.pdf"
+    }
   }
 }

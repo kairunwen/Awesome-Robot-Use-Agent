@@ -8390,9 +8390,7 @@
     "institutions": [
       {
         "name": "ACE Robotics",
-        "url": "https://www.acerobotics.com/",
-        "logo": "institutions/2611.16872.ico",
-        "logo_source": "https://www.acerobotics.com/"
+        "url": "https://www.acerobotics.com/"
       }
     ],
     "publication": {

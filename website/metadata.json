@@ -8353,5 +8353,558 @@
       "year": 2026,
       "source": "https://mit-han-lab.github.io/pear-blog/paper.pdf"
     }
+  },
+  "https://arxiv.org/abs/2611.16872": {
+    "source": "https://arxiv.org/pdf/2611.16872",
+    "date": "2026-11-12",
+    "authors": [
+      "ACE-CaP Team",
+      "Changxu Wei",
+      "Yunpeng Qing",
+      "Guozheng Ma",
+      "Bowen Liu",
+      "Zexin He",
+      "Yilun Kong",
+      "Haoming Gu",
+      "Jingyuan Liu",
+      "Tianyu Zhu",
+      "Jianfei Wang",
+      "Junqiang Kou",
+      "Huinan Mo",
+      "Hao Lv",
+      "Pengbin Li",
+      "Yuesong Wang",
+      "Bo Li",
+      "Huan Zhou",
+      "Shunyu Liu",
+      "Chunxiao Liu",
+      "Bixuan Jin",
+      "Shaopeng Yin",
+      "Fei Wang",
+      "Zhi Hou",
+      "Jiaxing Huang",
+      "Changqing Zou",
+      "Dacheng Tao",
+      "Xiaogang Wang"
+    ],
+    "institutions": [
+      {
+        "name": "ACE Robotics",
+        "url": "https://www.acerobotics.com/",
+        "logo": "institutions/2611.16872.ico",
+        "logo_source": "https://www.acerobotics.com/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.16872"
+    }
+  },
+  "https://arxiv.org/abs/2611.16246": {
+    "source": "https://arxiv.org/pdf/2611.16246",
+    "date": "2026-11-12",
+    "authors": [
+      "Jinze Tao",
+      "Yuxiao Han",
+      "Kangkang Dong",
+      "Yancong Wei",
+      "Xiaojun Zhu",
+      "Bokui Chen",
+      "Houde Liu"
+    ],
+    "institutions": [
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.16246"
+    }
+  },
+  "https://arxiv.org/abs/2611.16221": {
+    "source": "https://arxiv.org/pdf/2611.16221",
+    "date": "2026-11-12",
+    "authors": [
+      "BWM Team"
+    ],
+    "institutions": [
+      {
+        "name": "Tongji University",
+        "url": "https://www.tongji.edu.cn/",
+        "logo": "institutions/tongji-university.png",
+        "logo_source": "https://www.tongji.edu.cn/images/smalllogo.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.16221"
+    }
+  },
+  "https://arxiv.org/abs/2611.16009": {
+    "source": "https://arxiv.org/pdf/2611.16009",
+    "date": "2026-11-11",
+    "authors": [
+      "Zefan Wang",
+      "Yufan Dang",
+      "Xuanwei Shi",
+      "Mingqi Gao",
+      "Cheng Yin",
+      "SikYuen Tam",
+      "Hanyu Liu",
+      "Yasheng Wang",
+      "Yaxi Lu",
+      "Songyang Zhang",
+      "Xin Cong",
+      "Yuan Yao"
+    ],
+    "institutions": [
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.16009"
+    }
+  },
+  "https://arxiv.org/abs/2611.14115": {
+    "source": "https://arxiv.org/pdf/2611.14115",
+    "date": "2026-11-10",
+    "authors": [
+      "Qinfeng Zhu",
+      "Weiguang Zhao",
+      "Ke Sun",
+      "Xihao Guo",
+      "Yunxi Jiang",
+      "Rui Zhang",
+      "Lei Fan",
+      "Kaizhu Huang"
+    ],
+    "institutions": [
+      {
+        "name": "Xi’an Jiaotong-Liverpool University",
+        "url": "https://www.xjtlu.edu.cn/",
+        "logo": "institutions/2611.14115.ico",
+        "logo_source": "https://www.xjtlu.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.14115"
+    }
+  },
+  "https://arxiv.org/abs/2611.13034": {
+    "source": "https://arxiv.org/pdf/2611.13034",
+    "date": "2026-11-09",
+    "authors": [
+      "Delin Zhao",
+      "Zhengrong Yue",
+      "Junlin He",
+      "Yali Wang"
+    ],
+    "institutions": [
+      {
+        "name": "Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences",
+        "url": "https://www.siat.ac.cn/",
+        "logo": "institutions/8a38756ef694.png",
+        "logo_source": "https://www.siat.ac.cn/images/szxjy-logoicon.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.13034"
+    }
+  },
+  "https://arxiv.org/abs/2611.11941": {
+    "source": "https://arxiv.org/pdf/2611.11941",
+    "date": "2026-11-09",
+    "authors": [
+      "Shuangyu Xie",
+      "Kaiyuan Chen",
+      "Ken Goldberg"
+    ],
+    "institutions": [
+      {
+        "name": "UC Berkeley",
+        "url": "https://www.berkeley.edu/",
+        "logo": "institutions/ed145e7420a6.ico",
+        "logo_source": "https://brand.berkeley.edu/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.11941"
+    }
+  },
+  "https://arxiv.org/abs/2611.11509": {
+    "source": "https://arxiv.org/pdf/2611.11509",
+    "date": "2026-11-08",
+    "authors": [
+      "Yifei Yao",
+      "Yude Zou",
+      "Xing Gao",
+      "Guanbo Jiao",
+      "Yukai Wang",
+      "Jianming Ma",
+      "Weinan Zhang",
+      "Chunhua Shen"
+    ],
+    "institutions": [
+      {
+        "name": "Shanghai AI Laboratory",
+        "url": "https://www.shlab.org.cn/",
+        "logo": "institutions/304ced2da780.ico",
+        "logo_source": "https://www.shlab.org.cn/static/asset/img/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.11509"
+    }
+  },
+  "https://arxiv.org/abs/2611.11438": {
+    "source": "https://arxiv.org/pdf/2611.11438",
+    "date": "2026-11-08",
+    "authors": [
+      "Yiming Sun",
+      "Mi Zhang"
+    ],
+    "institutions": [
+      {
+        "name": "Fudan University",
+        "url": "https://www.fudan.edu.cn/",
+        "logo": "institutions/9e6d695284ef.ico",
+        "logo_source": "https://www.fudan.edu.cn/_upload/tpl/00/0e/14/template14/images/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.11438"
+    }
+  },
+  "https://arxiv.org/abs/2611.10748": {
+    "source": "https://arxiv.org/pdf/2611.10748",
+    "date": "2026-11-07",
+    "authors": [
+      "Zhihong Cui",
+      "Hengyu Liu",
+      "Haoran Tang",
+      "Shijun Liu",
+      "Amir Taherkordi",
+      "Tor Skeie"
+    ],
+    "institutions": [
+      {
+        "name": "The Hong Kong Polytechnic University",
+        "url": "https://www.polyu.edu.hk/",
+        "logo": "institutions/2611.10748.ico",
+        "logo_source": "https://www.polyu.edu.hk/-/media/department/home/setting/favicon.ico?rev=3645ae56c1674f7ba7ff351ec16123df&hash=362CCC9C57A3CEBB5D28EEA507E98503"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.10748"
+    }
+  },
+  "https://arxiv.org/abs/2611.10510": {
+    "source": "https://arxiv.org/pdf/2611.10510",
+    "date": "2026-11-07",
+    "authors": [
+      "Zheng Sun",
+      "Zhihao Li",
+      "Zhuo Li",
+      "Wenrui Liu",
+      "Xin Wang",
+      "Fei Chen"
+    ],
+    "institutions": [
+      {
+        "name": "The Chinese University of Hong Kong",
+        "url": "https://www.cuhk.edu.hk/",
+        "logo": "institutions/019914e9f09f.ico",
+        "logo_source": "https://www.cuhk.edu.hk/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.10510"
+    }
+  },
+  "https://arxiv.org/abs/2611.12885": {
+    "source": "https://arxiv.org/pdf/2611.12885",
+    "date": "2026-11-09",
+    "authors": [
+      "Heng Fang",
+      "Zehui Guo",
+      "Yuehan Zhang",
+      "Mingyang Du",
+      "Dingkang Liang",
+      "Xiang Bai"
+    ],
+    "institutions": [
+      {
+        "name": "Huazhong University of Science and Technology",
+        "url": "https://www.hust.edu.cn/",
+        "logo": "institutions/7940b8a35d1b.ico",
+        "logo_source": "https://www.hust.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.12885"
+    }
+  },
+  "https://arxiv.org/abs/2611.09892": {
+    "source": "https://arxiv.org/pdf/2611.09892",
+    "date": "2026-11-06",
+    "authors": [
+      "Chen Chen",
+      "Omid Bagherieh",
+      "Naveen Nikamanth Appiah Balaji",
+      "Jesse T. Gonzalez",
+      "Negin Heravi",
+      "Fahad Islam",
+      "Xueting Li",
+      "Jean-Baptiste Regli",
+      "Kejia Ren",
+      "Petr Švec",
+      "David J. Yoon",
+      "Matthias Müller",
+      "Vladlen Koltun"
+    ],
+    "institutions": [
+      {
+        "name": "Apple",
+        "url": "https://www.apple.com/",
+        "logo": "institutions/2611.09892.ico",
+        "logo_source": "https://www.apple.com/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.09892"
+    }
+  },
+  "https://arxiv.org/abs/2611.09124": {
+    "source": "https://arxiv.org/pdf/2611.09124",
+    "date": "2026-11-06",
+    "authors": [
+      "Chao Liang",
+      "Ke Chen",
+      "Fengxiaoxiao Li",
+      "Shibo Huang",
+      "Yufeng Sun",
+      "Zhaokai Yin",
+      "Jianhuan Lai",
+      "Haozhe Feng",
+      "Chenghuan Jia",
+      "Zhipeng Zhang"
+    ],
+    "institutions": [
+      {
+        "name": "Shanghai Jiao Tong University",
+        "url": "https://www.sjtu.edu.cn/",
+        "logo": "institutions/18ff21907047.png",
+        "logo_source": "https://www.sjtu.edu.cn/resource/assets/img/ico/favicon.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.09124"
+    }
+  },
+  "https://arxiv.org/abs/2611.09030": {
+    "source": "https://arxiv.org/pdf/2611.09030",
+    "date": "2026-11-06",
+    "authors": [
+      "Kaiyuan Chen",
+      "Xinyue Zhu",
+      "Shuangyu Xie",
+      "Uksang Yoo",
+      "Thi Thu Phuong Luong",
+      "Marcus Gualtieri",
+      "Christian Juette",
+      "Liu Ren",
+      "Spencer Huang",
+      "Ken Goldberg"
+    ],
+    "institutions": [
+      {
+        "name": "UC Berkeley",
+        "url": "https://www.berkeley.edu/",
+        "logo": "institutions/ed145e7420a6.ico",
+        "logo_source": "https://brand.berkeley.edu/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.09030"
+    }
+  },
+  "https://arxiv.org/abs/2611.09847": {
+    "source": "https://arxiv.org/pdf/2611.09847",
+    "date": "2026-11-06",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Sean Welleck"
+    ],
+    "institutions": [
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.09847"
+    }
+  },
+  "https://arxiv.org/abs/2611.08946": {
+    "source": "https://arxiv.org/pdf/2611.08946",
+    "date": "2026-11-06",
+    "authors": [
+      "Jingdong Zhang",
+      "Jionghao Wang",
+      "Zhengming Yu",
+      "Yancheng Cai",
+      "Wei Chow",
+      "Chris Choy",
+      "Zhiyang Dou",
+      "Hang Hua",
+      "Jiachen Li",
+      "Zhixuan Liu",
+      "Chen Wang",
+      "Songlin Wei",
+      "Siyuan Yang",
+      "Yu Yuan",
+      "Xiaohang Zhan",
+      "Yucheng Zhang",
+      "Shuhong Zheng",
+      "Xin Li",
+      "Lingjie Liu",
+      "Wojciech Matusik",
+      "Zhengzhong Tu",
+      "Wenping Wang"
+    ],
+    "institutions": [
+      {
+        "name": "Texas A&M University",
+        "url": "https://www.tamu.edu/",
+        "logo": "institutions/2611.08946.png",
+        "logo_source": "https://www.tamu.edu/_files/icons/favicon/apple-touch-icon-57x57.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.08946"
+    }
+  },
+  "https://arxiv.org/abs/2611.08209": {
+    "source": "https://arxiv.org/pdf/2611.08209",
+    "date": "2026-11-05",
+    "authors": [
+      "Satvik Sharma",
+      "Hengyuan Hu",
+      "Mihika Kamat",
+      "Dorsa Sadigh",
+      "Jeannette Bohg"
+    ],
+    "institutions": [
+      {
+        "name": "Stanford University",
+        "url": "https://www.stanford.edu/",
+        "logo": "institutions/eccb970ba1ac.ico",
+        "logo_source": "https://www.stanford.edu/favicon.ico?favicon.1h-97ahdncqw4.ico?dpl=e0307e29a4bd0658de805e4bf8025919a41623ccc5ec3da1d44b234ab20d3abc366161336638666139306335393630303039373562383736"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.08209"
+    }
+  },
+  "https://arxiv.org/abs/2611.08039": {
+    "source": "https://arxiv.org/pdf/2611.08039",
+    "date": "2026-11-05",
+    "authors": [
+      "Qingzhou Lu",
+      "Chenxin Liu",
+      "Xinming Wang",
+      "Liu Cao",
+      "Yanjiang Guo",
+      "Mengdi Xu",
+      "Jianyu Chen"
+    ],
+    "institutions": [
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.08039"
+    }
+  },
+  "https://arxiv.org/abs/2611.08318": {
+    "source": "https://arxiv.org/pdf/2611.08318",
+    "date": "2026-11-05",
+    "authors": [
+      "Wenbo Huang",
+      "Jianxin Bi",
+      "Shunyu Yang",
+      "Ruiyang Si",
+      "Rui Ni",
+      "Qiang Wang",
+      "Shulong Jiang",
+      "Yintianrun Zhang",
+      "Feixiang Ruan",
+      "Kewei Zhang",
+      "Ye Huang",
+      "Shukai Gong",
+      "Daquan Zhou"
+    ],
+    "institutions": [
+      {
+        "name": "Peking University",
+        "url": "https://www.pku.edu.cn/",
+        "logo": "institutions/b26f74c5b62b.ico",
+        "logo_source": "https://www.pku.edu.cn/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.08318"
+    }
   }
 }

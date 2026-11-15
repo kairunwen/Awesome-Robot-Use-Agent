@@ -702,5 +702,85 @@
   "https://mit-han-lab.github.io/pear-blog/paper.pdf": {
     "image": "previews/pear.png",
     "source": "https://github.com/mit-han-lab/pear"
+  },
+  "https://arxiv.org/abs/2611.16872": {
+    "image": "previews/2611.16872.jpg",
+    "source": "https://arxiv.org/pdf/2611.16872"
+  },
+  "https://arxiv.org/abs/2611.16246": {
+    "image": "previews/2611.16246.jpg",
+    "source": "https://arxiv.org/pdf/2611.16246"
+  },
+  "https://arxiv.org/abs/2611.16221": {
+    "image": "previews/2611.16221.jpg",
+    "source": "https://arxiv.org/pdf/2611.16221"
+  },
+  "https://arxiv.org/abs/2611.16009": {
+    "image": "previews/2611.16009.jpg",
+    "source": "https://arxiv.org/pdf/2611.16009"
+  },
+  "https://arxiv.org/abs/2611.14115": {
+    "image": "previews/2611.14115.jpg",
+    "source": "https://arxiv.org/pdf/2611.14115"
+  },
+  "https://arxiv.org/abs/2611.13034": {
+    "image": "previews/2611.13034.jpg",
+    "source": "https://arxiv.org/pdf/2611.13034"
+  },
+  "https://arxiv.org/abs/2611.11941": {
+    "image": "previews/2611.11941.jpg",
+    "source": "https://arxiv.org/pdf/2611.11941"
+  },
+  "https://arxiv.org/abs/2611.11509": {
+    "image": "previews/2611.11509.jpg",
+    "source": "https://arxiv.org/pdf/2611.11509"
+  },
+  "https://arxiv.org/abs/2611.11438": {
+    "image": "previews/2611.11438.jpg",
+    "source": "https://arxiv.org/pdf/2611.11438"
+  },
+  "https://arxiv.org/abs/2611.10748": {
+    "image": "previews/2611.10748.jpg",
+    "source": "https://arxiv.org/pdf/2611.10748"
+  },
+  "https://arxiv.org/abs/2611.10510": {
+    "image": "previews/2611.10510.jpg",
+    "source": "https://arxiv.org/pdf/2611.10510"
+  },
+  "https://arxiv.org/abs/2611.12885": {
+    "image": "previews/2611.12885.jpg",
+    "source": "https://arxiv.org/pdf/2611.12885"
+  },
+  "https://arxiv.org/abs/2611.09892": {
+    "image": "previews/2611.09892.jpg",
+    "source": "https://arxiv.org/pdf/2611.09892"
+  },
+  "https://arxiv.org/abs/2611.09124": {
+    "image": "previews/2611.09124.jpg",
+    "source": "https://arxiv.org/pdf/2611.09124"
+  },
+  "https://arxiv.org/abs/2611.09030": {
+    "image": "previews/2611.09030.jpg",
+    "source": "https://arxiv.org/pdf/2611.09030"
+  },
+  "https://arxiv.org/abs/2611.09847": {
+    "image": "previews/2611.09847.jpg",
+    "source": "https://arxiv.org/pdf/2611.09847"
+  },
+  "https://arxiv.org/abs/2611.08946": {
+    "image": "previews/2611.08946.jpg",
+    "source": "https://arxiv.org/pdf/2611.08946"
+  },
+  "https://arxiv.org/abs/2611.08209": {
+    "image": "previews/2611.08209.jpg",
+    "source": "https://arxiv.org/pdf/2611.08209"
+  },
+  "https://arxiv.org/abs/2611.08039": {
+    "image": "previews/2611.08039.jpg",
+    "source": "https://arxiv.org/pdf/2611.08039"
+  },
+  "https://arxiv.org/abs/2611.08318": {
+    "image": "previews/2611.08318.jpg",
+    "source": "https://arxiv.org/pdf/2611.08318"
   }
 }

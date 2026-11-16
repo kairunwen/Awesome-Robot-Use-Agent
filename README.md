@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="RUA logo: a robotic hand gently petting a happy cat" width="160" />
+<img src="https://raw.githubusercontent.com/kairunwen/Awesome-Robot-Use-Agent/main/assets/logo.png" alt="RUA logo: a robotic hand gently petting a happy cat" width="160" />
 
 # Awesome Robot Use Agent (RUA)
 
@@ -831,7 +831,7 @@ Thanks to all our [contributors](https://github.com/kairunwen/Awesome-Robot-Use-
 
 <div style="display:flex; align-items:center; gap:8px">
   <a href="https://github.com/kairunwen/Awesome-Robot-Use-Agent/graphs/contributors" style="display:block; line-height:0">
-    <img src="https://contrib.rocks/image?repo=kairunwen/Awesome-Robot-Use-Agent" alt="Avatars of all repository contributors" height="70" style="display:block; height:70px; width:auto; max-width:none"/>
+    <img src="assets/contributors.svg" alt="Avatars of all repository contributors" height="70" style="display:block; height:70px; width:auto; max-width:none"/>
   </a>
 </div>
 

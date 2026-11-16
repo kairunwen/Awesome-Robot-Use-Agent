@@ -782,5 +782,9 @@
   "https://arxiv.org/abs/2611.08318": {
     "image": "previews/2611.08318.jpg",
     "source": "https://arxiv.org/pdf/2611.08318"
+  },
+  "https://arxiv.org/abs/2611.12177": {
+    "image": "previews/efe-paper.jpg",
+    "source": "https://arxiv.org/pdf/2611.12177"
   }
 }

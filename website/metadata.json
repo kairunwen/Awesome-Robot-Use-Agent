@@ -6094,11 +6094,12 @@
     }
   },
   "https://www.embodied-first-exam.ai/": {
-    "date": "2026-10-19",
+    "source": "https://arxiv.org/abs/2611.12177",
+    "date": "2026-11-09",
     "authors": [
       "Kangrui Wang",
-      "Changhe Chen",
       "Qineng Wang",
+      "Changhe Chen",
       "Pingyue Zhang",
       "Chi Gui",
       "Feishi Wang",
@@ -6107,26 +6108,44 @@
       "Xiaoyu Huang",
       "Tonghe Zhang",
       "Linjie Li",
+      "Zihan Wang",
+      "Minyeong Kim",
       "Yiyou Sun",
       "Mingkai Deng",
       "Jinyu Hou",
+      "Qi Zhu",
+      "Han Liu",
       "Eric P. Xing",
       "Huaxiu Yao",
       "Zhiwen Fan",
       "Yuejiang Liu",
+      "Dawn Song",
+      "Pieter Abbeel",
+      "Li Fei-Fei",
       "Jiajun Wu",
       "Yuke Zhu",
       "Guanya Shi",
       "Ruohan Zhang",
       "Manling Li"
     ],
-    "source": "https://github.com/mll-lab-nu/embodied-first-exam",
-    "date_source": "https://github.com/mll-lab-nu/embodied-first-exam#news",
+    "institutions": [
+      {
+        "name": "Northwestern University",
+        "url": "https://www.northwestern.edu/",
+        "logo": "institutions/441aa302ff60.ico",
+        "logo_source": "https://common.northwestern.edu/favicon.ico"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      }
+    ],
     "publication": {
-      "venue": "Benchmark Release",
+      "venue": "ArXiv",
       "year": 2026,
-      "source": "https://github.com/mll-lab-nu/embodied-first-exam",
-      "checked_at": "2026-10-20"
+      "source": "https://arxiv.org/abs/2611.12177"
     }
   },
   "https://arxiv.org/abs/2610.15782": {
@@ -8903,6 +8922,61 @@
       "venue": "ArXiv",
       "year": 2026,
       "source": "https://arxiv.org/abs/2611.08318"
+    }
+  },
+  "https://arxiv.org/abs/2611.12177": {
+    "source": "https://arxiv.org/abs/2611.12177",
+    "date": "2026-11-09",
+    "authors": [
+      "Kangrui Wang",
+      "Qineng Wang",
+      "Changhe Chen",
+      "Pingyue Zhang",
+      "Chi Gui",
+      "Feishi Wang",
+      "Canyu Chen",
+      "Wenli Xiao",
+      "Xiaoyu Huang",
+      "Tonghe Zhang",
+      "Linjie Li",
+      "Zihan Wang",
+      "Minyeong Kim",
+      "Yiyou Sun",
+      "Mingkai Deng",
+      "Jinyu Hou",
+      "Qi Zhu",
+      "Han Liu",
+      "Eric P. Xing",
+      "Huaxiu Yao",
+      "Zhiwen Fan",
+      "Yuejiang Liu",
+      "Dawn Song",
+      "Pieter Abbeel",
+      "Li Fei-Fei",
+      "Jiajun Wu",
+      "Yuke Zhu",
+      "Guanya Shi",
+      "Ruohan Zhang",
+      "Manling Li"
+    ],
+    "institutions": [
+      {
+        "name": "Northwestern University",
+        "url": "https://www.northwestern.edu/",
+        "logo": "institutions/441aa302ff60.ico",
+        "logo_source": "https://common.northwestern.edu/favicon.ico"
+      },
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.12177"
     }
   }
 }

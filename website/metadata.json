@@ -8978,5 +8978,70 @@
       "year": 2026,
       "source": "https://arxiv.org/abs/2611.12177"
     }
+  },
+  "https://arxiv.org/abs/2611.18359": {
+    "source": "https://arxiv.org/abs/2611.18359",
+    "date": "2026-11-13",
+    "authors": [
+      "Grid Robotics",
+      "Qingfeng Lan",
+      "Duo Li",
+      "Siyao Li",
+      "Yiheng Lyu",
+      "Shijian Lu",
+      "Zhenghao Qi",
+      "Shizun Wang",
+      "Xinchao Wang",
+      "Ming Yang",
+      "Zhiqin Yang",
+      "Zuhao Yang",
+      "Tao Yu"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.18359"
+    }
+  },
+  "https://arxiv.org/abs/2611.18176": {
+    "source": "https://arxiv.org/abs/2611.18176",
+    "date": "2026-11-13",
+    "authors": [
+      "Yundi Cai",
+      "Zihan Wang",
+      "Chenxi Han",
+      "Yi Cheng",
+      "Houde Liu",
+      "Zilei Wang"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.18176"
+    }
+  },
+  "https://arxiv.org/abs/2611.17394": {
+    "source": "https://arxiv.org/abs/2611.17394",
+    "date": "2026-11-12",
+    "authors": [
+      "Gongyue Teng",
+      "Yuqing Xie",
+      "Yixian Zhang",
+      "Feng Gao",
+      "Shu'ang Yu",
+      "Jiaji Rao",
+      "Sukai Wang",
+      "Guanghui Ren",
+      "Ya Zhang",
+      "Maoqing Yao",
+      "Yu Wang",
+      "Chao Yu",
+      "Xinlei Chen"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.17394"
+    }
   }
 }

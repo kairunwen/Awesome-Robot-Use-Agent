@@ -786,5 +786,13 @@
   "https://arxiv.org/abs/2611.12177": {
     "image": "previews/efe-paper.jpg",
     "source": "https://arxiv.org/pdf/2611.12177"
+  },
+  "https://arxiv.org/abs/2611.18359": {
+    "image": "previews/2611.18359.jpg",
+    "source": "https://arxiv.org/pdf/2611.18359"
+  },
+  "https://arxiv.org/abs/2611.18176": {
+    "image": "previews/2611.18176.jpg",
+    "source": "https://arxiv.org/pdf/2611.18176"
   }
 }

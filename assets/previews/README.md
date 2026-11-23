@@ -19,3 +19,8 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 - [robocolosseum-overview.jpg](https://arxiv.org/html/2611.02497v1/images/main_fig/robocolosseum-figure-1-v10.png) — RoboColosseum evaluation tracks and physical robot platforms (Figure 1).
 
 - `mind2act-world.jpg`: official Mind2Act World CP05 simulation demo poster, https://mind2act-world.com/media/posters/CP05_hero_hard_1080p.jpg (accessed 2026-11-13).
+
+- [robocoliseum-object-replay.png](https://arxiv.org/html/2611.27042v1/figures/object-replay-evaluated.png) — Real and simulated object trajectories in RoboColiseum calibration experiments.
+- [robopro-overview.png](https://arxiv.org/html/2611.26971v1/first_image_v4.png) — RoboPRO benchmark overview showing dual-arm manipulation scenes and perturbations.
+- [robodyna-overview.png](https://arxiv.org/html/2611.26969v1/fig1_teaser.png) — RoboDyna overview of manipulation under varying physical dynamics.
+- [robobuilder-physical-tests.png](https://arxiv.org/html/2611.23855v1/fig_real_gallery.png) — RoboBuilder gallery of constructed robots on physical obstacle courses.

@@ -9043,5 +9043,333 @@
       "year": 2026,
       "source": "https://arxiv.org/abs/2611.17394"
     }
+  },
+  "https://arxiv.org/abs/2611.27797": {
+    "source": "https://arxiv.org/abs/2611.27797",
+    "date": "2026-11-20",
+    "authors": [
+      "Yingting Zhou",
+      "Yuyin Zhou",
+      "Yongliang Wang",
+      "Haoran Li",
+      "Dongbin Zhao"
+    ],
+    "institutions": [
+      {
+        "name": "Institute of Automation, Chinese Academy of Sciences",
+        "url": "https://www.ia.cas.cn/"
+      },
+      {
+        "name": "University of Chinese Academy of Sciences",
+        "url": "https://www.ucas.ac.cn/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.27797"
+    }
+  },
+  "https://arxiv.org/abs/2611.27499": {
+    "source": "https://arxiv.org/abs/2611.27499",
+    "date": "2026-11-20",
+    "authors": [
+      "Guangzhao Dai",
+      "Guoxin Lian",
+      "Shuo Wang",
+      "Shengbin Yue",
+      "Qianru Sun",
+      "Xiangbo Shu",
+      "Bin Zhu"
+    ],
+    "institutions": [
+      {
+        "name": "Singapore Management University",
+        "url": "https://www.smu.edu.sg/"
+      },
+      {
+        "name": "Renmin University of China",
+        "url": "https://www.ruc.edu.cn/",
+        "logo": "institutions/renmin-university.ico",
+        "logo_source": "https://www.ruc.edu.cn/template/1/out/imgs/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.27499"
+    }
+  },
+  "https://arxiv.org/abs/2611.27182": {
+    "source": "https://arxiv.org/abs/2611.27182",
+    "date": "2026-11-20",
+    "authors": [
+      "Sunli Chen",
+      "Yun Zong",
+      "Qinhong Zhou",
+      "Xiaowen Qiu",
+      "Jiaben Chen",
+      "Zeyuan Yang",
+      "Chuang Gan"
+    ],
+    "institutions": [
+      {
+        "name": "University of Massachusetts Amherst",
+        "url": "https://www.umass.edu/",
+        "logo": "institutions/632351c64f33.png",
+        "logo_source": "https://www.umass.edu/favicons/favicon-32x32.png"
+      },
+      {
+        "name": "University of Minnesota Twin Cities"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.27182"
+    }
+  },
+  "https://arxiv.org/abs/2611.21099": {
+    "source": "https://arxiv.org/abs/2611.21099",
+    "date": "2026-11-16",
+    "authors": [
+      "Ke Sun",
+      "Kevin Yuchen Ma",
+      "Yike Zhang",
+      "Yanzhe Chen",
+      "Mike Zheng Shou"
+    ],
+    "institutions": [
+      {
+        "name": "National University of Singapore",
+        "url": "https://nus.edu.sg/",
+        "logo": "institutions/nus.png",
+        "logo_source": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.21099"
+    }
+  },
+  "https://arxiv.org/abs/2611.26613": {
+    "source": "https://arxiv.org/abs/2611.26613",
+    "date": "2026-11-19",
+    "authors": [
+      "Yiyang Du",
+      "Yuxuan Kuang",
+      "Qitao Zhao",
+      "Yixuan Wang",
+      "Zhanqiu Guo",
+      "Yi Xu",
+      "Xin Li",
+      "Wenbin He",
+      "Liu Ren",
+      "Chenyan Xiong"
+    ],
+    "institutions": [
+      {
+        "name": "Carnegie Mellon University",
+        "url": "https://www.cmu.edu/",
+        "logo": "institutions/3c0141232566.ico",
+        "logo_source": "https://www.cmu.edu/themes/custom/cmu_base/favicon.ico"
+      },
+      {
+        "name": "University of Illinois Urbana-Champaign",
+        "url": "https://illinois.edu/",
+        "logo": "institutions/e3872bf6ec49.ico",
+        "logo_source": "https://cdn.brand.illinois.edu/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.26613"
+    }
+  },
+  "https://arxiv.org/abs/2611.27042": {
+    "source": "https://arxiv.org/abs/2611.27042",
+    "date": "2026-11-20",
+    "authors": [
+      "Chenghao Yin",
+      "Da Huang",
+      "Di Yang",
+      "Jichao Wang",
+      "Junhui Wu",
+      "Nanshu Zhao",
+      "Tong Ran",
+      "Zhijun Li",
+      "Gang Zhao",
+      "Linting Guo",
+      "Rui Feng",
+      "Sheng Zhang",
+      "Tianyu Jiang",
+      "Wenjun Sun",
+      "Yongxin Su",
+      "Zhaobo Liu",
+      "Zheyuan Xing",
+      "Sukai Wang",
+      "Yue Zhou",
+      "Qihan Jiang",
+      "Jianhua Jiang",
+      "Chuang Men",
+      "Yuxiang Yan",
+      "Daizhen Lv",
+      "Kunyu Yu",
+      "Yongjian Shen",
+      "Tianxiang Zhu",
+      "Siying Zhang",
+      "Wenhao Wang",
+      "Jun Zhao",
+      "Bowen Jiang",
+      "Zhi Zeng",
+      "Maoqing Yao",
+      "Qian Wang"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.27042"
+    }
+  },
+  "https://arxiv.org/abs/2611.26971": {
+    "source": "https://arxiv.org/abs/2611.26971",
+    "date": "2026-11-20",
+    "authors": [
+      "Zhiyuan Li",
+      "Charles Eret",
+      "Dingsheng Liu",
+      "Xuan Zhao",
+      "Joshua Choi",
+      "Yangzheng Wu",
+      "Tongtong Cao",
+      "Yingxue Zhang",
+      "Amir Rasouli"
+    ],
+    "institutions": [
+      {
+        "name": "Huawei Technologies Co., Ltd.",
+        "url": "https://www.huawei.com/en/",
+        "logo": "institutions/huawei-technologies.png",
+        "logo_source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/apple-touch-icon-precomposed-180.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.26971"
+    }
+  },
+  "https://arxiv.org/abs/2611.26969": {
+    "source": "https://arxiv.org/abs/2611.26969",
+    "date": "2026-11-20",
+    "authors": [
+      "Zhiyuan Li",
+      "Rui Heng Yang",
+      "Xuan Zhao",
+      "Amir Rasouli"
+    ],
+    "institutions": [
+      {
+        "name": "Huawei Technologies Co., Ltd.",
+        "url": "https://www.huawei.com/en/",
+        "logo": "institutions/huawei-technologies.png",
+        "logo_source": "https://www.huawei.com/-/media/htemplate-home/1.0.1.20251205144752/components/assets/img/apple-touch-icon-precomposed-180.png"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.26969"
+    }
+  },
+  "https://arxiv.org/abs/2611.23855": {
+    "source": "https://arxiv.org/abs/2611.23855",
+    "date": "2026-11-18",
+    "authors": [
+      "Ghadi Nehme",
+      "Dahyun Nam",
+      "Akshay Govind Srinivasan",
+      "Faez Ahmed"
+    ],
+    "institutions": [
+      {
+        "name": "MIT",
+        "url": "https://www.mit.edu/",
+        "logo": "institutions/48b327b71a4b.ico",
+        "logo_source": "https://www.mit.edu/themes/mit/assets/favicon/favicon.ico"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.23855"
+    }
+  },
+  "https://arxiv.org/abs/2611.26444": {
+    "source": "https://arxiv.org/abs/2611.26444",
+    "date": "2026-11-19",
+    "authors": [
+      "Yuzhi Huang",
+      "Jie Wu",
+      "Fanding Huang",
+      "Junchao Lin",
+      "Weichen Zhang",
+      "Ziyi Xiong",
+      "Yang Li",
+      "Zhengwei Xie",
+      "Zhimin Wang",
+      "Zhen Liu",
+      "Jiazhen Huang",
+      "Yuzheng Zhang",
+      "Yuche Liu",
+      "Hongyi Yang",
+      "Chen Tang",
+      "Shixiang Tang",
+      "Hakan Aktas",
+      "Adam Wu",
+      "Duo Wu",
+      "Kangye Ji",
+      "Shuzhao Xie",
+      "Huanan Liu",
+      "Weijue Bu",
+      "Chenxin Li",
+      "Xinyuan Wang",
+      "Tianyi Bai",
+      "Yinan Mao",
+      "Jiawei Wang",
+      "Minglei Li",
+      "Heng Yu",
+      "Ehsan Adeli",
+      "Minchen Li",
+      "Yong-Lu Li",
+      "Cengiz Öztireli",
+      "Huazhe Xu",
+      "Chao Yu",
+      "Jing Zhang",
+      "Shanghang Zhang",
+      "Weitao Zhou",
+      "Wenwu Zhu",
+      "Cheng Chi",
+      "Jingyan Jiang",
+      "Zhi Wang"
+    ],
+    "institutions": [
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Velabot AI"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.26444"
+    }
   }
 }

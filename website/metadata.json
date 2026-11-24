@@ -9371,5 +9371,52 @@
       "year": 2026,
       "source": "https://arxiv.org/abs/2611.26444"
     }
+  },
+  "https://arxiv.org/abs/2611.31002": {
+    "source": "https://arxiv.org/abs/2611.31002",
+    "date": "2026-11-23",
+    "authors": [
+      "Jinkun Liu",
+      "Yingze Wang",
+      "Situ Wang",
+      "Deyao Hong",
+      "Mingju Gao",
+      "Wenyi Li",
+      "Yizhe Chi",
+      "Youjie Zheng",
+      "Kaisen Yang",
+      "Xiangyang Wang",
+      "Bingxiang He",
+      "Yuxin Zuo",
+      "Boyuan Chen",
+      "Yue Chen",
+      "Cheng Qian",
+      "Tianxing Chen",
+      "Huichi Zhou",
+      "Huaxiu Yao",
+      "Hao Tang",
+      "Hao Zhou",
+      "Ya-Qin Zhang",
+      "Calvin Xiao",
+      "Tiga Altman",
+      "Huan-ang Gao"
+    ],
+    "institutions": [
+      {
+        "name": "Tsinghua University",
+        "url": "https://www.tsinghua.edu.cn/",
+        "logo": "institutions/896430aee7f5.ico",
+        "logo_source": "https://www.tsinghua.edu.cn/favicon.ico"
+      },
+      {
+        "name": "Einsia.AI",
+        "url": "https://lab.einsia.ai/robo-universe/"
+      }
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.31002"
+    }
   }
 }

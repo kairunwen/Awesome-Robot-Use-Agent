@@ -24,3 +24,5 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 - [robopro-overview.png](https://arxiv.org/html/2611.26971v1/first_image_v4.png) — RoboPRO benchmark overview showing dual-arm manipulation scenes and perturbations.
 - [robodyna-overview.png](https://arxiv.org/html/2611.26969v1/fig1_teaser.png) — RoboDyna overview of manipulation under varying physical dynamics.
 - [robobuilder-physical-tests.png](https://arxiv.org/html/2611.23855v1/fig_real_gallery.png) — RoboBuilder gallery of constructed robots on physical obstacle courses.
+
+- [robouniverse-10k-taxonomy.png](https://raw.githubusercontent.com/Einsia/RoboUniverse-10K/main/assets/task-taxonomy.png) — official RoboUniverse-10K task taxonomy (paper Figure 3).

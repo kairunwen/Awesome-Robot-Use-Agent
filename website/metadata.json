@@ -9418,5 +9418,365 @@
       "year": 2026,
       "source": "https://arxiv.org/abs/2611.31002"
     }
+  },
+  "https://arxiv.org/abs/2611.34778": {
+    "source": "https://arxiv.org/abs/2611.34778",
+    "date": "2026-11-25",
+    "authors": [
+      "Yuxiang Lai",
+      "Jike Zhong",
+      "Yu-Jhe Li",
+      "Lan Wang",
+      "Chengzhi Liu",
+      "Youbao Tang",
+      "Ming Li",
+      "Xi Xiao",
+      "Xiaofeng Yang",
+      "Liang Zhao",
+      "Zheda Mai",
+      "Ruixi Fan"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.34778"
+    }
+  },
+  "https://arxiv.org/abs/2611.34750": {
+    "source": "https://arxiv.org/abs/2611.34750",
+    "date": "2026-11-25",
+    "authors": [
+      "Xiang Li",
+      "Hongyu Zhou",
+      "Ya-Li Li",
+      "Tao Li",
+      "Rui Zhang",
+      "Junjie Lai",
+      "Weihua Zhang",
+      "Shengjin Wang"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.34750"
+    }
+  },
+  "https://arxiv.org/abs/2611.34675": {
+    "source": "https://arxiv.org/abs/2611.34675",
+    "date": "2026-11-25",
+    "authors": [
+      "Chenzhi Liu",
+      "Jiehong Lin",
+      "Wei Huang",
+      "Xuzhao Huang",
+      "Haoyuan Li",
+      "Yang Zhang",
+      "Junchao Huang",
+      "Chenyeyang Cai",
+      "Bo Wang",
+      "Kazuhiro Kosuge",
+      "Zhongrui Wang",
+      "Xiaojuan Qi"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.34675"
+    }
+  },
+  "https://arxiv.org/abs/2611.33915": {
+    "source": "https://arxiv.org/abs/2611.33915",
+    "date": "2026-11-25",
+    "authors": [
+      "Zeyang Guan",
+      "Qihao Zhao",
+      "Rui Gong",
+      "Zhang Haitian",
+      "Yalun Dai",
+      "Yangyu Huang",
+      "Lingao Xiao",
+      "Haozhe Du",
+      "Xuehui Yu",
+      "Ye Lu",
+      "Jianjun Gao",
+      "Ruoyu Wang",
+      "Haowen Bai",
+      "Hao Li",
+      "Scarlett Li",
+      "Kim-Hui Yap"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.33915"
+    }
+  },
+  "https://arxiv.org/abs/2611.33560": {
+    "source": "https://arxiv.org/abs/2611.33560",
+    "date": "2026-11-25",
+    "authors": [
+      "Wenfang Sun",
+      "Jianghao Deng",
+      "Wenzhe Yin",
+      "Yingjun Du",
+      "Cees G. M. Snoek"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.33560"
+    }
+  },
+  "https://arxiv.org/abs/2611.32016": {
+    "source": "https://arxiv.org/abs/2611.32016",
+    "date": "2026-11-24",
+    "authors": [
+      "Liyang Li",
+      "Mingyu Liu",
+      "Xiaoman Li",
+      "Zhiyue Zhao",
+      "Jin-Chuan Shi",
+      "Canyu Zhao",
+      "Haokai Zhang",
+      "Jinyuan Tian",
+      "Linhao Zhong",
+      "Hao Chen",
+      "Chunhua Shen"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.32016"
+    }
+  },
+  "https://arxiv.org/abs/2611.31205": {
+    "source": "https://arxiv.org/abs/2611.31205",
+    "date": "2026-11-23",
+    "authors": [
+      "Zexin He",
+      "Rui Li",
+      "Yushi Lan",
+      "Chengkai Jin",
+      "Zhi Hou",
+      "Xingang Pan"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.31205"
+    }
+  },
+  "https://arxiv.org/abs/2611.31201": {
+    "source": "https://arxiv.org/abs/2611.31201",
+    "date": "2026-11-23",
+    "authors": [
+      "Xiao-Ming Wu",
+      "Kang Liao",
+      "Yuexiao Ma",
+      "Taolin Zhang",
+      "Mingqian Zhou",
+      "Nuo Chen",
+      "Ziming Li",
+      "Yihang Luo",
+      "Rui Li",
+      "Zhonghua Wu",
+      "Tianyu Xie",
+      "Xiawu Zheng",
+      "Zhongang Cai",
+      "Zhi Hou",
+      "Chen Change Loy"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.31201"
+    }
+  },
+  "https://arxiv.org/abs/2611.31098": {
+    "source": "https://arxiv.org/abs/2611.31098",
+    "date": "2026-11-23",
+    "authors": [
+      "Jinzhong Gu",
+      "Jiakai Chen",
+      "Xinyi Cao",
+      "Yan Shen",
+      "Hangke Sui",
+      "Shutian Zheng",
+      "Xiang Xiao",
+      "Haoran Lu",
+      "Fan Xu",
+      "Lu Shi",
+      "Daochen Shi",
+      "Ruihua Zhang",
+      "Wei Zhan",
+      "Masayoshi Tomizuka",
+      "Ruihai Wu"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.31098"
+    }
+  },
+  "https://arxiv.org/abs/2611.31053": {
+    "source": "https://arxiv.org/abs/2611.31053",
+    "date": "2026-11-23",
+    "authors": [
+      "Yicheng Xu",
+      "Wencan Jiang",
+      "Zihao Zhu",
+      "Keru Zhou",
+      "Chang Zhou",
+      "Li Liu",
+      "Maoqing Yao",
+      "Yong Liu",
+      "Jiangning Zhang"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.31053"
+    }
+  },
+  "https://arxiv.org/abs/2611.30550": {
+    "source": "https://arxiv.org/abs/2611.30550",
+    "date": "2026-11-23",
+    "authors": [
+      "Yihao Shen",
+      "Yuxuan Chen",
+      "Xuantong Liu",
+      "Jun Gao",
+      "Weijian Luo",
+      "Tianyang Hu"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.30550"
+    }
+  },
+  "https://arxiv.org/abs/2611.29912": {
+    "source": "https://arxiv.org/abs/2611.29912",
+    "date": "2026-11-23",
+    "authors": [
+      "Jiarui Guo",
+      "Jinkai Zhang",
+      "Yuanhong Yu",
+      "Yongchen Zai",
+      "Futang Zhu",
+      "Ruizhen Hu",
+      "Sida Peng",
+      "Xiaowei Zhou"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.29912"
+    }
+  },
+  "https://arxiv.org/abs/2611.34671": {
+    "source": "https://arxiv.org/abs/2611.34671",
+    "date": "2026-11-25",
+    "authors": [
+      "Ruixiang Wang",
+      "Xinyue Yao",
+      "Xuanning Zhou",
+      "Yueci Deng",
+      "Yongyi Su",
+      "Kui Jia"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.34671"
+    }
+  },
+  "https://arxiv.org/abs/2611.34538": {
+    "source": "https://arxiv.org/abs/2611.34538",
+    "date": "2026-11-25",
+    "authors": [
+      "Yanran Jiang",
+      "Cécile Paris",
+      "Dana Kulić",
+      "Leimin Tian"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.34538"
+    }
+  },
+  "https://arxiv.org/abs/2611.33143": {
+    "source": "https://arxiv.org/abs/2611.33143",
+    "date": "2026-11-24",
+    "authors": [
+      "Xingjian Ran",
+      "Xiaoye Mo",
+      "Sihao Liu",
+      "Li Luo",
+      "Taiqiang Wu",
+      "Ji Zhao",
+      "Wenqi Shao",
+      "Hongyang Li",
+      "Jiaqi Wang",
+      "Bo Dai"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.33143"
+    }
+  },
+  "https://arxiv.org/abs/2611.32803": {
+    "source": "https://arxiv.org/abs/2611.32803",
+    "date": "2026-11-24",
+    "authors": [
+      "Yanzhe Chen",
+      "Zhijun Cao",
+      "Ruihe An",
+      "Chang Gong",
+      "Mike Zheng Shou"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.32803"
+    }
+  },
+  "https://arxiv.org/abs/2611.31115": {
+    "source": "https://arxiv.org/abs/2611.31115",
+    "date": "2026-11-23",
+    "authors": [
+      "Yanzhe Chen",
+      "Zhijun Cao",
+      "Zechen Bai",
+      "Wenzheng Zeng",
+      "Kevin Yuchen Ma",
+      "Yiqi Lin",
+      "Guoqiang Liang",
+      "Xiaokang Liu",
+      "Ke Sun",
+      "Kevin Qinghong Lin",
+      "Mike Zheng Shou"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.31115"
+    }
+  },
+  "https://arxiv.org/abs/2611.30989": {
+    "source": "https://arxiv.org/abs/2611.30989",
+    "date": "2026-11-23",
+    "authors": [
+      "Xinyang Zhou",
+      "Qi Li",
+      "Xinchao Wang"
+    ],
+    "publication": {
+      "venue": "ArXiv",
+      "year": 2026,
+      "source": "https://arxiv.org/abs/2611.30989"
+    }
   }
 }

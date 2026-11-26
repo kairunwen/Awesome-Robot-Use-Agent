@@ -26,3 +26,9 @@ Copies of official previews, resized where needed. Animated WebP files retain th
 - [robobuilder-physical-tests.png](https://arxiv.org/html/2611.23855v1/fig_real_gallery.png) — RoboBuilder gallery of constructed robots on physical obstacle courses.
 
 - [robouniverse-10k-taxonomy.png](https://raw.githubusercontent.com/Einsia/RoboUniverse-10K/main/assets/task-taxonomy.png) — official RoboUniverse-10K task taxonomy (paper Figure 3).
+
+- [dtu-bench-overview.jpg](https://arxiv.org/html/2611.34538v1/figure1.7.png) — DTU-Bench overview from the paper.
+- [roam-bench-overview.jpg](https://arxiv.org/html/2611.33143v1/01_teaser.png) — ROAM-Bench overview from the paper.
+- [mrbench-overview.jpg](https://arxiv.org/html/2611.32803v1/tasks.png) — MRBench overview from the paper.
+- [ruibench-overview.jpg](https://arxiv.org/html/2611.31115v1/teaser.png) — RUIBench overview from the paper.
+- [worldleague-overview.jpg](https://arxiv.org/html/2611.30989v1/fig/WorldLeague_Task_Construction.png) — WorldLeague overview from the paper.

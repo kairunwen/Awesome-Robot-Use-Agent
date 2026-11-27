@@ -466,7 +466,7 @@ These resources can supply action models, data workflows, or deployment componen
 | --- | --- | --- |
 | **OpenVLA** | Vision-language-action model and tools for adaptation to robot manipulation | [Paper](https://arxiv.org/abs/2406.09246) · [Project](https://openvla.github.io/) · [Code and model links](https://github.com/openvla/openvla) [![GitHub stars](https://img.shields.io/github/stars/openvla/openvla?style=flat-square&label=stars)](https://github.com/openvla/openvla) · [Models](https://huggingface.co/openvla/openvla-7b) |
 | **openpi** | Physical Intelligence's robot-policy implementations, training utilities, and inference interfaces | [Code and model links](https://github.com/Physical-Intelligence/openpi) <br> [![GitHub stars](https://img.shields.io/github/stars/Physical-Intelligence/openpi?style=flat-square&label=stars)](https://github.com/Physical-Intelligence/openpi) |
-| **LeRobot** | Robot learning library with policies, datasets, hardware integrations, and training workflows | [Code and documentation](https://github.com/huggingface/lerobot) <br> [![GitHub stars](https://img.shields.io/github/stars/huggingface/lerobot?style=flat-square&label=stars)](https://github.com/huggingface/lerobot) · [Docs](https://huggingface.co/docs/lerobot) |
+| **LeRobot** | Robot learning library with policies, datasets, hardware integrations, and training workflows | [Code and documentation](https://github.com/huggingface/lerobot) <br> [![GitHub stars](https://img.shields.io/github/stars/huggingface/lerobot?style=flat-square&label=stars)](https://github.com/huggingface/lerobot) · [Docs](https://huggingface.co/docs/lerobot) · [Episode splits and normalization](https://sapien1.com/research/lerobot-split-normalization) |
 
 <a id="other-tools"></a>
 
